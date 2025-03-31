@@ -1,0 +1,315 @@
+Mar 31 02:20:14 10.71.56.0 u98457667 Connection from 10.71.56.0 port 40468 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:20:14 10.71.56.0 u98457667 Accepted password for u98457667 from 10.71.56.0 port 40468 ssh2
+Mar 31 02:20:14 10.71.56.0 u98457667 Starting session: subsystem 'sftp' for u98457667 from 10.71.56.0 port 40468 id 0
+Mar 31 02:20:14 10.71.56.0 u98457667 session opened for local user u98457667 from [10.71.56.0]
+Mar 31 02:20:14 10.71.56.0 u98457667 Connection closed by 10.71.56.0 port 40468
+Mar 31 02:20:14 10.71.56.0 u98457667 session closed for local user u98457667 from [10.71.56.0]
+Mar 31 02:20:25 10.71.56.0 u98457667 Connection from 10.71.56.0 port 41786 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:20:26 10.71.56.0 u98457667 Accepted password for u98457667 from 10.71.56.0 port 41786 ssh2
+Mar 31 02:20:26 10.71.56.0 u98457667 Starting session: subsystem 'sftp' for u98457667 from 10.71.56.0 port 41786 id 0
+Mar 31 02:20:26 10.71.56.0 u98457667 session opened for local user u98457667 from [10.71.56.0]
+Mar 31 02:20:26 10.71.56.0 u98457667 session closed for local user u98457667 from [10.71.56.0]
+Mar 31 02:20:26 10.71.56.0 u98457667 Connection closed by 10.71.56.0 port 41786
+Mar 31 02:20:43 10.71.56.0 u98457667 Connection from 10.71.56.0 port 41788 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:20:43 10.71.56.0 u98457667 Accepted password for u98457667 from 10.71.56.0 port 41788 ssh2
+Mar 31 02:20:43 10.71.56.0 u98457667 Starting session: subsystem 'sftp' for u98457667 from 10.71.56.0 port 41788 id 0
+Mar 31 02:20:43 10.71.56.0 u98457667 session opened for local user u98457667 from [10.71.56.0]
+Mar 31 02:20:43 10.71.56.0 u98457667 session closed for local user u98457667 from [10.71.56.0]
+Mar 31 02:20:43 10.71.56.0 u98457667 Connection closed by 10.71.56.0 port 41788
+Mar 31 02:21:48 10.71.56.0 tmp98457667-6379 Connection from 10.71.56.0 port 13394 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:21:48 10.71.56.0 tmp98457667-6379 Accepted password for tmp98457667-6379 from 10.71.56.0 port 13394 ssh2
+Mar 31 02:21:48 10.71.56.0 tmp98457667-6379 Starting session: subsystem 'sftp' for tmp98457667-6379 from 10.71.56.0 port 13394 id 0
+Mar 31 02:21:48 10.71.56.0 tmp98457667-6379 session opened for local user tmp98457667-6379 from [10.71.56.0]
+Mar 31 02:26:48 10.71.56.0 tmp98457667-6379 Connection closed by 10.71.56.0 port 13394
+Mar 31 02:26:48 10.71.56.0 tmp98457667-6379 session closed for local user tmp98457667-6379 from [10.71.56.0]
+Mar 31 02:32:19 10.71.57.0 u98457667 Connection from 10.71.57.0 port 29870 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:32:24 10.71.57.0 u98457667 Failed password for u98457667 from 10.71.57.0 port 29870 ssh2
+Mar 31 02:32:30 10.71.57.0 u98457667 Connection from 10.71.57.0 port 41504 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:32:33 10.71.57.0 u98457667 Failed password for u98457667 from 10.71.57.0 port 41504 ssh2
+Mar 31 02:32:46 10.71.57.0 u98457667 Connection from 10.71.57.0 port 63528 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:32:48 10.71.57.0 u98457667 Failed password for u98457667 from 10.71.57.0 port 63528 ssh2
+Mar 31 02:32:55 10.71.57.0 u98457667 Connection from 10.71.57.0 port 63532 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:32:55 10.71.57.0 u98457667 Accepted password for u98457667 from 10.71.57.0 port 63532 ssh2
+Mar 31 02:32:56 10.71.57.0 u98457667 Starting session: subsystem 'sftp' for u98457667 from 10.71.57.0 port 63532 id 0
+Mar 31 02:32:56 10.71.57.0 u98457667 session opened for local user u98457667 from [10.71.57.0]
+Mar 31 02:33:03 10.71.57.0 u98457667 Connection from 10.71.57.0 port 37068 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:33:04 10.71.57.0 u98457667 Accepted password for u98457667 from 10.71.57.0 port 37068 ssh2
+Mar 31 02:33:03 10.71.57.0 u98457667 Connection from 10.71.57.0 port 37058 on 82.165.87.30 port 22 rdomain ""
+Mar 31 02:33:04 10.71.57.0 u98457667 Accepted password for u98457667 from 10.71.57.0 port 37058 ssh2
+Mar 31 02:33:05 10.71.57.0 u98457667 Starting session: subsystem 'sftp' for u98457667 from 10.71.57.0 port 37068 id 0
+Mar 31 02:33:05 10.71.57.0 u98457667 session opened for local user u98457667 from [10.71.57.0]
+Mar 31 02:33:05 10.71.57.0 u98457667 Starting session: subsystem 'sftp' for u98457667 from 10.71.57.0 port 37058 id 0
+Mar 31 02:33:05 10.71.57.0 u98457667 session opened for local user u98457667 from [10.71.57.0]
+Mar 31 02:33:06 10.71.57.0 u98457667 open "/vision247.html" flags READ mode 0666
+Mar 31 02:33:06 10.71.57.0 u98457667 open "/index.html" flags READ mode 0666
+Mar 31 02:33:07 10.71.57.0 u98457667 close "/vision247.html" bytes read 24647 written 0
+Mar 31 02:33:07 10.71.57.0 u98457667 [10.71.57.0|get|1|24647|0|0|0|2f766973696f6e3234372e68746d6c|]
+Mar 31 02:33:07 10.71.57.0 u98457667 close "/index.html" bytes read 38284 written 0
+Mar 31 02:33:07 10.71.57.0 u98457667 [10.71.57.0|get|1|38284|0|0|0|2f696e6465782e68746d6c|]
+Mar 31 02:33:07 10.71.57.0 u98457667 open "/ifsc-group.html" flags READ mode 0666
+Mar 31 02:33:07 10.71.57.0 u98457667 open "/hyperjar.html" flags READ mode 0666
+Mar 31 02:33:08 10.71.57.0 u98457667 close "/ifsc-group.html" bytes read 17445 written 0
+Mar 31 02:33:08 10.71.57.0 u98457667 [10.71.57.0|get|1|17445|0|0|0|2f696673632d67726f75702e68746d6c|]
+Mar 31 02:33:08 10.71.57.0 u98457667 close "/hyperjar.html" bytes read 22435 written 0
+Mar 31 02:33:08 10.71.57.0 u98457667 [10.71.57.0|get|1|22435|0|0|0|2f68797065726a61722e68746d6c|]
+Mar 31 02:33:08 10.71.57.0 u98457667 open "/contact.html" flags READ mode 0666
+Mar 31 02:33:09 10.71.57.0 u98457667 open "/aptitude.html" flags READ mode 0666
+Mar 31 02:33:09 10.71.57.0 u98457667 close "/contact.html" bytes read 13565 written 0
+Mar 31 02:33:09 10.71.57.0 u98457667 [10.71.57.0|get|1|13565|0|0|0|2f636f6e746163742e68746d6c|]
+Mar 31 02:33:09 10.71.57.0 u98457667 close "/aptitude.html" bytes read 8642 written 0
+Mar 31 02:33:09 10.71.57.0 u98457667 [10.71.57.0|get|0|8642|0|0|0|2f61707469747564652e68746d6c|]
+Mar 31 02:33:09 10.71.57.0 u98457667 open "/about.html" flags READ mode 0666
+Mar 31 02:33:10 10.71.57.0 u98457667 open "/Adam_Munir_CV_22.pdf" flags READ mode 0666
+Mar 31 02:33:10 10.71.57.0 u98457667 close "/about.html" bytes read 9646 written 0
+Mar 31 02:33:10 10.71.57.0 u98457667 [10.71.57.0|get|1|9646|0|0|0|2f61626f75742e68746d6c|]
+Mar 31 02:33:10 10.71.57.0 u98457667 close "/Adam_Munir_CV_22.pdf" bytes read 74282 written 0
+Mar 31 02:33:10 10.71.57.0 u98457667 [10.71.57.0|get|0|74282|0|0|0|2f4164616d5f4d756e69725f43565f32322e706466|]
+Mar 31 02:33:11 10.71.57.0 u98457667 open "/.htaccess" flags READ mode 0666
+Mar 31 02:33:11 10.71.57.0 u98457667 close "/.htaccess" bytes read 380 written 0
+Mar 31 02:33:11 10.71.57.0 u98457667 [10.71.57.0|get|0|380|0|0|0|2f2e6874616363657373|]
+Mar 31 02:33:12 10.71.57.0 u98457667 open "/img/tlogo.svg" flags READ mode 0666
+Mar 31 02:33:12 10.71.57.0 u98457667 open "/img/tlogo.png" flags READ mode 0666
+Mar 31 02:33:12 10.71.57.0 u98457667 close "/img/tlogo.svg" bytes read 1416 written 0
+Mar 31 02:33:12 10.71.57.0 u98457667 [10.71.57.0|get|0|1416|0|0|0|2f696d672f746c6f676f2e737667|]
+Mar 31 02:33:13 10.71.57.0 u98457667 open "/img/thumb1.svg" flags READ mode 0666
+Mar 31 02:33:13 10.71.57.0 u98457667 close "/img/tlogo.png" bytes read 526995 written 0
+Mar 31 02:33:13 10.71.57.0 u98457667 [10.71.57.0|get|1|526995|0|0|0|2f696d672f746c6f676f2e706e67|]
+Mar 31 02:33:14 10.71.57.0 u98457667 open "/img/thumb1.png" flags READ mode 0666
+Mar 31 02:33:14 10.71.57.0 u98457667 close "/img/thumb1.svg" bytes read 8710800 written 0
+Mar 31 02:33:14 10.71.57.0 u98457667 [10.71.57.0|get|1|8710800|0|0|0|2f696d672f7468756d62312e737667|]
+Mar 31 02:33:15 10.71.57.0 u98457667 close "/img/thumb1.png" bytes read 2033513 written 0
+Mar 31 02:33:15 10.71.57.0 u98457667 [10.71.57.0|get|1|2033513|0|0|0|2f696d672f7468756d62312e706e67|]
+Mar 31 02:33:15 10.71.57.0 u98457667 sent status No such file
+Mar 31 02:33:15 10.71.57.0 u98457667 open "/img/sticky_img.png" flags READ mode 0666
+Mar 31 02:33:15 10.71.57.0 u98457667 open "/img/sideR.png" flags READ mode 0666
+Mar 31 02:33:16 10.71.57.0 u98457667 close "/img/sticky_img.png" bytes read 24438 written 0
+Mar 31 02:33:16 10.71.57.0 u98457667 [10.71.57.0|get|1|24438|0|0|0|2f696d672f737469636b795f696d672e706e67|]
+Mar 31 02:33:16 10.71.57.0 u98457667 close "/img/sideR.png" bytes read 116407 written 0
+Mar 31 02:33:16 10.71.57.0 u98457667 [10.71.57.0|get|1|116407|0|0|0|2f696d672f73696465522e706e67|]
+Mar 31 02:33:16 10.71.57.0 u98457667 open "/img/sideL.svg" flags READ mode 0666
+Mar 31 02:33:16 10.71.57.0 u98457667 open "/img/sideL.png" flags READ mode 0666
+Mar 31 02:33:17 10.71.57.0 u98457667 close "/img/sideL.svg" bytes read 3764223 written 0
+Mar 31 02:33:17 10.71.57.0 u98457667 [10.71.57.0|get|1|3764223|0|0|0|2f696d672f736964654c2e737667|]
+Mar 31 02:33:17 10.71.57.0 u98457667 close "/img/sideL.png" bytes read 419672 written 0
+Mar 31 02:33:17 10.71.57.0 u98457667 [10.71.57.0|get|1|419672|0|0|0|2f696d672f736964654c2e706e67|]
+Mar 31 02:33:17 10.71.57.0 u98457667 open "/img/scallionicon.svg" flags READ mode 0666
+Mar 31 02:33:17 10.71.57.0 u98457667 open "/img/scallioncover.png" flags READ mode 0666
+Mar 31 02:33:18 10.71.57.0 u98457667 close "/img/scallionicon.svg" bytes read 7261 written 0
+Mar 31 02:33:18 10.71.57.0 u98457667 [10.71.57.0|get|1|7261|0|0|0|2f696d672f7363616c6c696f6e69636f6e2e737667|]
+Mar 31 02:33:18 10.71.57.0 u98457667 close "/img/scallioncover.png" bytes read 1510921 written 0
+Mar 31 02:33:18 10.71.57.0 u98457667 [10.71.57.0|get|1|1510921|0|0|0|2f696d672f7363616c6c696f6e636f7665722e706e67|]
+Mar 31 02:33:18 10.71.57.0 u98457667 open "/img/onehubtvlogo.svg" flags READ mode 0666
+Mar 31 02:33:19 10.71.57.0 u98457667 open "/img/ohtv_old_main.svg" flags READ mode 0666
+Mar 31 02:33:19 10.71.57.0 u98457667 close "/img/onehubtvlogo.svg" bytes read 6089 written 0
+Mar 31 02:33:19 10.71.57.0 u98457667 [10.71.57.0|get|1|6089|0|0|0|2f696d672f6f6e6568756274766c6f676f2e737667|]
+Mar 31 02:33:19 10.71.57.0 u98457667 close "/img/ohtv_old_main.svg" bytes read 3491852 written 0
+Mar 31 02:33:19 10.71.57.0 u98457667 [10.71.57.0|get|0|3491852|0|0|0|2f696d672f6f6874765f6f6c645f6d61696e2e737667|]
+Mar 31 02:33:20 10.71.57.0 u98457667 open "/img/newonehub.svg" flags READ mode 0666
+Mar 31 02:33:20 10.71.57.0 u98457667 open "/img/newonehub.png" flags READ mode 0666
+Mar 31 02:33:20 10.71.57.0 u98457667 close "/img/newonehub.svg" bytes read 2311000 written 0
+Mar 31 02:33:20 10.71.57.0 u98457667 [10.71.57.0|get|0|2311000|0|0|0|2f696d672f6e65776f6e656875622e737667|]
+Mar 31 02:33:20 10.71.57.0 u98457667 close "/img/newonehub.png" bytes read 3094592 written 0
+Mar 31 02:33:20 10.71.57.0 u98457667 [10.71.57.0|get|0|3094592|0|0|0|2f696d672f6e65776f6e656875622e706e67|]
+Mar 31 02:33:21 10.71.57.0 u98457667 open "/img/motioncover.png" flags READ mode 0666
+Mar 31 02:33:21 10.71.57.0 u98457667 open "/img/moreUI_1.svg" flags READ mode 0666
+Mar 31 02:33:21 10.71.57.0 u98457667 close "/img/motioncover.png" bytes read 2051320 written 0
+Mar 31 02:33:21 10.71.57.0 u98457667 [10.71.57.0|get|0|2051320|0|0|0|2f696d672f6d6f74696f6e636f7665722e706e67|]
+Mar 31 02:33:22 10.71.57.0 u98457667 open "/img/moreUI_1.png" flags READ mode 0666
+Mar 31 02:33:22 10.71.57.0 u98457667 close "/img/moreUI_1.svg" bytes read 14360104 written 0
+Mar 31 02:33:22 10.71.57.0 u98457667 [10.71.57.0|get|1|14360104|0|0|0|2f696d672f6d6f726555495f312e737667|]
+Mar 31 02:33:23 10.71.57.0 u98457667 close "/img/moreUI_1.png" bytes read 3565953 written 0
+Mar 31 02:33:23 10.71.57.0 u98457667 [10.71.57.0|get|1|3565953|0|0|0|2f696d672f6d6f726555495f312e706e67|]
+Mar 31 02:33:23 10.71.57.0 u98457667 open "/img/mob.png" flags READ mode 0666
+Mar 31 02:33:23 10.71.57.0 u98457667 open "/img/m1.png" flags READ mode 0666
+Mar 31 02:33:23 10.71.57.0 u98457667 close "/img/mob.png" bytes read 2946 written 0
+Mar 31 02:33:23 10.71.57.0 u98457667 [10.71.57.0|get|0|2946|0|0|0|2f696d672f6d6f622e706e67|]
+Mar 31 02:33:24 10.71.57.0 u98457667 open "/img/linkedincard.svg" flags READ mode 0666
+Mar 31 02:33:24 10.71.57.0 u98457667 close "/img/m1.png" bytes read 2690689 written 0
+Mar 31 02:33:24 10.71.57.0 u98457667 [10.71.57.0|get|1|2690689|0|0|0|2f696d672f6d312e706e67|]
+Mar 31 02:33:24 10.71.57.0 u98457667 close "/img/linkedincard.svg" bytes read 209944 written 0
+Mar 31 02:33:24 10.71.57.0 u98457667 [10.71.57.0|get|0|209944|0|0|0|2f696d672f6c696e6b6564696e636172642e737667|]
+Mar 31 02:33:24 10.71.57.0 u98457667 open "/img/linkedin.svg" flags READ mode 0666
+Mar 31 02:33:25 10.71.57.0 u98457667 open "/img/iphoneshowcase.png" flags READ mode 0666
+Mar 31 02:33:25 10.71.57.0 u98457667 close "/img/linkedin.svg" bytes read 2377 written 0
+Mar 31 02:33:25 10.71.57.0 u98457667 [10.71.57.0|get|1|2377|0|0|0|2f696d672f6c696e6b6564696e2e737667|]
+Mar 31 02:33:25 10.71.57.0 u98457667 open "/img/img3.png" flags READ mode 0666
+Mar 31 02:33:26 10.71.57.0 u98457667 close "/img/iphoneshowcase.png" bytes read 4955754 written 0
+Mar 31 02:33:26 10.71.57.0 u98457667 [10.71.57.0|get|1|4955754|0|0|0|2f696d672f6970686f6e6573686f77636173652e706e67|]
+Mar 31 02:33:26 10.71.57.0 u98457667 close "/img/img3.png" bytes read 1142028 written 0
+Mar 31 02:33:26 10.71.57.0 u98457667 [10.71.57.0|get|1|1142028|0|0|0|2f696d672f696d67332e706e67|]
+Mar 31 02:33:26 10.71.57.0 u98457667 open "/img/img2.png" flags READ mode 0666
+Mar 31 02:33:27 10.71.57.0 u98457667 open "/img/img1.png" flags READ mode 0666
+Mar 31 02:33:27 10.71.57.0 u98457667 close "/img/img2.png" bytes read 1185738 written 0
+Mar 31 02:33:27 10.71.57.0 u98457667 [10.71.57.0|get|1|1185738|0|0|0|2f696d672f696d67322e706e67|]
+Mar 31 02:33:27 10.71.57.0 u98457667 close "/img/img1.png" bytes read 1442398 written 0
+Mar 31 02:33:27 10.71.57.0 u98457667 [10.71.57.0|get|0|1442398|0|0|0|2f696d672f696d67312e706e67|]
+Mar 31 02:33:27 10.71.57.0 u98457667 open "/img/ifsc_prob_img.svg" flags READ mode 0666
+Mar 31 02:33:28 10.71.57.0 u98457667 open "/img/ifsc_prob_img.png" flags READ mode 0666
+Mar 31 02:33:28 10.71.57.0 u98457667 close "/img/ifsc_prob_img.svg" bytes read 1205944 written 0
+Mar 31 02:33:28 10.71.57.0 u98457667 [10.71.57.0|get|1|1205944|0|0|0|2f696d672f696673635f70726f625f696d672e737667|]
+Mar 31 02:33:28 10.71.57.0 u98457667 close "/img/ifsc_prob_img.png" bytes read 73010 written 0
+Mar 31 02:33:28 10.71.57.0 u98457667 [10.71.57.0|get|0|73010|0|0|0|2f696d672f696673635f70726f625f696d672e706e67|]
+Mar 31 02:33:28 10.71.57.0 u98457667 open "/img/ifsc_m_p.png" flags READ mode 0666
+Mar 31 02:33:29 10.71.57.0 u98457667 open "/img/ifsc_m.png" flags READ mode 0666
+Mar 31 02:33:29 10.71.57.0 u98457667 close "/img/ifsc_m_p.png" bytes read 1487405 written 0
+Mar 31 02:33:29 10.71.57.0 u98457667 [10.71.57.0|get|1|1487405|0|0|0|2f696d672f696673635f6d5f702e706e67|]
+Mar 31 02:33:29 10.71.57.0 u98457667 open "/img/ifsc_logo.svg" flags READ mode 0666
+Mar 31 02:33:29 10.71.57.0 u98457667 close "/img/ifsc_m.png" bytes read 1587480 written 0
+Mar 31 02:33:29 10.71.57.0 u98457667 [10.71.57.0|get|0|1587480|0|0|0|2f696d672f696673635f6d2e706e67|]
+Mar 31 02:33:30 10.71.57.0 u98457667 close "/img/ifsc_logo.svg" bytes read 12315 written 0
+Mar 31 02:33:30 10.71.57.0 u98457667 [10.71.57.0|get|1|12315|0|0|0|2f696d672f696673635f6c6f676f2e737667|]
+Mar 31 02:33:30 10.71.57.0 u98457667 open "/img/ifsc_group_dash.jpg" flags READ mode 0666
+Mar 31 02:33:31 10.71.57.0 u98457667 open "/img/ifsc_dash.svg" flags READ mode 0666
+Mar 31 02:33:31 10.71.57.0 u98457667 close "/img/ifsc_group_dash.jpg" bytes read 326208 written 0
+Mar 31 02:33:31 10.71.57.0 u98457667 [10.71.57.0|get|1|326208|0|0|0|2f696d672f696673635f67726f75705f646173682e6a7067|]
+Mar 31 02:33:31 10.71.57.0 u98457667 close "/img/ifsc_dash.svg" bytes read 1494529 written 0
+Mar 31 02:33:31 10.71.57.0 u98457667 [10.71.57.0|get|0|1494529|0|0|0|2f696d672f696673635f646173682e737667|]
+Mar 31 02:33:31 10.71.57.0 u98457667 open "/img/ifsc_dash.jpg" flags READ mode 0666
+Mar 31 02:33:32 10.71.57.0 u98457667 open "/img/hpj_logo.svg" flags READ mode 0666
+Mar 31 02:33:32 10.71.57.0 u98457667 close "/img/ifsc_dash.jpg" bytes read 665543 written 0
+Mar 31 02:33:32 10.71.57.0 u98457667 [10.71.57.0|get|1|665543|0|0|0|2f696d672f696673635f646173682e6a7067|]
+Mar 31 02:33:32 10.71.57.0 u98457667 close "/img/hpj_logo.svg" bytes read 30684 written 0
+Mar 31 02:33:32 10.71.57.0 u98457667 [10.71.57.0|get|0|30684|0|0|0|2f696d672f68706a5f6c6f676f2e737667|]
+Mar 31 02:33:32 10.71.57.0 u98457667 open "/img/github.svg" flags READ mode 0666
+Mar 31 02:33:33 10.71.57.0 u98457667 open "/img/generuklogo.svg" flags READ mode 0666
+Mar 31 02:33:33 10.71.57.0 u98457667 close "/img/github.svg" bytes read 2621 written 0
+Mar 31 02:33:33 10.71.57.0 u98457667 [10.71.57.0|get|1|2621|0|0|0|2f696d672f6769746875622e737667|]
+Mar 31 02:33:33 10.71.57.0 u98457667 close "/img/generuklogo.svg" bytes read 13180 written 0
+Mar 31 02:33:33 10.71.57.0 u98457667 [10.71.57.0|get|0|13180|0|0|0|2f696d672f67656e6572756b6c6f676f2e737667|]
+Mar 31 02:33:33 10.71.57.0 u98457667 open "/img/generuk_1.png" flags READ mode 0666
+Mar 31 02:33:34 10.71.57.0 u98457667 open "/img/generuk_1.jpg" flags READ mode 0666
+Mar 31 02:33:34 10.71.57.0 u98457667 close "/img/generuk_1.png" bytes read 2250199 written 0
+Mar 31 02:33:34 10.71.57.0 u98457667 [10.71.57.0|get|1|2250199|0|0|0|2f696d672f67656e6572756b5f312e706e67|]
+Mar 31 02:33:34 10.71.57.0 u98457667 close "/img/generuk_1.jpg" bytes read 1796148 written 0
+Mar 31 02:33:34 10.71.57.0 u98457667 [10.71.57.0|get|0|1796148|0|0|0|2f696d672f67656e6572756b5f312e6a7067|]
+Mar 31 02:33:35 10.71.57.0 u98457667 open "/img/generuk.jpg" flags READ mode 0666
+Mar 31 02:33:35 10.71.57.0 u98457667 open "/img/gbcover.png" flags READ mode 0666
+Mar 31 02:33:35 10.71.57.0 u98457667 close "/img/generuk.jpg" bytes read 3390024 written 0
+Mar 31 02:33:35 10.71.57.0 u98457667 [10.71.57.0|get|0|3390024|0|0|0|2f696d672f67656e6572756b2e6a7067|]
+Mar 31 02:33:35 10.71.57.0 u98457667 close "/img/gbcover.png" bytes read 1557482 written 0
+Mar 31 02:33:35 10.71.57.0 u98457667 [10.71.57.0|get|0|1557482|0|0|0|2f696d672f6762636f7665722e706e67|]
+Mar 31 02:33:36 10.71.57.0 u98457667 open "/img/full_img_hpj.svg" flags READ mode 0666
+Mar 31 02:33:36 10.71.57.0 u98457667 open "/img/full_img_hpj.png" flags READ mode 0666
+Mar 31 02:33:36 10.71.57.0 u98457667 close "/img/full_img_hpj.svg" bytes read 948624 written 0
+Mar 31 02:33:36 10.71.57.0 u98457667 [10.71.57.0|get|0|948624|0|0|0|2f696d672f66756c6c5f696d675f68706a2e737667|]
+Mar 31 02:33:37 10.71.57.0 u98457667 close "/img/full_img_hpj.png" bytes read 279406 written 0
+Mar 31 02:33:37 10.71.57.0 u98457667 [10.71.57.0|get|1|279406|0|0|0|2f696d672f66756c6c5f696d675f68706a2e706e67|]
+Mar 31 02:33:37 10.71.57.0 u98457667 open "/img/features_3.png" flags READ mode 0666
+Mar 31 02:33:37 10.71.57.0 u98457667 open "/img/features_2.png" flags READ mode 0666
+Mar 31 02:33:37 10.71.57.0 u98457667 close "/img/features_3.png" bytes read 324376 written 0
+Mar 31 02:33:37 10.71.57.0 u98457667 [10.71.57.0|get|0|324376|0|0|0|2f696d672f66656174757265735f332e706e67|]
+Mar 31 02:33:38 10.71.57.0 u98457667 close "/img/features_2.png" bytes read 41620 written 0
+Mar 31 02:33:38 10.71.57.0 u98457667 [10.71.57.0|get|1|41620|0|0|0|2f696d672f66656174757265735f322e706e67|]
+Mar 31 02:33:38 10.71.57.0 u98457667 open "/img/features_1.png" flags READ mode 0666
+Mar 31 02:33:38 10.71.57.0 u98457667 open "/img/email.png" flags READ mode 0666
+Mar 31 02:33:39 10.71.57.0 u98457667 close "/img/features_1.png" bytes read 87430 written 0
+Mar 31 02:33:39 10.71.57.0 u98457667 [10.71.57.0|get|1|87430|0|0|0|2f696d672f66656174757265735f312e706e67|]
+Mar 31 02:33:39 10.71.57.0 u98457667 close "/img/email.png" bytes read 2808 written 0
+Mar 31 02:33:39 10.71.57.0 u98457667 [10.71.57.0|get|1|2808|0|0|0|2f696d672f656d61696c2e706e67|]
+Mar 31 02:33:39 10.71.57.0 u98457667 open "/img/elyzocover.png" flags READ mode 0666
+Mar 31 02:33:39 10.71.57.0 u98457667 open "/img/btnfam.png" flags READ mode 0666
+Mar 31 02:33:40 10.71.57.0 u98457667 close "/img/elyzocover.png" bytes read 1484178 written 0
+Mar 31 02:33:40 10.71.57.0 u98457667 [10.71.57.0|get|1|1484178|0|0|0|2f696d672f656c797a6f636f7665722e706e67|]
+Mar 31 02:33:40 10.71.57.0 u98457667 close "/img/btnfam.png" bytes read 706877 written 0
+Mar 31 02:33:40 10.71.57.0 u98457667 [10.71.57.0|get|1|706877|0|0|0|2f696d672f62746e66616d2e706e67|]
+Mar 31 02:33:40 10.71.57.0 u98457667 open "/img/altitudecover.png" flags READ mode 0666
+Mar 31 02:33:40 10.71.57.0 u98457667 open "/img/behance.svg" flags READ mode 0666
+Mar 31 02:33:41 10.71.57.0 u98457667 close "/img/behance.svg" bytes read 4393 written 0
+Mar 31 02:33:41 10.71.57.0 u98457667 close "/img/altitudecover.png" bytes read 2699642 written 0
+Mar 31 02:33:41 10.71.57.0 u98457667 [10.71.57.0|get|1|4393|0|0|0|2f696d672f626568616e63652e737667|]
+Mar 31 02:33:41 10.71.57.0 u98457667 [10.71.57.0|get|1|2699642|0|0|0|2f696d672f616c746974756465636f7665722e706e67|]
+Mar 31 02:33:41 10.71.57.0 u98457667 open "/img/altitude.png" flags READ mode 0666
+Mar 31 02:33:41 10.71.57.0 u98457667 open "/img/alticon.svg" flags READ mode 0666
+Mar 31 02:33:42 10.71.57.0 u98457667 close "/img/altitude.png" bytes read 4640055 written 0
+Mar 31 02:33:42 10.71.57.0 u98457667 [10.71.57.0|get|1|4640055|0|0|0|2f696d672f616c7469747564652e706e67|]
+Mar 31 02:33:42 10.71.57.0 u98457667 close "/img/alticon.svg" bytes read 6187560 written 0
+Mar 31 02:33:42 10.71.57.0 u98457667 [10.71.57.0|get|1|6187560|0|0|0|2f696d672f616c7469636f6e2e737667|]
+Mar 31 02:33:43 10.71.57.0 u98457667 open "/img/PLANSIMG.png" flags READ mode 0666
+Mar 31 02:33:43 10.71.57.0 u98457667 open "/img/M3.png" flags READ mode 0666
+Mar 31 02:33:43 10.71.57.0 u98457667 close "/img/PLANSIMG.png" bytes read 1550108 written 0
+Mar 31 02:33:43 10.71.57.0 u98457667 [10.71.57.0|get|0|1550108|0|0|0|2f696d672f504c414e53494d472e706e67|]
+Mar 31 02:33:43 10.71.57.0 u98457667 close "/img/M3.png" bytes read 2927338 written 0
+Mar 31 02:33:43 10.71.57.0 u98457667 [10.71.57.0|get|0|2927338|0|0|0|2f696d672f4d332e706e67|]
+Mar 31 02:33:44 10.71.57.0 u98457667 open "/img/M2.svg" flags READ mode 0666
+Mar 31 02:33:44 10.71.57.0 u98457667 open "/img/M2.png" flags READ mode 0666
+Mar 31 02:33:44 10.71.57.0 u98457667 close "/img/M2.svg" bytes read 2209378 written 0
+Mar 31 02:33:44 10.71.57.0 u98457667 [10.71.57.0|get|0|2209378|0|0|0|2f696d672f4d322e737667|]
+Mar 31 02:33:45 10.71.57.0 u98457667 close "/img/M2.png" bytes read 1425290 written 0
+Mar 31 02:33:45 10.71.57.0 u98457667 [10.71.57.0|get|1|1425290|0|0|0|2f696d672f4d322e706e67|]
+Mar 31 02:33:45 10.71.57.0 u98457667 open "/img/M.png" flags READ mode 0666
+Mar 31 02:33:45 10.71.57.0 u98457667 open "/img/LANDING_PAGE_1200px.png" flags READ mode 0666
+Mar 31 02:33:45 10.71.57.0 u98457667 close "/img/M.png" bytes read 131493 written 0
+Mar 31 02:33:45 10.71.57.0 u98457667 [10.71.57.0|get|0|131493|0|0|0|2f696d672f4d2e706e67|]
+Mar 31 02:33:46 10.71.57.0 u98457667 close "/img/LANDING_PAGE_1200px.png" bytes read 3092119 written 0
+Mar 31 02:33:46 10.71.57.0 u98457667 [10.71.57.0|get|1|3092119|0|0|0|2f696d672f4c414e44494e475f504147455f3132303070782e706e67|]
+Mar 31 02:33:46 10.71.57.0 u98457667 open "/img/HPJ_HERO_1.svg" flags READ mode 0666
+Mar 31 02:33:46 10.71.57.0 u98457667 open "/img/HPJ_HERO.svg" flags READ mode 0666
+Mar 31 02:33:47 10.71.57.0 u98457667 close "/img/HPJ_HERO_1.svg" bytes read 2763589 written 0
+Mar 31 02:33:47 10.71.57.0 u98457667 [10.71.57.0|get|1|2763589|0|0|0|2f696d672f48504a5f4845524f5f312e737667|]
+Mar 31 02:33:47 10.71.57.0 u98457667 close "/img/HPJ_HERO.svg" bytes read 2764032 written 0
+Mar 31 02:33:47 10.71.57.0 u98457667 [10.71.57.0|get|1|2764032|0|0|0|2f696d672f48504a5f4845524f2e737667|]
+Mar 31 02:33:47 10.71.57.0 u98457667 open "/img/HPJ_HERO.png" flags READ mode 0666
+Mar 31 02:33:48 10.71.57.0 u98457667 open "/img/HPJ_2.png" flags READ mode 0666
+Mar 31 02:33:48 10.71.57.0 u98457667 close "/img/HPJ_HERO.png" bytes read 1211796 written 0
+Mar 31 02:33:48 10.71.57.0 u98457667 [10.71.57.0|get|1|1211796|0|0|0|2f696d672f48504a5f4845524f2e706e67|]
+Mar 31 02:33:48 10.71.57.0 u98457667 close "/img/HPJ_2.png" bytes read 336237 written 0
+Mar 31 02:33:48 10.71.57.0 u98457667 [10.71.57.0|get|0|336237|0|0|0|2f696d672f48504a5f322e706e67|]
+Mar 31 02:33:48 10.71.57.0 u98457667 open "/img/HPJ_1.png" flags READ mode 0666
+Mar 31 02:33:49 10.71.57.0 u98457667 open "/img/G.png" flags READ mode 0666
+Mar 31 02:33:49 10.71.57.0 u98457667 close "/img/HPJ_1.png" bytes read 346535 written 0
+Mar 31 02:33:49 10.71.57.0 u98457667 [10.71.57.0|get|1|346535|0|0|0|2f696d672f48504a5f312e706e67|]
+Mar 31 02:33:49 10.71.57.0 u98457667 close "/img/G.png" bytes read 22612 written 0
+Mar 31 02:33:49 10.71.57.0 u98457667 [10.71.57.0|get|0|22612|0|0|0|2f696d672f472e706e67|]
+Mar 31 02:33:49 10.71.57.0 u98457667 open "/img/E.png" flags READ mode 0666
+Mar 31 02:33:50 10.71.57.0 u98457667 open "/img/Artboard.png" flags READ mode 0666
+Mar 31 02:33:50 10.71.57.0 u98457667 close "/img/E.png" bytes read 23309 written 0
+Mar 31 02:33:50 10.71.57.0 u98457667 [10.71.57.0|get|1|23309|0|0|0|2f696d672f452e706e67|]
+Mar 31 02:33:50 10.71.57.0 u98457667 close "/img/Artboard.png" bytes read 19933 written 0
+Mar 31 02:33:50 10.71.57.0 u98457667 [10.71.57.0|get|0|19933|0|0|0|2f696d672f417274626f6172642e706e67|]
+Mar 31 02:33:50 10.71.57.0 u98457667 open "/img/Artboard Copy 3.png" flags READ mode 0666
+Mar 31 02:33:51 10.71.57.0 u98457667 close "/img/Artboard Copy 3.png" bytes read 154296 written 0
+Mar 31 02:33:51 10.71.57.0 u98457667 [10.71.57.0|get|1|154296|0|0|0|2f696d672f417274626f61726420436f707920332e706e67|]
+Mar 31 02:33:51 10.71.57.0 u98457667 open "/img/1_1.svg" flags READ mode 0666
+Mar 31 02:33:51 10.71.57.0 u98457667 open "/img/1_1.png" flags READ mode 0666
+Mar 31 02:33:52 10.71.57.0 u98457667 close "/img/1_1.svg" bytes read 2208979 written 0
+Mar 31 02:33:52 10.71.57.0 u98457667 [10.71.57.0|get|0|2208979|0|0|0|2f696d672f315f312e737667|]
+Mar 31 02:33:52 10.71.57.0 u98457667 close "/img/1_1.png" bytes read 1347287 written 0
+Mar 31 02:33:52 10.71.57.0 u98457667 [10.71.57.0|get|1|1347287|0|0|0|2f696d672f315f312e706e67|]
+Mar 31 02:33:53 10.71.57.0 u98457667 open "/js/vision247.js" flags READ mode 0666
+Mar 31 02:33:53 10.71.57.0 u98457667 open "/js/jquery.js" flags READ mode 0666
+Mar 31 02:33:53 10.71.57.0 u98457667 close "/js/vision247.js" bytes read 561198 written 0
+Mar 31 02:33:53 10.71.57.0 u98457667 [10.71.57.0|get|0|561198|0|0|0|2f6a732f766973696f6e3234372e6a73|]
+Mar 31 02:33:54 10.71.57.0 u98457667 close "/js/jquery.js" bytes read 89477 written 0
+Mar 31 02:33:54 10.71.57.0 u98457667 [10.71.57.0|get|1|89477|0|0|0|2f6a732f6a71756572792e6a73|]
+Mar 31 02:33:54 10.71.57.0 u98457667 open "/js/index.js" flags READ mode 0666
+Mar 31 02:33:54 10.71.57.0 u98457667 open "/js/ifscgroup.js" flags READ mode 0666
+Mar 31 02:33:54 10.71.57.0 u98457667 close "/js/index.js" bytes read 561198 written 0
+Mar 31 02:33:54 10.71.57.0 u98457667 [10.71.57.0|get|0|561198|0|0|0|2f6a732f696e6465782e6a73|]
+Mar 31 02:33:55 10.71.57.0 u98457667 close "/js/ifscgroup.js" bytes read 561198 written 0
+Mar 31 02:33:55 10.71.57.0 u98457667 [10.71.57.0|get|1|561198|0|0|0|2f6a732f6966736367726f75702e6a73|]
+Mar 31 02:33:55 10.71.57.0 u98457667 open "/js/hyperjar.js" flags READ mode 0666
+Mar 31 02:33:55 10.71.57.0 u98457667 open "/js/aptitude_contact.js" flags READ mode 0666
+Mar 31 02:33:55 10.71.57.0 u98457667 close "/js/hyperjar.js" bytes read 561197 written 0
+Mar 31 02:33:55 10.71.57.0 u98457667 [10.71.57.0|get|0|561197|0|0|0|2f6a732f68797065726a61722e6a73|]
+Mar 31 02:33:56 10.71.57.0 u98457667 close "/js/aptitude_contact.js" bytes read 590562 written 0
+Mar 31 02:33:56 10.71.57.0 u98457667 [10.71.57.0|get|1|590562|0|0|0|2f6a732f61707469747564655f636f6e746163742e6a73|]
+Mar 31 02:33:56 10.71.57.0 u98457667 open "/js/about.js" flags READ mode 0666
+Mar 31 02:33:57 10.71.57.0 u98457667 close "/js/about.js" bytes read 561197 written 0
+Mar 31 02:33:57 10.71.57.0 u98457667 [10.71.57.0|get|1|561197|0|0|0|2f6a732f61626f75742e6a73|]
+Mar 31 02:33:57 10.71.57.0 u98457667 open "/logs/access.log.14.1" flags READ mode 0666
+Mar 31 02:33:57 10.71.57.0 u98457667 close "/logs/access.log.14.1" bytes read 19006 written 0
+Mar 31 02:33:57 10.71.57.0 u98457667 [10.71.57.0|get|0|19006|0|0|0|2f6c6f67732f6163636573732e6c6f672e31342e31|]
+Mar 31 02:33:58 10.71.57.0 u98457667 open "/logs/access.log.13.4.gz" flags READ mode 0666
+Mar 31 02:33:58 10.71.57.0 u98457667 open "/logs/access.log.13.1.gz" flags READ mode 0666
+Mar 31 02:33:58 10.71.57.0 u98457667 close "/logs/access.log.13.4.gz" bytes read 21001 written 0
+Mar 31 02:33:58 10.71.57.0 u98457667 [10.71.57.0|get|0|21001|0|0|0|2f6c6f67732f6163636573732e6c6f672e31332e342e677a|]
+Mar 31 02:33:58 10.71.57.0 u98457667 close "/logs/access.log.13.1.gz" bytes read 9011 written 0
+Mar 31 02:33:58 10.71.57.0 u98457667 [10.71.57.0|get|0|9011|0|0|0|2f6c6f67732f6163636573732e6c6f672e31332e312e677a|]
+Mar 31 02:33:59 10.71.57.0 u98457667 open "/logs/access.log.11.gz" flags READ mode 0666
+Mar 31 02:33:59 10.71.57.0 u98457667 open "/logs/access.log.06.gz" flags READ mode 0666
+Mar 31 02:33:59 10.71.57.0 u98457667 close "/logs/access.log.11.gz" bytes read 50436 written 0
+Mar 31 02:33:59 10.71.57.0 u98457667 [10.71.57.0|get|0|50436|0|0|0|2f6c6f67732f6163636573732e6c6f672e31312e677a|]
+Mar 31 02:33:59 10.71.57.0 u98457667 close "/logs/access.log.06.gz" bytes read 47983 written 0
+Mar 31 02:33:59 10.71.57.0 u98457667 [10.71.57.0|get|0|47983|0|0|0|2f6c6f67732f6163636573732e6c6f672e30362e677a|]
+Mar 31 02:34:00 10.71.57.0 u98457667 open "/logs/access.log.13.6.gz" flags READ mode 0666
+Mar 31 02:34:00 10.71.57.0 u98457667 open "/logs/sftp.log" flags READ mode 0666

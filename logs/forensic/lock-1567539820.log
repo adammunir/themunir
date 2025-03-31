@@ -1,0 +1,17 @@
+Please find our analysis result below.
+In order to make your website functional again you need to change file permissions at least to 604 after cleaning up.
+
+The following files have been likely modified by others.
+Please check these files and re-upload them from a clean backup.
+~/app796855770/wp-content/themes/twentysixteen/functions.php
+~/app796854867/wp-content/themes/twentynineteen/functions.php
+~/app796855770/wp-content/themes/twentynineteen/functions.php
+~/app796854867/wp-content/themes/unrovr/functions.php
+~/app796855770/wp-content/themes/unrovr-child/functions.php
+~/app796854867/wp-content/themes/twentyseventeen/functions.php
+~/app796855770/wp-content/themes/writers/functions.php
+~/app796854867/wp-content/themes/twentysixteen/functions.php
+~/app796855770/wp-content/themes/unrovr/functions.php
+~/app796854867/wp-content/themes/pure-simple/functions.php
+~/app796855770/wp-content/themes/twentyseventeen/functions.php
+

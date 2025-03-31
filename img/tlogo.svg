@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="593px" viewBox="0 0 750 593" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <defs>
+        <linearGradient x1="90.9796591%" y1="26.1386312%" x2="0%" y2="81.3122559%" id="linearGradient-1">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#C5C0C0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M226.656675,3.57705866 L451.114073,448.329912 L374.512128,593 L150.573069,153.212201 L226.656675,3.57705866 Z M526.294427,0 L749.346213,448.246247 L601.143075,448.246247 L526.294427,299.66223 L485.71067,376.122647 L410.139388,231.269609 L526.294427,0 Z M114.839701,222.830749 L189.085701,367.336367 L152.107264,448.110653 L0,448.110653 L114.839701,222.830749 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-2266.000000, -1191.000000)">
+            <g id="Group-5" transform="translate(2266.653787, 1191.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Combined-Shape" fill="url(#linearGradient-1)" opacity="0.800901867" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
