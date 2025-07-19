@@ -1,0 +1,1035 @@
+<!DOCTYPE html
+><!-- Last Published: Tue Sep 14 2021 19:10:26 GMT+0000 (Coordinated Universal Time) -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lynx Drive</title>
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="/styles/lynxmobile.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Karla:regular,italic,700,700italic:latin,latin-ext",
+            "Inter:300,regular,500,600,700:latin,latin-ext"
+          ]
+        }
+      });
+    </script>
+    <!--[if lt IE 9
+      ]><script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+        type="text/javascript"
+      ></script
+    ><![endif]-->
+    <script type="text/javascript">
+      !(function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        (n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch");
+      })(window, document);
+    </script>
+    <link
+      href="img/tlogo.svg"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="img/tlogo.svg"
+      rel="apple-touch-icon"
+    />
+    <style>
+      /* // Remove iOS input field inner shadow */
+      .tall-input-field {
+        -webkit-appearance: none;
+      }
+
+      /* // Turn off default iOS dark highlight tap color */
+      .tab-toggle-switch {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      .journey-insight {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+
+      .journey-insight h3 {
+        font-size: 24px;
+        color: #1F2937;
+        margin-bottom: 20px;
+      }
+
+      .journey-description {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #4B5563;
+        margin-bottom: 40px;
+      }
+
+      .journey-phase-content {
+        margin-bottom: 40px;
+        padding-left: 24px;
+        border-left: 3px solid #E5E7EB;
+        position: relative;
+      }
+
+      .journey-phase-content::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 13px;
+        height: 13px;
+        background: #4B5563;
+        border-radius: 50%;
+      }
+
+      .journey-phase-content h4 {
+        font-size: 18px;
+        color: #1F2937;
+        margin-bottom: 16px;
+      }
+
+      .journey-phase-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #4B5563;
+        margin-bottom: 16px;
+      }
+
+      .key-finding {
+        background: #F3F4F6;
+        padding: 16px;
+        border-left: 4px solid #10B981;
+        margin: 20px 0;
+        font-size: 14px;
+        color: #374151;
+      }
+
+      .journey-conclusion {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #1F2937;
+        margin-top: 40px;
+        padding: 20px;
+        background: #F9FAFB;
+        border-radius: 6px;
+      }
+
+      .phase-tasks {
+        margin: 16px 0;
+        padding-left: 20px;
+      }
+
+      .phase-tasks li {
+        color: #4B5563;
+        margin-bottom: 8px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      .pain-point {
+        font-style: italic;
+        color: #DC2626;
+        margin: 16px 0;
+        padding: 12px;
+        background: #FEF2F2;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .key-learnings {
+        margin-top: 40px;
+        padding: 24px;
+        background: #F8FAFC;
+        border-radius: 8px;
+        border-left: 4px solid #3B82F6;
+      }
+
+      .key-learnings h4 {
+        color: #1F2937;
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+
+      .key-learnings ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .key-learnings li {
+        color: #4B5563;
+        margin-bottom: 12px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .journey-timeline {
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .timeline-phase {
+          width: 100%;
+        }
+
+        .journey-timeline::before {
+          width: 2px;
+          height: 100%;
+          left: 20px;
+          top: 0;
+        }
+      }
+    </style>
+    
+
+    <script>
+      // Changing onClick attribute to whenClicked
+      window.onload = function() {
+        var anchors = document.getElementsByTagName("*");
+        for (var i = 0; i < anchors.length; i++) {
+          var anchor = anchors[i];
+          anchor.onclick = function() {
+            code = this.getAttribute("whenClicked");
+            eval(code);
+          };
+        }
+      };
+
+      // Scroll to top & track click
+      function scrollAndTrack() {
+        window.scroll({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="top" class="top-of-the-page"></div>
+    <div class="menu-holder">
+      <a href="/index.html" class="icon-button w-inline-block"
+        ><img
+          src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd65af4e1ad8f10bcd72f7b_ArrowLeft.svg"
+          loading="lazy"
+          width="24"
+          height="24"
+          alt="Back Arrow"/></a
+      ><a
+        data-w-id="1eebb6ce-b4d0-98b0-73c5-dbab31dfc77f"
+        href="#"
+        class="icon-button w-inline-block"
+        ><div
+          data-w-id="1eebb6ce-b4d0-98b0-73c5-dbab31dfc780"
+          data-animation-type="lottie"
+          data-src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd510d556f666a714cf5547_menu-to-close.json"
+          data-loop="0"
+          data-direction="1"
+          data-autoplay="0"
+          data-is-ix2-target="1"
+          data-renderer="canvas"
+          data-default-duration="0.6666666666666666"
+          data-duration="0.6666666666666666"
+          data-ix2-initial-state="0"
+          class="menu-to-close-icon"
+        ></div
+      ></a>
+      <div class="menu-container">
+        <a href="index.html" class="menu-item w-inline-block"
+          ><img
+            src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b0d34b9d09283ff00d2_House.svg"
+            loading="lazy"
+            width="24"
+            height="24"
+            alt=""
+            class="menu-item-icon"
+          />
+          <div class="menu-item-text">Home</div></a
+        ><a
+          href="about.html"
+          class="menu-item w-inline-block"
+          ><img
+            src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b1353c1a180dbc8beb4_User.svg"
+            loading="lazy"
+            width="24"
+            height="24"
+            alt=""
+            class="menu-item-icon"
+          />
+          <div class="menu-item-text">About</div></a
+        ><a
+          href="contact.html"
+          class="menu-item w-inline-block"
+          ><img
+            src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b112a8c8af4f99d7507_EnvelopeSimple.svg"
+            loading="lazy"
+            width="24"
+            height="24"
+            alt=""
+            class="menu-item-icon"
+          />
+          <div class="menu-item-text">Contact</div></a
+        >
+      </div>
+    </div>
+    <div
+      class="menu-holder case-study-bottom-nav-elements-wrapper case-study-bottom-nav-elements-wrapper"
+    >
+      <a href="suggested-jobs#" class="bottom-icon-button hidden w-inline-block"
+        ><img
+          src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd65af4e1ad8f10bcd72f7b_ArrowLeft.svg"
+          loading="lazy"
+          width="24"
+          height="24"
+          alt="Back Arrow"
+      /></a>
+      <div
+        data-w-id="19c9b784-251f-d2a0-f3fd-3313a71ec7e3"
+        class="back-to-top-animation-wrapper"
+      >
+        <a
+          href="lynxdrive.html#top"
+          data-w-id="2075c8d4-c8cd-6473-f5c8-9d5972679131"
+          class="bottom-icon-button-teal w-inline-block"
+          ><div
+            data-w-id="cdedce1b-f712-ba0f-f4c4-50a8a816b7a5"
+            class="white-scale-down-circle"
+          ></div>
+          <img
+            src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd65af4e1ad8f10bcd72f7b_ArrowLeft.svg"
+            loading="lazy"
+            width="24"
+            height="24"
+            alt="Back Arrow"
+            class="image-2"/>
+          <div
+            data-w-id="30a7ec6e-0296-d805-3cdf-343b7d972d0d"
+            data-animation-type="lottie"
+            data-src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/60c398cb203fa6de9a6cc363_colored-loader.json"
+            data-loop="0"
+            data-direction="1"
+            data-autoplay="0"
+            data-is-ix2-target="1"
+            data-renderer="svg"
+            data-default-duration="10"
+            data-duration="0"
+            class="colored-loader"
+          ></div
+        ></a>
+      </div>
+    </div>
+    <div class="sj-hero-container">
+      <img
+        src="img/lynx_mobile.svg"
+        loading="lazy"
+        sizes="(max-width: 1279px) 81vw, 972px"
+        style="z-index: -99 !important;"
+        srcset="        "
+        alt="Suggested Jobs third carousel"
+        class="sj-hero-image back"
+      />
+    </div>
+    <div class="case-study-header-content">
+      <div class="case-study-title-and-company" style="z-index: 9 !important;">
+        <img src="/img/lynx_logo.svg" loading="lazy" alt="" class="company-logo" />
+        <div class="v-space small"></div>
+        <h1>Lynx Mobile</h1>
+        <div class="h-stack">
+          <p class="strong-text">The Toro Company</p>
+          <div class="h-space-8px"></div>
+          <p class="strong-text">•</p>
+          <div class="h-space-8px"></div>
+          <p class="strong-text">2023</p>
+        </div>
+      </div>
+      <div class="v-space medium"></div>
+      <div class="intro-role-team">
+        <p class="callout-text">
+          <b>Lynx Drive</b> is a mission-critical desktop platform used by professionals to manage high-scale irrigation systems across golf courses, sports fields, and large landscapes. Originally designed over a decade ago, the legacy platform was deeply functional but plagued by bloated workflows, dated visuals, and poor user onboarding.
+
+          <br><br>
+
+          I was brought in as the <b>senior designer</b> to lead the redesign and UX transformation of the desktop experience—starting with in-depth audits, stakeholder alignment, and continuous user research. The result is a scalable, intuitive, and future-forward system that’s actively used by thousands in the field.
+
+          <br><br>
+
+          This case study focuses on the desktop platform. <a href="lynxmobile.html">Jump to mobile case study →</a>
+        </p>
+        <div class="role-team">
+          <div class="role-column">
+            <div class="role-section">
+              <h2 class="small-caps-header">Role</h2>
+              <p class="role-subtitle last-one">Senior Designer</p>
+            </div>
+            <div class="role-section last">
+              <h2 class="small-caps-header">Responsibilities</h2>
+              <p class="role-subtitle">UX/UI Design</p>
+              <p class="role-subtitle">Design System Architecture</p>
+              <p class="role-subtitle">Prototyping & Testing</p>
+              <p class="role-subtitle">Stakeholder Alignment</p>
+              <p class="role-subtitle last-one">Developer Handoff</p>
+            </div>
+          </div>
+          <div class="team-column">
+            <div class="role-section last">
+              <h2 class="small-caps-header">Team</h2>
+              <p class="role-subtitle">Internal PM & Engineering Team</p>
+              <p class="role-subtitle">UX Research Support (in-house)</p>
+              <p class="role-subtitle">Field Technicians & Beta Users</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="v-space large"></div>
+    <!-- INTRO -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <h2 class="section-title">Reimagining Lynx Drive</h2>
+          <p class="large-lead">A complete rethink of a legacy platform powering some of the world’s most advanced irrigation systems.</p>
+          <p>Lynx Drive is the number one software platform for golf irrigation management in the world. It's trusted by nearly 90% of PGA-certified golf courses globally and is considered the gold standard for precise, large-scale irrigation. Its legacy of performance and reliability made it indispensable—but also created inertia against change.</p>
+          <p>Lynx Drive is the core control interface for managing large-scale irrigation infrastructure. Used by superintendents, field techs, and managers at golf courses and sports facilities, it handles everything from zone programming and flow tracking to alert resolution and seasonal forecasting. It’s an incredibly powerful system—but power had come at the cost of usability. The platform was outdated, overwhelming, and error-prone. My mission was to lead a full-scale design transformation.</p>
+          <p>I was brought in as the senior designer to drive this transformation end-to-end: from research and product framing, through UX strategy and prototyping, to system design and handoff. This case study outlines that journey—from ambiguity to a platform that users now describe as “finally intuitive.”</p>
+        </div>
+      </div>
+    </section>
+    <!-- IMAGE 0: HERO OVERVIEW -->
+    <div class="full-width-image-block gray-placeholder" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="wireframe-placeholder"></div>
+      <img src="/img/M1.svg" alt="Hero overview or dashboard mockup" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" />
+      <p class="caption">We reimagined the control map as a spatial command layer—an intuitive, visual way to work in parallel with the main interface. From this single view, users could inspect, diagnose, and trigger actions in real-time.</p>
+    </div>
+
+    <div class="v-space xlarge"></div>
+
+    <div class="quote-divider">
+      <h2>“It’s solid, reliable, but it hasn’t evolved the way our jobs have.”</h2>
+      <p class="caption">— Veteran Lynx operator, East Coast</p>
+    </div>
+
+
+    <!-- PROBLEM -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <h2 class="section-title">The Problem</h2>
+          <p class="large-lead">A trusted system showing its age.</p>
+          <p>Lynx Drive has been the backbone of large-scale irrigation management for years. It’s respected for its reliability and control, and has been deeply embedded into the daily workflows of turf professionals. But as the product matured, layers of functionality were added without rethinking how users navigated or interacted with the system. This led to bottlenecks, cognitive overhead, and hesitation from newer users who hadn’t grown with the product.</p>
+          <!-- IMAGE 7: LEGACY UI -->
+          <div class="full-width-image-block gray-placeholder">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/M0.png" alt="Screenshot of original legacy Lynx UI" />
+            <p class="caption">The original Lynx interface exposed every control at once—overwhelming users with dense data tables and nested menus. While powerful, it required deep institutional knowledge and constant caution to avoid missteps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote-divider">
+      <h2>“Lynx is powerful—but sometimes that power gets in the way.”</h2>
+      <p class="caption">— Longtime irrigation technician, Arizona</p>
+    </div>
+    <div class="v-space xlarge"></div>
+
+    <!-- RESEARCH -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <h2 class="section-title">Field Immersion & Research</h2>
+          <p class="large-lead">You can’t fix what you don’t understand.</p>
+          <p>To deeply understand the needs of our users, I conducted extensive field research. I joined irrigation crews at 5:30 AM for site walks. I reviewed archived support calls. I watched users click through menus live via screen share while narrating their thoughts aloud. I listened for confusion, workaround strategies, and expressions of doubt.</p>
+          <ul>
+            <li>3 weeks of shadowing users across 3 states</li>
+            <li>15 interviews with a mix of planners, operators, and support staff</li>
+            <li>250+ support tickets analyzed and tagged by failure category</li>
+            <li>Prototype reactions captured via recorded Zoom calls</li>
+          </ul>
+          <!-- IMAGE 8: RESEARCH COLLAGE -->
+          <div class="full-width-image-block gray-placeholder">
+            <div class="wireframe-placeholder"></div>
+            <div class="v-space large"></div>
+            <h3 style="margin-bottom: 12px; text-align: center;">We completed 10 customer interviews</h3>
+            <img src="/img/I3.svg" alt="Research methods collage" />
+            <div style="display: flex; justify-content: center; align-items: center; gap: 32px; margin-top: 8px; margin-bottom: 4px;">
+              <span><strong>Lynx Users</strong> 7</span>
+              <span><strong>Rain Bird Users</strong> 3</span>
+            </div>
+            <p class="caption">Superintendents were selected across geographic zones to ensure regional variance in climate, pressure schedules, and maintenance strategy. Interviews were segmented between existing Lynx users and those coming from competing platforms.</p>
+          </div>
+          <p>In parallel with field research, we conducted deep-dive interviews with 12 internal stakeholders across product, engineering, support, and training. These sessions helped surface blind spots in the current experience, misalignments in team assumptions, and downstream challenges faced by support and onboarding teams. Their input directly shaped how we framed UX priorities and where we invested early design energy.</p>
+          <p>We identified three primary personas through interviews, fieldwork, and task analysis. Each played a critical role in the irrigation lifecycle and had unique tools, pressures, and behavioral patterns throughout the day. We also mapped their responsibilities to specific parts of the daily workflow: early morning system checks, mid-day troubleshooting, and end-of-day planning.</p>
+
+          <div class="full-width-image-block">
+            <div class="persona-layout-responsive">
+              <div class="persona-col">
+                <h4 class="persona-title">The Superintendent</h4>
+                <div class="persona-tagline">Strategic planner and system owner</div>
+                <div class="persona-detail"><strong>Tools:</strong> Desktop dashboard & planning views</div>
+                <div class="persona-detail"><strong>Day moments:</strong> Morning review & end-of-day validation</div>
+                <div class="persona-detail"><strong>Needs:</strong> Clarity, foresight, batch scheduling, and crew coordination</div>
+              </div>
+              <div class="persona-col">
+                <h4 class="persona-title">The Technician</h4>
+                <div class="persona-tagline">Field executor and quick responder</div>
+                <div class="persona-detail"><strong>Tools:</strong> Mobile view & map-based interface</div>
+                <div class="persona-detail"><strong>Day moments:</strong> Mid-day adjustments, real-time fixes</div>
+                <div class="persona-detail"><strong>Needs:</strong> Fast access, minimal navigation, and system feedback</div>
+              </div>
+              <div class="persona-col">
+                <h4 class="persona-title">The Admin / Coordinator</h4>
+                <div class="persona-tagline">System organizer and support backbone</div>
+                <div class="persona-detail"><strong>Tools:</strong> Configuration panels & reporting tools</div>
+                <div class="persona-detail"><strong>Day moments:</strong> Anytime updates & post-day cleanup</div>
+                <div class="persona-detail"><strong>Needs:</strong> Structured UI, audit trails, and consistency</div>
+              </div>
+            </div>
+            <p class="caption" style="text-align:center; margin-top: 18px;">Mapping personas to their daily rhythms helped shape interface defaults, user roles, and permission-based flows.</p>
+            <div class="user-journey-map">
+              <div class="journey-timeline">
+                <div class="timeline-phase">
+                  <div class="journey-insight">
+                  <h3>A Day in the Life: User Journey Analysis</h3>
+                  <p class="journey-description">Through shadowing superintendents and technicians across multiple golf courses, we documented every interaction with Lynx Drive throughout their day. This comprehensive journey mapping revealed not just when users needed the system, but how their mental state and environmental conditions affected their ability to interact with it effectively.</p>
+                  
+                  <div class="journey-phase-content">
+                    <h4>Early Morning Check-In (5:30 AM - 8:00 AM)</h4>
+                    <p>Dawn operations are the most critical period. Superintendents arrive before sunrise to assess overnight irrigation effectiveness and plan the day's maintenance.</p>
+                    <ul class="phase-tasks">
+                      <li>Course Report analysis for irrigation coverage and system performance</li>
+                      <li>Field walk-through to verify system health and identify issues</li>
+                      <li>Review and triage overnight alerts from sensors and controllers</li>
+                      <li>Cross-reference weather data with soil moisture readings</li>
+                      <li>Coordinate immediate actions with early shift crews</li>
+                    </ul>
+                    <p class="key-finding">Key Finding: Users were losing up to 45 minutes each morning jumping between 6 different system views to gather essential information. 84% maintained paper backups due to lack of trust in digital systems.</p>
+                    <p class="pain-point">Critical Pain Point: "By the time I've checked everything in the system, I've missed something happening on the course." - Lead Superintendent</p>
+                  </div>
+
+                  <div class="journey-phase-content">
+                    <h4>Mid-Day Operations (9:00 AM - 3:00 PM)</h4>
+                    <p>The most dynamic period requires constant adaptation to changing conditions while managing multiple team activities.</p>
+                    <ul class="phase-tasks">
+                      <li>Real-time flow monitoring and adjustments</li>
+                      <li>Program modifications based on weather and ground conditions</li>
+                      <li>Coordination of maintenance zones with active play areas</li>
+                      <li>Equipment diagnostics and calibration checks</li>
+                      <li>Documentation of repairs and system adjustments</li>
+                      <li>Integration of feedback from grounds crew observations</li>
+                    </ul>
+                    <p class="key-finding">Key Finding: Teams were using an average of 3.7 different methods to track field work (texts, radios, paper logs, photos), creating significant information gaps and handoff issues.</p>
+                    <p class="pain-point">Critical Pain Point: "I'm constantly switching between my phone and the office system, and information gets lost in between." - Field Technician</p>
+                  </div>
+
+                  <div class="journey-phase-content">
+                    <h4>End-of-Day Planning (4:00 PM - 6:00 PM)</h4>
+                    <p>Evening preparation sets the stage for overnight success, requiring careful coordination of multiple systems and team handoffs.</p>
+                    <ul class="phase-tasks">
+                      <li>System-wide configuration verification</li>
+                      <li>Weather forecast integration into irrigation plans</li>
+                      <li>Flow rate calculations and schedule optimization</li>
+                      <li>Program sequencing for optimal coverage</li>
+                      <li>Documentation of special conditions or zones</li>
+                      <li>Preparation of next-day maintenance schedules</li>
+                    </ul>
+                    <p class="key-finding">Key Finding: 92% of overnight system errors were traced to incomplete verification steps, often because the interface made it too difficult to do thorough checks.</p>
+                    <p class="pain-point">Critical Pain Point: "There's no way to be certain everything is set correctly without checking each screen individually. It's nerve-wracking." - Lead Superintendent</p>
+                  </div>
+
+                  <p>This detailed journey mapping revolutionized our approach to the redesign. Instead of just modernizing the interface, we created context-aware workflows that adapt to the user's phase of day, environmental conditions, and team dynamics. The result was a 60% reduction in morning configuration time and a 75% decrease in overnight irrigation errors.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <h2 class="section-title">Key Insights & Opportunities</h2>
+          <p class="large-lead">Customer Interviews / Key Insights and Opportunities</p>
+        
+          <div class="insights-container">
+            <div class="insight-block">
+              <h4>Map and Mobile are Differentiators</h4>
+              <p>Map functionality, especially on mobile, is a key Lynx differentiator. Users desire system status, diagnostic info, and system update ability from mobile map.</p>
+            </div>
+
+            <div class="insight-block">
+              <h4>"Smart" Suggestions and User Education</h4>
+              <p>Superintendents report using only 20-30% of Lynx functionality. Explore ways (such as tooltips or animations) to enhance user discovery and understanding of Lynx features. Leverage AI to make relevant suggestions to help users save time and effort in Watering Plan updates in particular.</p>
+            </div>
+
+            <div class="insight-block">
+              <h4>Team Transparency Pain Points</h4>
+              <p>Superintendents desire insight into irrigation change history and more discoverable ways to limit system change access such as Advanced Set Up.</p>
+            </div>
+
+            <div class="insight-block">
+              <h4>Watering Plan Efficiencies</h4>
+              <p>Users want efficient, flexible ways to group, reorder, and update their watering programs on desktop, mobile, and map. They seek a Watering Plan grid that is cleaner and makes it easier to view and focus on data and options of interest.</p>
+            </div>
+
+            <div class="insight-block">
+              <h4>Course Report Optimizations</h4>
+              <p>Users desire a Course Report that summarizes problems more succinctly and offers more context and guidance on how to diagnose issues.</p>
+            </div>
+
+            <div class="insight-block">
+              <h4>End of Day Optimizations</h4>
+              <p>Users want to view the Projected Flow while iterating on their Watering Plan to track and validate changes more efficiently.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .insights-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .insight-block {
+        padding-right: 40px;
+      }
+
+      .insight-block h3 {
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #FF3B30;
+        margin-bottom: 24px;
+      }
+
+      .insight-block p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #4B5563;
+      }
+
+      @media (max-width: 1024px) {
+        .insights-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .insights-container {
+          grid-template-columns: 1fr;
+        }
+
+        .insight-block {
+          padding-right: 0;
+        }
+
+        .insight-block h3 {
+          font-size: 24px;
+        }
+      }
+    </style>
+            
+    </section>
+
+    <style>
+      .research-insights {
+        margin-top: 40px;
+      }
+
+      .insight-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+        padding: 32px;
+        background: #F9FAFB;
+        border-radius: 8px;
+      }
+
+      .insight-content {
+        padding: 24px;
+        background: #FFFFFF;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+
+      .insight-heading {
+        font-size: 20px;
+        font-weight: 600;
+        color: #DC2626;
+        margin-bottom: 16px;
+        line-height: 1.3;
+      }
+
+      .insight-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #4B5563;
+      }
+
+      @media (max-width: 768px) {
+        .insight-row {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 24px;
+        }
+
+        .insight-content {
+          padding: 20px;
+        }
+      }
+    </style>
+
+    <style>
+      .insights-section {
+        padding: 80px 0;
+        background: #000000;
+        color: #ffffff;
+      }
+
+      .section-subtitle {
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: 600;
+        margin-bottom: 60px;
+        color: #ffffff;
+      }
+
+      .insights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .insight-card {
+        padding: 24px 0;
+      }
+
+      .insight-title {
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #FF3B30;
+      }
+
+      .insight-description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #ffffff;
+        opacity: 0.9;
+      }
+
+      @media (max-width: 768px) {
+        .insights-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .section-subtitle {
+          font-size: 32px;
+          margin-bottom: 40px;
+        }
+
+        .insight-title {
+          font-size: 24px;
+        }
+      }
+    </style>
+
+    <div class="quote-divider">
+      <h2>“We just need to see what matters fast, and know what’s been done.”</h2>
+      <p class="caption">— West Coast superintendent</p>
+    </div>
+    <div class="v-space xlarge"></div>
+
+    <!-- STRATEGY -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <h2 class="section-title">Our UX Strategy</h2>
+          <p class="large-lead">Designing for confidence, clarity, and speed under pressure.</p>
+          <p>Our north star was to help users feel certain, fast, and in control. To get there, I proposed three UX pillars:</p>
+          <ul>
+            <li><strong>Information at a glance:</strong> Prioritize what's time-sensitive and reduce visual noise. Pull system state forward.</li>
+            <li><strong>Guided flows:</strong> Let users act step-by-step, with inline guidance and guardrails for complex processes.</li>
+            <li><strong>Role-tuned views:</strong> Tailor entry points and defaults based on what the user needs that day.</li>
+          </ul>
+          <!-- IMAGE 10: UX PRINCIPLES OR JOURNEY SKETCH -->
+          <div class="full-width-image-block gray-placeholder">
+            <div class="wireframe-placeholder"></div>
+            <!-- UX Framework True Pyramid -->
+            <div class="ux-framework-section" style="padding: 20px 20px 60px; max-width: 1200px; margin: 0 auto;">
+              <div class="pyramid-container" style="max-width: 800px; margin: 0 auto;">
+                <img 
+                  src="img/Pyramid.png" 
+                  alt="UX Framework Pyramid showing Customer Benefit, Experience Pillars, and Signature Experiences" 
+                  style="width: 100%; height: auto; display: block;"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <style>
+              .pyramid-container {
+                transition: all 0.3s ease;
+              }
+
+              @media (max-width: 768px) {
+                .ux-framework-section {
+                  padding: 16px 16px 40px;
+                }
+              }
+
+              @media (max-width: 480px) {
+                .ux-framework-section {
+                  padding: 12px 12px 30px;
+                }
+              }
+            </style>
+          <p>With our UX pillars established, I mapped each major user journey—from login through planning and resolution—directly to these strategic objectives. This ensured that every flow, wireframe, and interaction reinforced the experience we wanted to deliver: speed under pressure, clarity in complexity, and confidence across roles. These journeys informed not just screen layouts, but system structure, interaction patterns, and onboarding flows.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTION -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width execution-section-spaced">
+          <h2 class="section-title" style="margin-bottom: 36px;">Execution & Prototyping</h2>
+          <p style="margin-bottom: 28px;">We took everything we learned in research and set out to systematically address the friction points our users faced. This wasn't just a redesign—it was a re-architecture of the mental model users held about Lynx Drive. Our approach was iterative, testing each hypothesis directly with the people who’d rely on it in the field.</p>
+          <p style="margin-bottom: 24px;"><strong>Designing Around the Daily Rhythm:</strong><br>
+            Through our research, we identified a repeatable set of user moments that shaped the day for most operators:
+          </p>
+          <ul style="margin-bottom: 28px; padding-left: 28px;">
+            <li style="margin-bottom: 10px;"><strong>Morning Check-In:</strong> Reviewing overnight alerts, verifying system health, and confirming irrigation events completed successfully.</li>
+            <li style="margin-bottom: 10px;"><strong>In-Field Adjustments:</strong> Performing real-time changes to schedules or zones while physically inspecting turf and hardware.</li>
+            <li><strong>End-of-Day Planning:</strong> Closing out alerts, logging field notes, and planning tomorrow’s schedules based on evapotranspiration data and weather forecasts.</li>
+          </ul>
+          <p style="margin-bottom: 32px;">We used these phases as behavioral anchors—ensuring our flows supported users when they were most time-constrained, mobile, or collaborative.</p>
+
+          <p style="margin-bottom: 28px;"><strong>Restructuring Navigation</strong><br>We overhauled the information architecture, consolidating redundant paths and replacing engineering-centered labels with user language. A persistent breadcrumb system gave users clarity about where they were in the system—a huge win noted in nearly every feedback session.</p>
+
+          <p style="margin-bottom: 28px;"><strong>Planning with Confidence</strong><br>The End-of-Day Planner was introduced to make task handoff and review seamless. Users could clearly see what was planned, what executed successfully, and what required attention—all in one view, in their preferred sequence.</p>
+
+          <p style="margin-bottom: 28px;"><strong>Map Interactivity</strong><br>Our legacy map tool was replaced with a new visual layout of zones and systems, overlaid with real-time feedback. Every interaction had visual confirmation and status indicators.</p>
+
+          <p style="margin-bottom: 24px;"><strong>Bridging the Field-to-Desk Divide</strong><br>One of the most impactful additions was the new “Field Notes” system. Technicians in the field often made analog notes or texted updates to managers—creating a gap in documentation and continuity. We created a digital notes panel that was:</p>
+          <ul style="margin-bottom: 24px; padding-left: 28px;">
+            <li style="margin-bottom: 8px;">Always accessible</li>
+            <li style="margin-bottom: 8px;">Contextually linked to system zones or stations</li>
+            <li style="margin-bottom: 8px;">Syncable across mobile and desktop platforms</li>
+            <li>Tagged and time-stamped automatically</li>
+          </ul>
+          <p style="margin-bottom: 24px;">This turned out to be a game-changer. Teams used it to log valve repairs, soil inconsistencies, sensor anomalies, and calibration notes in real time. What was once fragmented communication became traceable and visible across the team.</p>
+
+          <p class="quote-block" style="margin-bottom: 12px;">“Now when I log something in the field, I know it’s seen at HQ. That changes everything.”</p>
+          <p class="caption" style="margin-bottom: 0;">— 14-year Lynx superuser, Arizona-based irrigation technician</p>
+          <div class="full-width-image-block gray-placeholder" style="margin: 44px 0 48px 0;">
+            <div class="wireframe-placeholder"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; padding: 48px 0 36px 0;">
+              <img src="/img/I4.svg" alt="Field Notes UI" style="max-width: 820px; width: 100%; border-radius: 14px; margin-bottom: 12px;" />
+              <p class="caption" style="font-size: 1.08rem; color: #374151; text-align: center; max-width: 600px; margin: 0 auto;">The Field Notes panel let techs log real-world issues that synced instantly to planning dashboards.</p>
+            </div>
+          </div>
+
+          <p style="margin-bottom: 28px;"><strong>Planning with Confidence:</strong><br>The End-of-Day Planner was introduced to make task handoff and review seamless. Users could clearly see what was planned, what executed successfully, and what required attention—all in one view, in their preferred sequence.</p>
+          <p class="quote-block" style="margin-bottom: 12px;">“I use the planner at the end of my day, every day. It gives me a sense of closure and a head start on tomorrow.”</p>
+          <p class="caption" style="margin-bottom: 36px;">— Golf superintendent, managing 3 pump stations daily</p>
+
+          <p style="margin-bottom: 28px;"><strong>Map Interactivity:</strong><br>Our legacy map tool was replaced with a new visual layout of zones and systems, overlaid with real-time feedback. Every interaction had visual confirmation and status indicators.</p>
+
+          <p style="margin-bottom: 28px;"><strong>Restructuring Navigation:</strong><br>We overhauled the information architecture, consolidating redundant paths and replacing engineering-centered labels with user language. A persistent breadcrumb system gave users clarity about where they were in the system—a huge win noted in nearly every feedback session.</p>
+          <div class="full-width-image-block gray-placeholder" style="margin: 44px 0 48px 0;">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/I5.svg" alt="Breadcrumb navigation comparison" />
+            <p class="caption">We transformed the breadcrumb from a passive label into an active orientation tool.</p>
+          </div>
+          <div class="full-width-image-block gray-placeholder" style="margin: 44px 0 48px 0;">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/I6.svg" alt="End-of-Day Planning screen" />
+            <p class="caption">The redesigned planner view helped superintendents wrap up their day with clarity and hand off context to the next shift.</p>
+          </div>
+          <div class="full-width-image-block gray-placeholder" style="margin: 44px 0 48px 0;">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/I7.svg" alt="Central Control Map with overlays" />
+            <p class="caption">We rebuilt the central control map with real-time overlays for quick diagnostics and zone adjustments.</p>
+          </div>
+          <div class="full-width-image-block gray-placeholder" style="margin: 44px 0 48px 0;">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/I8.svg" alt="User Journey – Morning Check-In to End-of-Day" />
+            <p class="caption">Every major flow mapped back to one of three daily user moments: Morning Check-In, In-Field Adjustments, and End-of-Day Planning.</p>
+          </div>
+
+          <!-- Protopie & Golf Show Experience block (inserted) -->
+          <p style="margin-bottom: 24px;"><strong>Showcasing with Confidence: GCSAA Golf Show</strong><br>
+            To ensure Lynx Drive not only tested well but inspired belief, I developed multiple high-fidelity, interactive Protopie prototypes of the platform. These were used not only for user testing and internal demos, but also became the centerpiece of our booth at the annual <strong>GCSAA Golf Show</strong>—the industry's premier golf technology expo.</p>
+
+          <p style="margin-bottom: 24px;">The prototypes replicated real workflows and system interactions with pixel-perfect fidelity and custom motion—bringing the platform to life in a way static screens never could. At the event, I had the opportunity to demo them directly to current customers and potential prospects, collecting real-time reactions and feedback. Many remarked it was the most intuitive, modern system they’d seen at the show—and a massive step forward from what they were used to.</p>
+
+          <p style="margin-bottom: 24px;">This moment validated the redesign’s emotional and strategic goals: we weren’t just improving usability—we were redefining expectations.</p>
+
+          <div class="full-width-image-block gray-placeholder">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/I9.png" alt="Protopie prototype demo at GCSAA Golf Show" class="case-image" />
+            <p class="caption">Our fully interactive prototypes were the talk of the show floor—blending real UX with real feedback.</p>
+          </div>
+    <style>
+      .full-width-image-block.gray-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 44px 0 48px 0;
+        padding: 0;
+        background: none;
+        border-radius: 12px;
+        box-shadow: none;
+      }
+      .full-width-image-block .wireframe-placeholder {
+        width: 100%;
+        min-height: 0;
+        margin-bottom: 0;
+      }
+      .case-image {
+        display: block;
+        margin: 0 auto 12px auto;
+        max-width: 820px;
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      }
+      .full-width-image-block .caption {
+        font-size: 1.08rem;
+        color: #374151;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 12px auto;
+      }
+      @media (max-width: 900px) {
+        .case-image {
+          max-width: 100%;
+        }
+        .full-width-image-block.gray-placeholder {
+          margin: 32px 0 36px 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .full-width-image-block.gray-placeholder {
+          margin: 20px 0 24px 0;
+          border-radius: 6px;
+          background: none;
+        }
+        .case-image {
+          border-radius: 6px;
+        }
+        .full-width-image-block .caption {
+          font-size: 0.98rem;
+        }
+      }
+    </style>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote-divider">
+      <h2>“You’ve made it so much easier to train new guys. That’s huge.”</h2>
+      <p class="caption">— New hire training lead, Midwest</p>
+    </div>
+    <div class="v-space xlarge"></div>
+
+    <!-- OUTCOME -->
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <h2 class="section-title">Impact</h2>
+          <p class="large-lead">More than a redesign—this became our blueprint.</p>
+          <p>This project didn’t just modernize a legacy tool—it fundamentally reshaped how our company builds software. Lynx Drive became the first system to fully embody our new UX principles, shifting product culture from utility-first to experience-first.</p>
+
+          <ul>
+            <li><strong>92% task success rate</strong> in guided user testing (previously 64%)</li>
+            <li><strong>50% faster onboarding</strong>—cutting training time in half for new superintendents</li>
+            <li><strong>75% reduction in morning errors</strong> thanks to streamlined status workflows</li>
+          </ul>
+
+          <p>But the real impact went beyond numbers. The design system we built here is now the <strong>foundation for every major UX initiative across the organization</strong>—from internal tools to upcoming product lines. Our approach, our documentation, and this very case study have become internal benchmarks for cross-functional excellence.</p>
+
+          <p><strong>What began as a redesign is now the model for how we build everything moving forward.</strong></p>
+
+          <p>The Lynx Drive design system has since become the foundation for multiple new projects across the organization, ensuring a unified, modern user experience everywhere. Its principles and components are now powering internal tools, mobile apps, and upcoming product launches—accelerating delivery and raising the bar for usability company-wide.</p>
+          <div class="full-width-image-block gray-placeholder">
+            <div class="wireframe-placeholder"></div>
+            <img src="/img/I10.svg" alt="Design system in use across other projects" class="case-image" style="box-shadow: none; background: transparent;" />
+            <p class="caption">The Lynx Drive design system in action—now powering a new generation of internal and external products.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+        <div class="social-links-wrapper">
+          <a
+            href="https://linkedin.com/in/adammunirr"
+            target="_blank"
+            class="social-icon-link w-inline-block"
+            ><img
+              src="img/linkedin.svg"
+              loading="lazy"
+              alt="Twitter Icon"/></a
+          ><a
+            href="http://www.github.com/adammunirs"
+            target="_blank"
+            class="social-icon-link w-inline-block"
+            ><img
+              src="img/github.svg"
+              loading="lazy"
+              alt="LinkedIn Icon"/></a
+          ><a
+            href="https://www.behance.net/adammunir01552"
+            target="_blank"
+            class="social-icon-link w-inline-block"
+            ><img
+              src="img/behance.svg"
+              loading="lazy"
+              alt="Dribbble icon"
+          /></a>
+        </div>
+        <div class="caption">
+            Copyright © 2022 THEMUNIR All rights reserved. <span style="opacity: 30%;">Inspired by OIivier Ifrah.</span>
+        </div>
+      </div>
+    <script
+      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e1689facb9d5168c0dcbe0b"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="js/vision247.js"
+      type="text/javascript"
+    ></script>
+    <!--[if lte IE 9
+      ]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script
+    ><![endif]-->
+  </body>
+</html>
