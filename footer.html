@@ -1,55 +1,151 @@
-<div class="footer">
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="index.html" class="footer-link">Work</a>
-      <a href="about.html" class="footer-link">About</a>
-      <a href="contact.html" class="footer-link">Contact</a>
+<style>
+  .tm-footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .tm-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 72px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 72px;
+  }
+
+  .tm-footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tm-footer-logo-col {
+    flex: 0 0 auto;
+  }
+
+  .tm-footer-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .tm-footer-social-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .tm-footer-social-inline img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .tm-footer-heading {
+    margin-bottom: 12px;
+    color: #323235;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .tm-footer-link {
+    display: block;
+    margin-bottom: 8px;
+    color: #323235;
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .tm-footer-link:hover {
+    color: #111111;
+  }
+
+  .tm-footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 72px 32px;
+    box-sizing: border-box;
+  }
+
+  .tm-footer-caption {
+    color: #8a8b90;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 767px) {
+    .tm-footer-inner {
+      padding: 32px 24px 24px;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .tm-footer-bottom {
+      padding: 0 24px 24px;
+    }
+
+    .tm-footer-column {
+      width: 100%;
+    }
+
+    .tm-footer-caption {
+      font-size: 12px;
+    }
+  }
+</style>
+<div class="tm-footer">
+  <div class="tm-footer-inner">
+    <div class="tm-footer-column tm-footer-logo-col">
+      <img src="img/themunirLogo.svg" alt="TheMunir Logo" class="tm-footer-logo" width="64" height="64" />
+      <div class="tm-footer-social-inline">
+        <a href="https://linkedin.com/in/adammunirr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="img/linkedin.svg" width="24" height="24" /></a>
+        <a href="http://www.github.com/adammunirs" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="img/github.svg" width="24" height="24" /></a>
+        <a href="https://www.behance.net/adammunir01552" target="_blank" rel="noopener noreferrer" aria-label="Behance"><img src="img/behance.svg" width="24" height="24" /></a>
+      </div>
     </div>
-    <div class="social-links-wrapper">
-      <a
-        href="https://linkedin.com/in/adammunirr"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-icon-link w-inline-block"
-        aria-label="LinkedIn"
-        ><img
-          src="img/linkedin.svg"
-          loading="lazy"
-          alt="LinkedIn Icon"
-          width="24"
-          height="24"
-      /></a>
-      <a
-        href="http://www.github.com/adammunirs"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-icon-link w-inline-block"
-        aria-label="GitHub"
-        ><img
-          src="img/github.svg"
-          loading="lazy"
-          alt="GitHub Icon"
-          width="24"
-          height="24"
-      /></a>
-      <a
-        href="https://www.behance.net/adammunir01552"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-icon-link w-inline-block"
-        aria-label="Behance"
-        ><img
-          src="img/behance.svg"
-          loading="lazy"
-          alt="Behance Icon"
-          width="24"
-          height="24"
-      /></a>
+
+    <div class="tm-footer-column">
+      <div class="tm-footer-heading">Explore</div>
+      <a href="index.html" class="tm-footer-link">Work</a>
+      <a href="play.html" class="tm-footer-link">Play</a>
+      <a href="about.html" class="tm-footer-link">About</a>
+      <a href="contact.html" class="tm-footer-link">Contact</a>
     </div>
-    <div class="footer-caption">
-      Copyright © <span id="current-year">2025</span> THEMUNIR All rights reserved.
+
+    <div class="tm-footer-column">
+      <div class="tm-footer-heading">Case Study</div>
+      <a href="oasis.html" class="tm-footer-link">Toro Oasis</a>
+      <a href="lynxmobile.html" class="tm-footer-link">Lynx Mobile</a>
+      <a href="lynxdrive.html" class="tm-footer-link">Lynx Drive</a>
+      <a href="#" class="tm-footer-link">Onehubtv</a>
+      <a href="#" class="tm-footer-link">HyperJar</a>
+      <a href="#" class="tm-footer-link">IFSC Oceans</a>
+    </div>
+
+    <div class="tm-footer-column">
+      <div class="tm-footer-heading">External</div>
+      <a href="https://linkedin.com/in/adammunirr" target="_blank" class="tm-footer-link">Linkedin</a>
+      <a href="https://www.behance.net/adammunir01552" target="_blank" class="tm-footer-link">Behance</a>
+      <a href="http://www.github.com/adammunirs" target="_blank" class="tm-footer-link">Github</a>
     </div>
   </div>
+
+  <div class="tm-footer-bottom">
+    <div class="tm-footer-caption">Copyright © <span id="current-year">2025</span> THEMUNIR All rights reserved.</div>
+  </div>
 </div>
+
 
 

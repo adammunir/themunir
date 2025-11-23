@@ -3077,7 +3077,8 @@ strong {
   }
 
   .sj-hero-container {
-    height: 290px;
+    height: 240px;
+    margin-top: 0px !important;
   }
 
   .sj-hero-image {

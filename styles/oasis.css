@@ -2916,6 +2916,7 @@ strong {
 
   .sj-hero-container {
     height: 290px;
+    margin-top: 0px !important;
   }
 
   .sj-hero-image {
@@ -3265,8 +3266,9 @@ strong {
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-top: 0px;
+  /* padding-left: 32px;
+  padding-right: 32px; */
 }
 
 .wide-max-width {
