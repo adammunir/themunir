@@ -7,6 +7,15 @@
   align-items: flex-start;
   margin: 32px 0 16px 0;
 }
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9b9ca0;
+  margin-bottom: 6px;
+  display: block;
+}
 .persona-col {
   flex: 1 1 200px;
   min-width: 200px;

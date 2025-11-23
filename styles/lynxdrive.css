@@ -13,6 +13,15 @@
   max-width: 320px;
   margin-bottom: 24px;
 }
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9b9ca0;
+  margin-bottom: 6px;
+  display: block;
+}
 .persona-title {
   margin-bottom: 4px;
   color: #1a3a4a;

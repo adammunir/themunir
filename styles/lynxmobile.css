@@ -9,6 +9,15 @@
   flex: 1 1 0;
   font-size: 1.15rem;
 }
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9b9ca0;
+  margin-bottom: 6px;
+  display: block;
+}
 .feature-img {
   flex: 0 0 120px;
   display: flex;
