@@ -1,0 +1,111 @@
+/* Uniform padding and margin styles for consistent case study layouts */
+/* Based on Oasis.html as reference */
+
+/* Section spacing */
+.section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.section-padding {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Container spacing */
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  
+  .section-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+/* Heading spacing */
+.section-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.section-subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Image containers */
+.figure-container {
+  margin-bottom: 24px;
+}
+
+.figure-container:last-child {
+  margin-bottom: 0;
+}
+
+/* Text blocks */
+.text-block {
+  margin-bottom: 20px;
+}
+
+.text-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.w-list-unstyled {
+  margin-bottom: 20px;
+}
+
+.w-list-unstyled:last-child {
+  margin-bottom: 0;
+}
+
+/* Buttons */
+.button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Figures and images */
+figure {
+  margin: 0 0 24px 0;
+}
+
+/* Content blocks */
+.content-block {
+  margin-bottom: 32px;
+}
+
+.content-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
