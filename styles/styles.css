@@ -650,6 +650,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     border-color: #cfd4dc;
     color: #0f1014;
     box-shadow: 0 6px 18px rgba(15, 16, 20, 0.08);
+    cursor: pointer;
   }
 
   .secondary-button .button-text {
@@ -818,7 +819,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 
 .modal-slide-title {
   margin: 0 0 8px 0;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 132%;
   letter-spacing: -0.02em;
   font-weight: 700;
@@ -987,6 +988,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     -webkit-transform: translateY(-1px);
     -ms-transform: translateY(-1px);
     transform: translateY(-1px);
+    cursor: pointer;
   }
 
 .glass-modal {
