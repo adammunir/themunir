@@ -9,6 +9,22 @@
       yearElement.textContent = new Date().getFullYear();
     }
   }
+
+  function attachFooterAccessHandlers(root) {
+    const links = (root || document).querySelectorAll('.footer-access-link');
+    links.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const caseId = link.getAttribute('data-case-id');
+        if (window.openCaseAccess) {
+          window.openCaseAccess(caseId);
+        } else {
+          const target = caseId ? `index.html?case=${encodeURIComponent(caseId)}` : 'index.html';
+          window.location.href = target;
+        }
+      });
+    });
+  }
   
   // Load footer HTML
   function loadFooter() {
@@ -22,6 +38,7 @@
           .then(html => {
             existingFooter.outerHTML = html;
             updateYear();
+            attachFooterAccessHandlers(document);
           })
           .catch(error => {
             console.warn('Could not load footer component:', error);
@@ -33,6 +50,7 @@
         .then(html => {
           footerPlaceholder.outerHTML = html;
           updateYear();
+          attachFooterAccessHandlers(document);
         })
         .catch(error => {
           console.warn('Could not load footer component:', error);
@@ -47,5 +65,4 @@
     loadFooter();
   }
 })();
-
 

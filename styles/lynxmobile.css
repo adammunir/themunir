@@ -1415,20 +1415,20 @@ strong {
 }
 
 .case-study-section.white-background {
-  max-width: 760px;
+  max-width: 930px;
   margin: 0 auto;
   padding: 0 32px;
 }
 
 .case-study-block {
-  max-width: 760px;
+  max-width: 930px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 88px 0;
 }
 
 .quote-divider {
-  max-width: 760px;
-  margin: 120px auto 60px auto;
+  max-width: 930px;
+  margin: 80px auto 48px auto;
   padding: 0 32px;
 }
 
@@ -2157,7 +2157,7 @@ strong {
 }
 
 .v-space.extra-large {
-  height: 128px;
+  height: 72px;
 }
 
 .v-space.extra-large.color {
@@ -2622,7 +2622,7 @@ strong {
   }
 
   .v-space.extra-large {
-    height: 96px;
+    height: 72px;
   }
 
   .v-space.large {
@@ -3142,24 +3142,24 @@ strong {
    Case Study Premium Layout Enhancements
    ========================================================================== */
 .case-study-block {
-  max-width: 1000px;
+  max-width: 930px;
   margin-left: auto;
   margin-right: auto;
-  padding: 120px 0;
+  padding: 88px 0;
   box-sizing: border-box;
 }
 
 .case-study-section.white-background {
-  padding: 0 64px;
-  max-width: 1080px;
+  padding: 0 32px;
+  max-width: 930px;
   margin: 0 auto;
 }
 
 .quote-divider {
   text-align: center;
-  margin: 120px auto 60px auto;
+  margin: 80px auto 48px auto;
   padding: 0 32px;
-  max-width: 820px;
+  max-width: 930px;
 }
 
 .quote-divider h2 {
@@ -3176,7 +3176,7 @@ strong {
 }
 
 .v-space.xlarge {
-  height: 128px;
+  height: 72px;
 }
 
 .case-study-inner {
@@ -3571,4 +3571,28 @@ strong {
     width: 44px;
     height: 44px;
   }
+}
+
+
+/* Unified spacing (match Oasis) */
+.case-study-block {
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 88px 0;
+  box-sizing: border-box;
+}
+
+.case-study-section.white-background,
+.case-study-section {
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.quote-divider {
+  max-width: 930px;
+  margin: 80px auto 48px auto;
+  padding: 0 32px;
+  box-sizing: border-box;
 }
