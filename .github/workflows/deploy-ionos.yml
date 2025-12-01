@@ -14,17 +14,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload site to IONOS via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.IONOS_HOST }}
+          host: ${{ secrets.IONOS_HOST }}
           username: ${{ secrets.IONOS_USERNAME }}
           password: ${{ secrets.IONOS_PASSWORD }}
-          protocol: sftp
-          local-dir: ./**
-          server-dir: ${{ secrets.IONOS_REMOTE_PATH }}
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/**
-            **/.DS_Store
-            **/README.md
+          port: 22
+          local_path: ./
+          remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
+          args: "-o StrictHostKeyChecking=no"
