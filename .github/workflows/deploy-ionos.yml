@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.IONOS_USERNAME }}
           password: ${{ secrets.IONOS_PASSWORD }}
           protocol: ftps
-          local-dir: .
+          local-dir: ./
           server-dir: ${{ secrets.IONOS_REMOTE_PATH }}
           exclude: |
             **/.git*
