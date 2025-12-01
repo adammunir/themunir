@@ -19,7 +19,7 @@ jobs:
           server: ${{ secrets.IONOS_HOST }}
           username: ${{ secrets.IONOS_USERNAME }}
           password: ${{ secrets.IONOS_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           local-dir: ./
           server-dir: ${{ secrets.IONOS_REMOTE_PATH }}
           exclude: |
