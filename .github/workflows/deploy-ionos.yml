@@ -13,14 +13,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Upload site to IONOS via FTP
+      - name: Upload site to IONOS via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.IONOS_HOST }}
           username: ${{ secrets.IONOS_USERNAME }}
           password: ${{ secrets.IONOS_PASSWORD }}
-          protocol: ftp
-          local-dir: ./
+          protocol: sftp
+          local-dir: ./**
           server-dir: ${{ secrets.IONOS_REMOTE_PATH }}
           exclude: |
             **/.git*
