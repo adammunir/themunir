@@ -30,6 +30,11 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      href="/styles/nav.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script
       src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
       type="text/javascript"
@@ -108,14 +113,38 @@
       }
 
       html, body {
-        overscroll-behavior: none;
         overflow-x: hidden;
         position: relative;
+      }
+
+      /* Ensure document remains scrollable (Chrome/Safari) */
+      html,
+      body {
+        height: auto;
+        overflow-y: auto;
+      }
+
+      body.preview-modal-open {
+        overflow: hidden !important;
       }
       
       /* Smooth scrolling */
       html {
         scroll-behavior: smooth;
+      }
+
+      /* Ensure Webflow animation containers are visible */
+      .particle-overflow-hide {
+        opacity: 1 !important;
+        transition: none;
+      }
+      .tabs-toggle-background {
+        transform: none !important;
+        opacity: 1 !important;
+      }
+      .tabs-toggle-options {
+        transform: none !important;
+        opacity: 1 !important;
       }
 
       /* Fade-in effect for sections on scroll */
@@ -137,7 +166,7 @@
     </style>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('.project-card, .hero-text-wrapper');
+        const sections = document.querySelectorAll('.hero-text-wrapper');
         
         const options = {
           root: null,
@@ -152,12 +181,9 @@
             const isShowing = visibilityState.get(entry.target) || false;
             const ratio = entry.intersectionRatio;
 
-            if (!isShowing && ratio > 0.15) {
+            if (!isShowing && ratio > 0.05) {
               entry.target.classList.add('is-visible');
               visibilityState.set(entry.target, true);
-            } else if (isShowing && ratio < 0.05) {
-              entry.target.classList.remove('is-visible');
-              visibilityState.set(entry.target, false);
             }
           });
         }, options);
@@ -174,6 +200,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQRWJCW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div id="top"></div>
 
       <div data-w-id="d64efa4e-aae7-3cd0-956d-dcaafdb93204" class="menu-holder1">
           <!-- <div class="sup-text1">Sup</div> -->
@@ -295,41 +322,20 @@
         ><div
         ><img src="img/themunirLogo.svg" style="height: 30px; width: auto;"></div></a
       >
-      
-      <a
-        data-w-id="d64efa4e-aae7-3cd0-956d-dcaafdb9320a"
-        href="#"
-        class="icon-button w-inline-block"
-        ><div
-          data-w-id="d64efa4e-aae7-3cd0-956d-dcaafdb9320b"
-          data-animation-type="lottie"
-          data-src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd510d556f666a714cf5547_menu-to-close.json"
-          data-loop="0"
-          data-direction="1"
-          data-autoplay="0"
-          data-is-ix2-target="1"
-          data-renderer="canvas"
-          data-default-duration="0.6666666666666666"
-          data-duration="0.6666666666666666"
-          data-ix2-initial-state="0"
-          class="menu-to-close-icon"
-        ></div
-      ></a>
       <div class="menu-container">
         <a href="index.html" class="menu-item w-inline-block w--current" aria-current="page">
-          <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b0d34b9d09283ff00d2_House.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Home</div>
         </a>
+        <a href="#" class="menu-item menu-tab" data-tab="Play Tab">
+          <div class="menu-item-text">Play</div>
+        </a>
         <a href="about.html" class="menu-item w-inline-block">
-          <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b1353c1a180dbc8beb4_User.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">About</div>
         </a>
         <a href="resume.html" class="menu-item w-inline-block">
-          <img src="img/resume.png" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Resume</div>
         </a>
         <a href="contact.html" class="menu-item w-inline-block">
-          <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b112a8c8af4f99d7507_EnvelopeSimple.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Contact</div>
         </a>
       </div>
@@ -346,7 +352,6 @@
     </div>
     <div
       data-w-id="3b9248db-ceac-4231-7be4-18e398bcae6d"
-      style="opacity:0"
       class="particle-overflow-hide"
     >
       <div class="full-width-section">
@@ -387,383 +392,440 @@
               class="work-tab-content w-tab-pane w--tab-active"
             >
               <div class="hero-text-wrapper">
-                <h1 class="eyebrow">Adam Munir</h1>
-                <h1 class="black-gradient-h1">Designing clear, useful products for real people.</h1>
-                <div class="v-space"></div>
-                <div class="hero-centered-paragraph work">
-                  Senior Designer at The Toro Company, turning complex Agriculture, Irrigation and Golf systems into tools anyone can use.
+                <div class="home-hero-grid">
+                  <div class="home-hero-copy">
+                    <h1 class="black-gradient-h1"><span class="home-hero-intro">Hey, I&#x27;m Adam.</span><span class="home-hero-main">Designing the software layer behind complex products.</span></h1>
+                    <div class="hero-centered-paragraph work">
+                      Senior Product Designer currently @ The Toro Company, working across operational platforms, native tools, and AI-enabled workflows for products that need clarity, reliability, and real-world execution.
+                    </div>
+                  </div>
+                  <div class="home-hero-image-card" aria-label="Portrait placeholder">
+                    <div class="home-hero-image-frame">
+                      <div class="home-hero-image-placeholder">
+                        <span class="home-hero-image-placeholder-mark">AM</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="v-space small"></div>
-                <div class="location-wrapper">
-                  <img
-                    src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd67d88e589fa52700f6034_MapPin.svg"
-                    loading="lazy"
-                    width="24"
-                    height="24"
-                    alt=""
-                    class="location-icon"
-                  />
-                  <div class="strong-text">Orange, CA</div>
-                </div>
-                <!-- <img src="img/logos.png" alt="Logo" class="logo-img" width="120" height="auto" /> -->
-                <!-- <div class="particle-wrapper">
-                  <div class="particle-8"></div>
-                  <div class="particle-7"></div>
-                  <div class="particle-6"></div>
-                  <div class="particle-5"></div>
-                  <div class="particle-4"></div>
-                  <div class="particle-3"></div>
-                  <div class="particle-2"></div>
-                  <div class="particle-1"></div>
-                </div> -->
               </div>
-              <!-- Placeholder for new project (moved to top) -->
 
-               <a
-                href="oasis.html"
-                class="project-card w-inline-block"
-                ><div class="v-stack max-width">
-                  <img
-                    src="img/OasisLogo.svg"
-                    loading="lazy"
-                    alt="Lynx Drive logo"
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>Toro Oasis</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Senior Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2025</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>
-                    Designed for homeowners and contractors, smart irrigation built for real yards.
-                  </p>
-                  <div class="button-row">
-                    <div class="secondary-button preview-button" data-preview-id="oasis">
-                      <div class="button-text">See Preview</div>
-                      <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+              <section class="achievements-preview" aria-label="Highlights preview">
+                <div class="achievement-awards-grid">
+                  <a href="highlights.html#patents" class="achievement-award-card w-inline-block">
+                    <div class="achievement-ornament"></div>
+                    <div class="achievement-award-content">
+                      <p class="achievement-award-kicker">Patents</p>
+                      <h2 class="achievement-award-title">2 filings in smart irrigation</h2>
+                      <p class="achievement-award-copy">Patent-backed product work spanning spatial adjust and smart notes.</p>
                     </div>
-                    <div class="full-case-button access-button" data-case-id="oasis">
-                      <div class="button-text">Full Case Study</div>
-                      <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src="img/OasisMain.png"
-                  loading="lazy"
-                  alt="Lynx Drive project preview"
-                  class="project-preview-image right-align"/>
-              </a>
-
-               <a
-                href="lynxmobile.html"
-                class="project-card w-inline-block"
-                ><div class="v-stack max-width">
-                  <img
-                    src="img/lynx_logo.svg"
-                    loading="lazy"
-                    alt="Lynx Drive logo"
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>Lynx Mobile</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Senior Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2023</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>
-                    Mobile controls that help grounds teams quickly spot issues, make changes, and keep play areas healthy.
-                  </p>
-                  <div class="button-row">
-                    <div class="secondary-button preview-button" data-preview-id="lynxmobile">
-                      <div class="button-text">See Preview</div>
-                      <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
-                    </div>
-                    <div class="full-case-button access-button" data-case-id="lynxmobile">
-                      <div class="button-text">Full Case Study</div>
-                      <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src="img/LM.svg"
-                  loading="lazy"
-                  alt="Lynx Drive project preview"
-                  class="project-preview-image right-align"/>
-              </a>
-
-              <a
-                href="lynxdrive.html"
-                class="project-card w-inline-block"
-                ><div class="v-stack max-width">
-                  <img
-                    src="img/lynx_drive.svg"
-                    loading="lazy"
-                    alt="Lynx Drive logo"
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>Lynx Drive</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Senior Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2022</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>
-                    Reimagining the #1 irrigation tool—smarter controls, faster insights, seamless in the field.
-                  </p>
-                  <div class="button-row">
-                    <div class="secondary-button preview-button" data-preview-id="lynxdrive">
-                      <div class="button-text">See Preview</div>
-                      <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
-                    </div>
-                    <div class="full-case-button access-button" data-case-id="lynxdrive">
-                      <div class="button-text">Full Case Study</div>
-                      <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src="img/LD.svg"
-                  loading="lazy"
-                  alt="Lynx Drive project preview"
-                  class="project-preview-image right-align"/>
-              </a>
-              <a
-                href="/vision247.html"
-                class="project-card w-inline-block"
-                ><div class="v-stack max-width">
-                  <img
-                    src="img/onehubtvlogo.svg"
-                    loading="lazy"
-                    alt=""
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>Onehubtv</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Senior UI/UX Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2021</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>
-                    Pivoting the UI/UX of a streaming platform.
-                  </p>
-                  <div class="button-row">
-                    <div class="secondary-button preview-button" data-preview-id="onehubtv">
-                      <div class="button-text">See Preview</div>
-                      <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
-                    </div>
-                    <div class="full-case-button access-button" data-case-id="onehubtv">
-                      <div class="button-text">Full Case Study</div>
-                      <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
-                    </div>
-                  </div>
-                </div>
-
-                <img
-                  src="img/OHTV.svg"
-                  loading="lazy"
-                  alt="Preview image of the redesigned suggested jobs carousels.."
-                  class="project-preview-image right-align"/></a
-              ><a
-                href="/hyperjar.html"
-                class="project-card w-inline-block"
-                ><div class="v-stack max-width">
-                  <img
-                    src="img/hpj_logo.svg"
-                    loading="lazy"
-                    alt=""
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>HyperJar</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Lead Product Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2020</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>Bringing the look and feel of the Kids Card to life.</p>
-                  <div class="button-row">
-                    <div class="secondary-button preview-button" data-preview-id="hyperjar">
-                      <div class="button-text">See Preview</div>
-                      <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
-                    </div>
-                    <div class="full-case-button access-button" data-case-id="hyperjar">
-                      <div class="button-text">Full Case Study</div>
-                      <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src="img/HPJ_HERO.svg"
-                  srcset="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd4f3b57684da0e44ba39cb_ArrowRight.svg 100vw"
-                  loading="lazy"
-                  sizes="(max-width: 600px) 100vw, (max-width: 767px) 83vw, (max-width: 991px) 87vw, 480px"
-                  alt="Preview image of the redesigned job card."
-                  class="project-preview-image"/>
                   </a>
 
-                  <!-- ifsc -->
+                  <a href="highlights.html#training" class="achievement-award-card w-inline-block">
+                    <div class="achievement-ornament"></div>
+                    <div class="achievement-award-content">
+                      <p class="achievement-award-kicker">Training</p>
+                      <h2 class="achievement-award-title">Stanford and UXPA 2026</h2>
+                      <p class="achievement-award-copy">AI product UX training plus conference courses and continuing education.</p>
+                    </div>
+                  </a>
 
-                  <a
-                href="/ifsc-group.html"
-                class="project-card w-inline-block"
-                ><div class="v-stack max-width">
-                  <img
-                    src="img/ifsc_logo.svg"
-                    loading="lazy"
-                    alt=""
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>IFSC Group</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Product Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2019</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>
-                    Building a real time freight calculator and sales dashboard w/salesforce API.
-                  </p>
-                  <div class="button-row">
-                    <div class="secondary-button preview-button" data-preview-id="ifsc">
-                      <div class="button-text">See Preview</div>
-                      <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                  <a href="highlights.html#launches" class="achievement-award-card w-inline-block">
+                    <div class="achievement-ornament"></div>
+                    <div class="achievement-award-content">
+                      <p class="achievement-award-kicker">Latest Launches</p>
+                      <h2 class="achievement-award-title">Recent releases and beta work</h2>
+                      <p class="achievement-award-copy">Public launches across native, desktop, and connected systems.</p>
                     </div>
-                    <div class="full-case-button access-button" data-case-id="ifsc">
-                      <div class="button-text">Full Case Study</div>
-                      <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                  </a>
+
+                  <a href="highlights.html#timeline" class="achievement-award-card w-inline-block">
+                    <div class="achievement-ornament"></div>
+                    <div class="achievement-award-content">
+                      <p class="achievement-award-kicker">Timeline</p>
+                      <h2 class="achievement-award-title">Current work and shipped product</h2>
+                      <p class="achievement-award-copy">A quick read on what is in progress, ready, and already launched.</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
-  
-                <img
-                  src="img/ifsc_m.png"
-                  loading="lazy"
-                  alt="Preview image of the redesigned suggested jobs carousels.."
-                  class="project-preview-image right-align"/>
+              </section>
 
-                    <a
-                    href="#"
-                    class="project-card disabled last w-inline-block"
-                    ><div class="v-stack max-width">
-                      <img
-                        src="img/E.png"
-                        loading="lazy"
-                        alt=""
-                        class="company-logo"
-                      />
-                      <div class="v-space small"></div>
-                      <h2>elyzo.com</h2>
-                      <div class="h-stack">
-                        <p class="small-caps-subtitle">Founder</p>
-                        <div class="h-space-8px"></div>
-                        <p class="small-caps-subtitle light">•</p>
-                        <div class="h-space-8px"></div>
-                        <p class="small-caps-subtitle">2018</p>
-                      </div>
-                      <div class="v-space small"></div>
-                      <p>
-                        Womens fast fashion brand.
-                      </p>
-                      <div class="disabled-project-hover-tooltip">
-                        I&#x27;m still working on this case study.
-                      </div>
-                    </div>
+              <div class="bento-grid">
+                <a
+                  id="work"
+                  href="precision-et.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
                     <img
-                      src="img/elyzocover.png"
+                      src="img/OasisLogo.svg"
                       loading="lazy"
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 83vw, (max-width: 991px) 87vw, 480px"
-                      alt="A preview image of the Grumble app"
-                      class="project-preview-image"
-                  />
-                  
-
-                  <a
-                href="#"
-                class="project-card disabled last w-inline-block"
-                ><div class="v-stack max-width">
+                      alt="Precision ET logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Precision ET</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Senior Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2026</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Smart irrigation scheduling built from FAO-56 science.
+                    </p>
+                  </div>
                   <img
-                    src="img/g.png"
+                    src="img/PrecisionET_cover.svg"
                     loading="lazy"
-                    alt=""
-                    class="company-logo"
-                  />
-                  <div class="v-space small"></div>
-                  <h2>Geoff Banks</h2>
-                  <div class="h-stack">
-                    <p class="small-caps-subtitle">Product Lead &#38; Designer</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle light">•</p>
-                    <div class="h-space-8px"></div>
-                    <p class="small-caps-subtitle">2017</p>
-                  </div>
-                  <div class="v-space small"></div>
-                  <p>
-                    Bespoke sportsbook web & app feature refresh.
-                  </p>
-                  <div class="disabled-project-hover-tooltip">
-                    I&#x27;m still working on this case study.
-                  </div>
-                </div>
-                <img
-                  src="img/gbcover.png"
-                  loading="lazy"
-                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 83vw, (max-width: 991px) 87vw, 480px"
-                  alt="A preview image of the Grumble app"
-                  class="project-preview-image"
-              />
+                    alt="Precision ET preview"
+                    class="project-preview-image right-align flush-bottom-preview"/>
+                </a>
 
-            </a>
+                <a
+                  href="oasis.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/OasisLogo.svg"
+                      loading="lazy"
+                      alt="Toro Oasis logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Toro Oasis</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Senior Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2025</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Designed for homeowners and contractors, smart irrigation built for real yards.
+                    </p>
+                    <div class="button-row">
+                      <div class="secondary-button preview-button" data-preview-id="oasis">
+                        <div class="button-text">See Preview</div>
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                      </div>
+                      <div class="full-case-button access-button" data-case-id="oasis">
+                        <div class="button-text">Full Case Study</div>
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="img/OasisMain.png"
+                    loading="lazy"
+                    alt="Toro Oasis preview"
+                    class="project-preview-image right-align"/>
+                </a>
+
+                <a
+                  href="spatial-adjust.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/OasisLogo.svg"
+                      loading="lazy"
+                      alt="Spatial Adjust logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Spatial Adjust</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Senior Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2026</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Map-based irrigation recommendations for reviewing and tuning zone changes.
+                    </p>
+                  </div>
+                  <img
+                    src="img/Spatial_Adjust_cover.svg"
+                    loading="lazy"
+                    alt="Spatial Adjust preview"
+                    class="project-preview-image right-align flush-bottom-preview"/>
+                </a>
+
+                <a
+                  href="lynxmobile.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/lynx_logo.svg"
+                      loading="lazy"
+                      alt="Lynx Mobile logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Lynx Mobile</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Senior Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2023</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Field-first mobile control, alerts, and visibility for irrigation teams.
+                    </p>
+                    <div class="button-row">
+                      <div class="secondary-button preview-button" data-preview-id="lynxmobile">
+                        <div class="button-text">See Preview</div>
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                      </div>
+                      <div class="full-case-button access-button" data-case-id="lynxmobile">
+                        <div class="button-text">Full Case Study</div>
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="img/LM.svg"
+                    loading="lazy"
+                    alt="Lynx Mobile preview"
+                    class="project-preview-image right-align"/>
+                </a>
+
+                <a
+                  href="lynxdrive.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/lynx_drive.svg"
+                      loading="lazy"
+                      alt="Lynx Drive logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Lynx Drive</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Senior Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2022</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Central irrigation control for superintendents and operators.
+                    </p>
+                    <div class="button-row">
+                      <div class="secondary-button preview-button" data-preview-id="lynxdrive">
+                        <div class="button-text">See Preview</div>
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                      </div>
+                      <div class="full-case-button access-button" data-case-id="lynxdrive">
+                        <div class="button-text">Full Case Study</div>
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="img/LD.svg"
+                    loading="lazy"
+                    alt="Lynx Drive preview"
+                    class="project-preview-image right-align"/>
+                </a>
+
+                <a
+                  href="vision247.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/onehubtvlogo.svg"
+                      loading="lazy"
+                      alt="OneHubTV logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>OneHubTV</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Senior UI/UX Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2021</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      OTT streaming platform and subscription conversion redesign.
+                    </p>
+                    <div class="button-row">
+                      <div class="secondary-button preview-button" data-preview-id="onehubtv">
+                        <div class="button-text">See Preview</div>
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                      </div>
+                      <div class="full-case-button access-button" data-case-id="onehubtv">
+                        <div class="button-text">Full Case Study</div>
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="img/OHTV.svg"
+                    loading="lazy"
+                    alt="OneHubTV preview"
+                    class="project-preview-image right-align"/>
+                </a>
+
+                <a
+                  href="hyperjar.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/hpj_logo.svg"
+                      loading="lazy"
+                      alt="HyperJar logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>HyperJar Kids Card</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Lead Product Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2020</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Kids card platform, launch site, and physical card design.
+                    </p>
+                    <div class="button-row">
+                      <div class="secondary-button preview-button" data-preview-id="hyperjar">
+                        <div class="button-text">See Preview</div>
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                      </div>
+                      <div class="full-case-button access-button" data-case-id="hyperjar">
+                        <div class="button-text">Full Case Study</div>
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="img/HPJ_HERO.svg"
+                    loading="lazy"
+                    alt="HyperJar preview"
+                    class="project-preview-image right-align"/>
+                </a>
+
+                <a
+                  href="ifsc-group.html"
+                  class="project-card w-inline-block"
+                  ><div class="v-stack max-width">
+                    <img
+                      src="img/ifsc_logo.svg"
+                      loading="lazy"
+                      alt="IFSC Group logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>IFSC Group</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Product Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2019</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Freight calculator and sales dashboard with Salesforce API integration.
+                    </p>
+                    <div class="button-row">
+                      <div class="secondary-button preview-button" data-preview-id="ifsc">
+                        <div class="button-text">See Preview</div>
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5c-5 0-9 3.5-10 7 1 3.5 5 7 10 7s9-3.5 10-7c-1-3.5-5-7-10-7Zm0 11.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm0-2.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#1e1f23"/></svg>
+                      </div>
+                      <div class="full-case-button access-button" data-case-id="ifsc">
+                        <div class="button-text">Full Case Study</div>
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1.5a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-7A1.5 1.5 0 0 1 5.5 10H7Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="black"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="img/ifsc_m.png"
+                    loading="lazy"
+                    alt="IFSC Group preview"
+                    class="project-preview-image right-align"/>
+                </a>
+
+                <div class="project-card disabled">
+                  <div class="v-stack max-width">
+                    <img
+                      src="img/E.png"
+                      loading="lazy"
+                      alt="Elyzo logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Elyzo</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">2018</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Early product work across e-commerce flows, visual design, and digital merchandising.
+                    </p>
+                  </div>
+                  <img
+                    src="img/elyzocover.png"
+                    loading="lazy"
+                    alt="Elyzo preview"
+                    class="project-preview-image right-align"/>
+                </div>
+
+                <div class="project-card disabled">
+                  <div class="v-stack max-width">
+                    <img
+                      src="img/G.png"
+                      loading="lazy"
+                      alt="Geoff Banks logo"
+                      class="company-logo"
+                    />
+                    <div class="v-space small"></div>
+                    <h2>Geoff Banks</h2>
+                    <div class="h-stack">
+                      <p class="small-caps-subtitle">Product Designer</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle light">•</p>
+                      <div class="h-space-8px"></div>
+                      <p class="small-caps-subtitle">2017</p>
+                    </div>
+                    <div class="v-space small"></div>
+                    <p>
+                      Racecourse digital experience, campaign design, and web delivery for live events.
+                    </p>
+                  </div>
+                  <img
+                    src="img/gbcover.png"
+                    loading="lazy"
+                    alt="Geoff Banks preview"
+                    class="project-preview-image right-align"/>
+                </div>
+              </div>
 
               <div class="v-space extra-large"></div>
             </div>
             <div data-w-tab="Play Tab" class="play-tab-content w-tab-pane">
-                            <div class="hero-text-wrapper">
-                              <h1 class="eyebrow">Adam Munir</h1>
-                              <h1 class="black-gradient-h1 play-gradient-text">Side projects, experiments, and things I make for fun.</h1>
-                              <div class="v-space"></div>
-                              <div class="hero-centered-paragraph work">
-                                I’m a keen designer who’s always looking for ways to spread my design footprint through video & animation and new languages and libraries.
-                                <a href="about.html" class="link-text"
-                                  >about me.</a
-                                >
-                              </div>
-                              <div class="v-space small"></div>
-                              <div class="location-wrapper">
-                                <img
-                                  src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd67d88e589fa52700f6034_MapPin.svg"
-                                  loading="lazy"
-                                  width="24"
-                                  height="24"
-                                  alt=""
-                                  class="location-icon"
-                                />
-                                <div class="strong-text">Orange, CA</div>
-                              </div>
-                            </div>
+              <div class="play-tab-shell">
+                            <header class="achievements-simple-hero play-tab-hero">
+                              <p class="achievements-simple-kicker">Play</p>
+                              <h1 class="achievements-simple-title">Experiments, motion, and side projects.</h1>
+                              <p class="achievements-simple-intro">
+                                A running collection of visual explorations, interactions, animation work, and smaller builds outside the main portfolio.
+                              </p>
+                            </header>
+              <div class="bento-grid">
               
               <!-- <a
                 href="https://clearcook.webflow.io"
@@ -895,17 +957,6 @@
                   </div>
                   <div class="v-space small"></div>
                   <p>A travel planning and booking app.</p>
-                  <div class="full-case-button">
-                    <div class="button-text">See Concept</div>
-                    <img
-                      src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd4f3b57684da0e44ba39cb_ArrowRight.svg"
-                      loading="lazy"
-                      width="24"
-                      height="24"
-                      alt=""
-                      class="button-icon"
-                    />
-                  </div>
                 </div>
                 <img
                   src="img/altitudecover.png"
@@ -1023,6 +1074,8 @@
           
           </a>
 
+              </div>
+              </div>
               <div class="v-space extra-large"></div>
             </div>
           </div>
@@ -1077,10 +1130,6 @@
       type="text/javascript"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
-    ></script>
-    <script
-      src="js/index.js"
-      type="text/javascript"
     ></script>
     <script
       src="js/footer.js"
@@ -1188,6 +1237,49 @@
           hyperjar: 'hyperjar.html',
           ifsc: 'ifsc-group.html'
         };
+
+        // Safety reset: ensure scroll isn't locked on load.
+        document.body.classList.remove('preview-modal-open');
+        if (overlay) {
+          overlay.classList.remove('is-visible');
+          overlay.setAttribute('aria-hidden', 'true');
+        }
+        if (passwordOverlay) {
+          passwordOverlay.classList.remove('is-visible');
+          passwordOverlay.setAttribute('aria-hidden', 'true');
+        }
+
+        // Keep scroll behavior simple; modal scroll lock is handled by CSS + open/close functions.
+
+        // Work/Play tabs are now controlled from the top navigation.
+        (function() {
+          var tabButtons = document.querySelectorAll('.menu-tab');
+          var tabLinks = document.querySelectorAll('.tabs-toggle-options .w-tab-link');
+          var panes = document.querySelectorAll('.home-tabs-content .w-tab-pane');
+
+          function activateTab(tabName) {
+            tabButtons.forEach(function(btn) {
+              btn.classList.toggle('is-active', btn.getAttribute('data-tab') === tabName);
+            });
+            tabLinks.forEach(function(link) {
+              link.classList.toggle('w--current', link.getAttribute('data-w-tab') === tabName);
+            });
+            panes.forEach(function(pane) {
+              pane.classList.toggle('w--tab-active', pane.getAttribute('data-w-tab') === tabName);
+            });
+          }
+
+          tabButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              activateTab(btn.getAttribute('data-tab'));
+            });
+          });
+
+          var params = new URLSearchParams(window.location.search);
+          var tabParam = params.get('tab');
+          activateTab(tabParam === 'Play' ? 'Play Tab' : 'Work Tab');
+        })();
 
         function renderSlide() {
           if (!activePreview) return;
@@ -1368,12 +1460,7 @@
           });
         });
 
-        var projectCards = document.querySelectorAll('.project-card');
-        projectCards.forEach(function(card) {
-          card.addEventListener('click', function(event) {
-            event.preventDefault();
-          });
-        });
+
 
         var accessButtons = document.querySelectorAll('.access-button');
         accessButtons.forEach(function(button) {

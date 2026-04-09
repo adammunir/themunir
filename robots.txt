@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /oasis.html
+Disallow: /lynxdrive.html
+Disallow: /lynxmobile.html
+Disallow: /spatial-adjust.html
+Disallow: /precision-et.html
+Disallow: /vision247.html
+Disallow: /hyperjar.html
+Disallow: /ifsc-group.html
+Disallow: /aptitude.html
