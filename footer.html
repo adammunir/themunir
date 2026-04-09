@@ -24,6 +24,13 @@
     align-items: flex-start;
   }
 
+  .tm-footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 6px 28px;
+    align-items: start;
+  }
+
   .tm-footer-logo-col {
     flex: 0 0 auto;
   }
@@ -101,6 +108,11 @@
       width: 100%;
     }
 
+    .tm-footer-links-grid {
+      grid-template-columns: 1fr;
+      gap: 4px 0;
+    }
+
     .tm-footer-caption {
       font-size: 12px;
     }
@@ -128,12 +140,14 @@
 
     <div class="tm-footer-column">
       <div class="tm-footer-heading">Studies</div>
-      <a href="#" class="tm-footer-link footer-access-link" data-case-id="oasis">Toro Oasis</a>
-      <a href="#" class="tm-footer-link footer-access-link" data-case-id="lynxmobile">Lynx Mobile</a>
-      <a href="#" class="tm-footer-link footer-access-link" data-case-id="lynxdrive">Lynx Drive</a>
-      <a href="#" class="tm-footer-link footer-access-link" data-case-id="onehubtv">Onehubtv</a>
-      <a href="#" class="tm-footer-link footer-access-link" data-case-id="hyperjar">HyperJar</a>
-      <a href="#" class="tm-footer-link footer-access-link" data-case-id="ifsc">IFSC Oceans</a>
+      <div class="tm-footer-links-grid">
+        <a href="oasis.html" class="tm-footer-link">Toro Oasis</a>
+        <a href="lynxmobile.html" class="tm-footer-link">Lynx Mobile</a>
+        <a href="lynxdrive.html" class="tm-footer-link">Lynx Drive</a>
+        <a href="vision247.html" class="tm-footer-link">OneHubTV</a>
+        <a href="hyperjar.html" class="tm-footer-link">HyperJar</a>
+        <a href="ifsc-group.html" class="tm-footer-link">IFSC Oceans</a>
+      </div>
     </div>
 
     <div class="tm-footer-column">
@@ -148,4 +162,3 @@
     <div class="tm-footer-caption">Copyright © <span id="current-year">2025</span> THEMUNIR All rights reserved.</div>
   </div>
 </div>
-

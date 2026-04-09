@@ -13,7 +13,17 @@
       type="text/css"
     />
     <link
+      href="/styles/styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
       href="/styles/uniform-spacing.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="/styles/nav.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -105,97 +115,83 @@
         class="logomain w-inline-block"
         ><div><img src="img/themunirLogo.svg" style="height: 30px; width: auto;"></div></a
       >
-      <a
-        data-w-id="d64efa4e-aae7-3cd0-956d-dcaafdb9320a"
-        href="#"
-        class="icon-button w-inline-block"
-        ><div
-          data-w-id="d64efa4e-aae7-3cd0-956d-dcaafdb9320b"
-          data-animation-type="lottie"
-          data-src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd510d556f666a714cf5547_menu-to-close.json"
-          data-loop="0"
-          data-direction="1"
-          data-autoplay="0"
-          data-is-ix2-target="1"
-          data-renderer="canvas"
-          data-default-duration="0.6666666666666666"
-          data-duration="0.6666666666666666"
-          data-ix2-initial-state="0"
-          class="menu-to-close-icon"
-        ></div
-      ></a>
       <div class="menu-container">
         <a href="index.html" class="menu-item w-inline-block">
-          <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b0d34b9d09283ff00d2_House.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Home</div>
         </a>
+        <a href="index.html?tab=Play" class="menu-item w-inline-block">
+          <div class="menu-item-text">Play</div>
+        </a>
         <a href="about.html" class="menu-item w-inline-block w--current" aria-current="page">
-          <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b1353c1a180dbc8beb4_User.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">About</div>
         </a>
         <a href="resume.html" class="menu-item w-inline-block">
-          <img src="img/resume.png" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Resume</div>
         </a>
         <a href="contact.html" class="menu-item w-inline-block">
-          <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b112a8c8af4f99d7507_EnvelopeSimple.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Contact</div>
         </a>
       </div>
     </div>
-    <div class="full-width-section">
-      <div class="about-cloud-container">
-        <img
-          src="img/img1.png"
-          loading="eager"
-          width="233"
-          data-w-id="75ace4df-5ec6-8ef2-5c94-adab473822f3"
-          sizes="(max-width: 479px) 28vw, (max-width: 767px) 26vw, (max-width: 991px) 21vw, (max-width: 1439px) 19vw, 22vw"
-          alt="Me, my wife and son at DisneyLand."
-          class="about-cloud-image olive"
-        /><img
-          src="img/img2.png"
-          loading="eager"
-          width="233"
-          data-w-id="8147d119-0101-44b7-296b-0b9d03bad731"
-          sizes="(max-width: 479px) 36vw, (max-width: 767px) 33vw, (max-width: 991px) 26vw, (max-width: 1439px) 24vw, 27vw"
-          alt="Me pretending to read a book."
-          class="about-cloud-image waterfall"
-        /><img
-          class="about-cloud-image bridge"
-          src="img/img3.png"
-          width="233"
-          height="200"
-          alt="A photo of a telephone box, in the UK where I am from."
-          sizes="(max-width: 479px) 30vw, (max-width: 767px) 27vw, (max-width: 991px) 26vw, (max-width: 1439px) 24vw, 27vw"
-          data-w-id="f890f31c-d0cd-2f75-2fad-98762d5ac331"
-          loading="eager"
-        />
+    <div class="achievements-simple-page">
+      <div class="achievements-simple-shell">
+        <header class="achievements-simple-hero">
+          <p class="achievements-simple-kicker">About</p>
+          <h1 class="achievements-simple-title">Hey again, I&#x27;m Adam.</h1>
+          <p class="achievements-simple-intro">
+            Senior Product Designer based in Orange, California, building thoughtful products across native, web, and AI-enabled experiences.
+          </p>
+        </header>
+        <div class="about-cloud-container">
+          <img
+            src="img/img1.png"
+            loading="eager"
+            width="233"
+            data-w-id="75ace4df-5ec6-8ef2-5c94-adab473822f3"
+            sizes="(max-width: 479px) 28vw, (max-width: 767px) 26vw, (max-width: 991px) 21vw, (max-width: 1439px) 19vw, 22vw"
+            alt="Me, my wife and son at DisneyLand."
+            class="about-cloud-image olive"
+          /><img
+            src="img/img2.png"
+            loading="eager"
+            width="233"
+            data-w-id="8147d119-0101-44b7-296b-0b9d03bad731"
+            sizes="(max-width: 479px) 36vw, (max-width: 767px) 33vw, (max-width: 991px) 26vw, (max-width: 1439px) 24vw, 27vw"
+            alt="Me pretending to read a book."
+            class="about-cloud-image waterfall"
+          /><img
+            class="about-cloud-image bridge"
+            src="img/img3.png"
+            width="233"
+            height="200"
+            alt="A photo of a telephone box, in the UK where I am from."
+            sizes="(max-width: 479px) 30vw, (max-width: 767px) 27vw, (max-width: 991px) 26vw, (max-width: 1439px) 24vw, 27vw"
+            data-w-id="f890f31c-d0cd-2f75-2fad-98762d5ac331"
+            loading="eager"
+          />
+        </div>
+        <div class="single-column-section" style="padding-left: 0; padding-right: 0;">
+          <p class="case-paragraph">
+            I&#x27;m a Senior Product Designer based in Orange, California, focused on building scalable software for complex, data-driven systems. My work lives at the intersection of UX, engineering, and applied AI, translating technical platforms into intuitive tools that perform under real-world operational constraints.
+          </p>
+          <p class="case-paragraph">
+            My background began in analytics and data operations, which shaped how I approach design today: grounded in systems thinking, measurable outcomes, and technical feasibility. Over the years I’ve worked across fintech, gambling, logistics, data analytics, connected-device ecosystems, and large-scale platforms serving irrigation, golf, agriculture, and residential smart-home markets.
+          </p>
+          <p class="case-paragraph">
+            I specialize in turning dense workflows into confident, efficient experiences: real-time dashboards, field-tested mobile tools, setup flows for connected hardware, and platform design systems that scale across user types and device categories.
+          </p>
+          <p class="case-paragraph">
+            Alongside product design, I invest heavily in applied AI through prototyping tools, model-driven workflows, and new ways of accelerating research, iteration, and engineering collaboration.
+          </p>
+          <p class="case-paragraph">
+            My goal is simple: design software that feels clear, reliable, and effortless, even when the underlying systems are anything but.
+          </p>
+          <p class="case-paragraph">
+            If you&#x27;d like to connect, feel free to
+            <a href="contact.html" class="link-text">reach out</a>.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="single-column-section">
-      <div class="v-space medium"></div>
-      <h1 class="colored-h1-small">Hey again, I&#x27;m Adam.</h1>
-      <div class="v-space small"></div>
-      <p class="case-paragraph">
-        I&#x27;m a Senior Product Designer based in Orange, California, focused on building scalable software for complex, data-driven systems. My work lives at the intersection of UX, engineering, and applied AI—translating technical platforms into intuitive tools that perform under real-world operational constraints.
-      </p>
-      <p class="case-paragraph">
-        My background began in analytics and data operations, which shaped how I approach design today: grounded in systems thinking, measurable outcomes, and technical feasibility. Over the years I’ve worked across a wide range of industries including fintech, gambling, logistics, data analytics, connected-device ecosystems, and large-scale platforms serving irrigation, golf, agriculture, and residential smart‑home markets—environments where reliability, clarity, and performance matter far more than surface aesthetics.
-      </p>
-      <p class="case-paragraph">
-        I specialize in turning dense workflows into confident, efficient experiences: real-time dashboards, field-tested mobile tools, setup flows for connected hardware, and platform design systems that scale across user types and device categories.
-      </p>
-      <p class="case-paragraph">
-        Alongside product design, I invest heavily in applied AI—prototyping tools, experimenting with models, and integrating emerging workflows into real product development. I use these systems to accelerate research synthesis, design iteration, prototyping, and engineering collaboration, continually evolving how software is conceived and built.
-      </p>
-      <p class="case-paragraph">
-        My goal is simple: design software that feels clear, reliable, and effortless—even when the underlying systems are anything but.
-      </p>
-      <p class="case-paragraph">
-        If you&#x27;d like to connect, feel free to
-        <a href="contact.html" class="link-text">reach out</a>.
-      </p>
     </div>
     <div class="footer-placeholder"></div>
     <script
