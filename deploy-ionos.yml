@@ -1,0 +1,26 @@
+name: Deploy to IONOS Webspace
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Upload site to IONOS via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.IONOS_HOST }}
+          username: ${{ secrets.IONOS_USERNAME }}
+          password: ${{ secrets.IONOS_PASSWORD }}
+          port: 22
+          local_path: "./"
+          remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
+          args: "-o StrictHostKeyChecking=no -o ConnectTimeout=5"
+          delete: "true"
