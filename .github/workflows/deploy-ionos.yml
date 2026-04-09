@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - ".gitignore"
+      - "README.md"
+      - "AGENTS.md"
+      - "case-logs/**"
+      - "logs/**"
+      - ".github/**"
+
+concurrency:
+  group: ionos-deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -22,4 +33,13 @@ jobs:
           port: 22
           local_path: "./*"
           remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
+          rsyncArgs: >-
+            --exclude=.git
+            --exclude=.github
+            --exclude=.gitignore
+            --exclude=AGENTS.md
+            --exclude=README.md
+            --exclude=case-logs
+            --exclude=logs
+            --exclude=.DS_Store
           sftpArgs: "-o StrictHostKeyChecking=no"
