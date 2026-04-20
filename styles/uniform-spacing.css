@@ -109,3 +109,256 @@ figure {
     padding-bottom: 32px;
   }
 }
+
+/* Case study consistency layer */
+:root {
+  --case-study-content-width: 930px;
+  --case-study-content-gutter: 24px;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.case-study-block,
+.single-column-section,
+.two-column-section,
+.full-width-section,
+.callout-container,
+.case-study-header-content,
+.sj-hero-container,
+.oasis-metrics-banner,
+.sticky-image-text-columns,
+.ux-framework-section,
+.pet-container,
+.pet-container--narrow,
+.pet-section .pet-container {
+  box-sizing: border-box;
+  width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  max-width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-study-block,
+.case-study-section,
+.single-column-section,
+.two-column-section,
+.full-width-section,
+.callout-container,
+.intro-role-team,
+.pet-section {
+  padding-top: clamp(48px, 7vw, 88px) !important;
+  padding-bottom: clamp(48px, 7vw, 88px) !important;
+}
+
+.case-study-block {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.case-study-block,
+.full-width-image-block,
+.quote-divider,
+.oasis-problem-statement {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 760px;
+}
+
+.case-study-block + .case-study-block,
+.single-column-section + .single-column-section,
+.two-column-section + .two-column-section,
+.full-width-section + .full-width-section {
+  margin-top: 0 !important;
+}
+
+.section-eyebrow,
+.pet-eyebrow,
+.small-caps-header {
+  display: block;
+  margin-bottom: 12px !important;
+}
+
+.section-title,
+.pet-title-lg,
+.pet-title-md {
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.callout-container,
+.case-study-section,
+.intro-role-team,
+.wide-max-width,
+.pet-container,
+.single-column-section,
+.full-width-section,
+.sj-hero-container,
+.v-stack.max-width {
+  width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  max-width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+}
+
+.case-study-header-content {
+  max-width: var(--case-study-content-width) !important;
+}
+
+.sj-hero-container {
+  max-width: var(--case-study-content-width) !important;
+  height: auto !important;
+  margin-top: clamp(32px, 5vw, 64px) !important;
+}
+
+.sj-hero-container .sj-hero-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  margin: 0 auto !important;
+}
+
+.case-study-header-content.job-card-case,
+.callout-container,
+.v-stack.max-width {
+  max-width: var(--case-study-content-width) !important;
+}
+
+.case-study-section.white-background,
+.case-study-section {
+  box-sizing: border-box;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.intro-role-team,
+.oasis-metrics-grid,
+.role-team,
+.role-column,
+.team-column,
+.callout-text {
+  width: 100% !important;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.role-team {
+  box-sizing: border-box;
+}
+
+/* Standalone case-study media should be readable within a viewport. */
+.full-width-image-block,
+.full-width-section.white-background,
+.pet-figure,
+.pet-media-frame {
+  box-sizing: border-box;
+  width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  max-width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.full-width-image-block.gray-placeholder,
+.full-width-image-block {
+  padding: clamp(20px, 4vw, 40px) !important;
+}
+
+.full-width-image-block > img,
+.full-width-section.white-background > img,
+.case-image,
+.wide-image,
+.pet-section .pet-container > img,
+.pet-figure img,
+.pet-media-frame img {
+  display: block !important;
+  width: auto !important;
+  max-width: min(900px, 100%) !important;
+  max-height: 72vh !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.full-width-image-block .caption,
+.full-width-section .caption {
+  max-width: 680px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Keep HyperJar-style sticky sections compact and scrollable. */
+.sticky-image-text-columns,
+.pet-sticky-story {
+  box-sizing: border-box;
+  width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  max-width: min(var(--case-study-content-width), calc(100% - (var(--case-study-content-gutter) * 2))) !important;
+  gap: clamp(32px, 5vw, 56px) !important;
+}
+
+.sticky-image-container-bg,
+.pet-sticky-visual {
+  top: clamp(80px, 18vh, 160px) !important;
+}
+
+.sticky-image-container-bg img,
+.pet-sticky-frame,
+.pet-sticky-frame img {
+  max-height: 72vh !important;
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --case-study-content-gutter: 16px;
+  }
+
+  .intro-role-team {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .callout-text {
+    margin-right: 0 !important;
+  }
+
+  .role-team {
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    margin-top: 32px !important;
+  }
+
+  .role-column,
+  .team-column {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .case-study-block,
+  .case-study-section,
+  .single-column-section,
+  .two-column-section,
+  .full-width-section,
+  .pet-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .full-width-image-block > img,
+  .full-width-section.white-background > img,
+  .case-image,
+  .wide-image,
+  .pet-section .pet-container > img,
+  .pet-figure img,
+  .pet-media-frame img {
+    max-height: none !important;
+  }
+}

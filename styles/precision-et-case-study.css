@@ -1,0 +1,2467 @@
+/* ============================================================
+   Precision ET Case Study — Platform-Aligned Stylesheet
+   Namespace: pet-  |  Last updated: 2025
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. CSS CUSTOM PROPERTIES
+   ---------------------------------------------------------- */
+:root {
+  /* Brand */
+  --pet-toro-red: #E11837;
+  --pet-toro-red-hover: #c8152f;
+
+  /* Backgrounds */
+  --pet-bg: #ffffff;
+  --pet-bg-alt: #f6f6f6;
+  --pet-bg-dark: #323235;
+  --pet-bg-card: #ffffff;
+  --pet-bg-muted: #f7f8fb;
+
+  /* Text */
+  --pet-text-heading: #101114;
+  --pet-text-primary: #323235;
+  --pet-text-secondary: #5e5e63;
+  --pet-text-tertiary: #75757a;
+  --pet-text-on-dark: #ffffff;
+  --pet-text-muted: #707072;
+
+  /* Borders & Surfaces */
+  --pet-border: #e5e7eb;
+  --pet-border-light: #eceff1;
+  --pet-surface-card: #fdfdfd;
+
+  /* Shadows */
+  --pet-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.1);
+  --pet-shadow-lg: 0 9px 30px 0 rgba(0, 0, 0, 0.13);
+  --pet-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  /* Radius */
+  --pet-radius: 12px;
+  --pet-radius-lg: 24px;
+  --pet-radius-pill: 999px;
+  --pet-radius-md: 15px;
+
+  /* Layout */
+  --pet-max-width: 960px;
+  --pet-narrow-width: 760px;
+  --pet-section-pad: 64px;
+  --pet-container-pad: 24px;
+
+  /* Typography */
+  --pet-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pet-font-alt: 'Karla', sans-serif;
+
+  /* Accent */
+  --pet-accent-purple: #8474f9;
+  --pet-accent-blue: #55a5ff;
+  --pet-accent-coral: #f4717d;
+}
+
+/* ----------------------------------------------------------
+   2. BASE / RESET
+   ---------------------------------------------------------- */
+.pet-case-study {
+  font-family: var(--pet-font);
+  color: var(--pet-text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.pet-case-study *,
+.pet-case-study *::before,
+.pet-case-study *::after {
+  box-sizing: border-box;
+}
+
+.pet-case-study img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pet-case-study a {
+  color: var(--pet-toro-red);
+  text-decoration: none;
+}
+
+.pet-case-study a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------------
+   3. TYPOGRAPHY
+   ---------------------------------------------------------- */
+.pet-title-xl {
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 0 24px !important;
+}
+
+.pet-title-lg {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 0 24px !important;
+}
+
+.pet-title-md {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 0 16px !important;
+}
+
+.pet-title-sm {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 0 12px !important;
+}
+
+.pet-eyebrow {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--pet-toro-red) !important;
+  margin: 0 0 12px !important;
+  display: block;
+}
+
+.pet-lead {
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 0 32px !important;
+  max-width: 760px;
+}
+
+.pet-body {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: var(--pet-text-primary) !important;
+}
+
+.pet-body-lg {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: var(--pet-text-primary) !important;
+}
+
+.pet-body-sm {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+}
+
+.pet-brand-title {
+  display: block;
+}
+
+.pet-brand-name {
+  display: inline-block;
+}
+
+.pet-caption {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: var(--pet-text-tertiary) !important;
+}
+
+/* Dark section text overrides */
+.pet-section--dark .pet-title-xl,
+.pet-section--dark .pet-title-lg,
+.pet-section--dark .pet-title-md,
+.pet-section--dark .pet-title-sm {
+  color: var(--pet-text-on-dark) !important;
+}
+
+.pet-section--dark .pet-eyebrow {
+  color: var(--pet-accent-coral) !important;
+}
+
+.pet-section--dark .pet-lead,
+.pet-section--dark .pet-body,
+.pet-section--dark .pet-body-lg,
+.pet-section--dark .pet-body-sm {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.pet-section--dark .pet-caption {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ----------------------------------------------------------
+   4. LAYOUT — SECTIONS & CONTAINERS
+   ---------------------------------------------------------- */
+.pet-section {
+  padding: var(--pet-section-pad) 0 !important;
+  background: var(--pet-bg) !important;
+  position: relative;
+}
+
+.pet-section--muted {
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-section--dark {
+  background: var(--pet-bg-dark) !important;
+  color: var(--pet-text-on-dark) !important;
+}
+
+.pet-container {
+  max-width: var(--pet-max-width) !important;
+  margin: 0 auto !important;
+  padding: 0 var(--pet-container-pad) !important;
+  width: 100% !important;
+}
+
+.pet-container--narrow {
+  max-width: var(--pet-narrow-width) !important;
+  margin: 0 auto !important;
+  padding: 0 var(--pet-container-pad) !important;
+  width: 100% !important;
+}
+
+/* Grids */
+.pet-grid-2 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 32px !important;
+  align-items: start;
+}
+
+.pet-grid-3 {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+
+/* Spacing helpers */
+.pet-mt-sm { margin-top: 16px !important; }
+.pet-mt-md { margin-top: 32px !important; }
+.pet-mt-lg { margin-top: 48px !important; }
+.pet-mt-xl { margin-top: 64px !important; }
+
+/* Full bleed image */
+.pet-full-bleed {
+  width: 100% !important;
+  border-radius: var(--pet-radius-lg) !important;
+  overflow: hidden !important;
+  margin-top: 48px !important;
+  box-shadow: var(--pet-shadow);
+}
+
+.pet-full-bleed img {
+  width: 100%;
+  display: block;
+}
+
+/* ----------------------------------------------------------
+   5. HERO SECTION
+   ---------------------------------------------------------- */
+.pet-hero {
+  position: relative !important;
+  min-height: 90vh !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: 0 0 80px !important;
+  overflow: hidden !important;
+  background: #1a1a2e !important;
+}
+
+.pet-hero__bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+}
+
+.pet-hero__bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 0.18 !important;
+  filter: blur(2px) !important;
+}
+
+.pet-hero__overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 20, 0.65) 0%,
+    rgba(10, 10, 20, 0.75) 40%,
+    rgba(10, 10, 20, 0.92) 100%
+  ) !important;
+}
+
+.pet-hero__content {
+  position: relative !important;
+  z-index: 3 !important;
+  max-width: var(--pet-max-width) !important;
+  margin: 0 auto !important;
+  padding: 0 var(--pet-container-pad) !important;
+  width: 100% !important;
+}
+
+.pet-hero__badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: var(--pet-radius-pill) !important;
+  padding: 8px 20px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 24px !important;
+}
+
+.pet-hero__title {
+  font-size: 56px !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  color: #ffffff !important;
+  margin: 0 0 20px !important;
+  max-width: 720px !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.pet-hero__subtitle {
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin: 0 0 40px !important;
+  max-width: 600px !important;
+}
+
+.pet-hero__meta {
+  display: flex !important;
+  gap: 48px !important;
+  flex-wrap: wrap !important;
+}
+
+.pet-hero__meta-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.pet-hero__meta-label {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.pet-hero__meta-value {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ----------------------------------------------------------
+   6. OVERVIEW / SIDEBAR LAYOUT
+   ---------------------------------------------------------- */
+.pet-overview {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: 64px !important;
+  align-items: start !important;
+}
+
+.pet-overview__main {
+  /* Primary content column */
+}
+
+.pet-overview__main p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--pet-text-primary);
+  margin-bottom: 16px;
+}
+
+.pet-overview__sidebar {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 32px !important;
+  padding: 32px !important;
+  background: var(--pet-bg-alt) !important;
+  border-radius: var(--pet-radius) !important;
+}
+
+.pet-overview__sidebar h4 {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--pet-text-tertiary) !important;
+  margin: 0 0 8px !important;
+}
+
+.pet-overview__sidebar p {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-primary) !important;
+  margin: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   7. METRICS BANNER
+   ---------------------------------------------------------- */
+.pet-metrics-banner {
+  background: var(--pet-bg-dark) !important;
+  border-radius: var(--pet-radius-lg) !important;
+  padding: 48px !important;
+  margin-top: 48px !important;
+}
+
+.pet-metrics-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 32px !important;
+  text-align: center !important;
+}
+
+.pet-metric-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.pet-metric-number {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.1 !important;
+}
+
+.pet-metric-label {
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* ----------------------------------------------------------
+   8. DOUBLE DIAMOND
+   ---------------------------------------------------------- */
+.pet-diamond {
+  text-align: center !important;
+  margin-top: 48px !important;
+}
+
+.pet-diamond__svg {
+  max-width: 600px !important;
+  margin: 0 auto 48px !important;
+}
+
+.pet-diamond__svg svg {
+  width: 100%;
+  height: auto;
+}
+
+.pet-diamond__phases {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  text-align: center !important;
+}
+
+.pet-diamond__phase {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.pet-diamond__icon {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: var(--pet-radius) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  background: var(--pet-bg-alt) !important;
+  color: var(--pet-text-primary) !important;
+}
+
+.pet-diamond__icon--discover { background: #e8f5e9 !important; color: #2e7d32 !important; }
+.pet-diamond__icon--define   { background: #e3f2fd !important; color: #1565c0 !important; }
+.pet-diamond__icon--develop  { background: #fff3e0 !important; color: #e65100 !important; }
+.pet-diamond__icon--deliver  { background: #fce4ec !important; color: #c62828 !important; }
+
+.pet-diamond__phase h4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-diamond__phase p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   9. PERSONA CARDS
+   ---------------------------------------------------------- */
+.pet-persona-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+
+.pet-persona-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.pet-persona-card:hover {
+  box-shadow: var(--pet-shadow) !important;
+  transform: translateY(-2px) !important;
+}
+
+.pet-persona__avatar {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  background: var(--pet-bg-alt) !important;
+  flex-shrink: 0 !important;
+}
+
+.pet-persona__avatar--homeowner  { background: #e3f2fd !important; }
+.pet-persona__avatar--contractor { background: #e8f5e9 !important; }
+.pet-persona__avatar--landscape  { background: #fff3e0 !important; }
+
+.pet-persona-card h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-persona-card p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+.pet-persona-card strong {
+  color: var(--pet-text-heading) !important;
+  font-weight: 600 !important;
+}
+
+.pet-persona-card ul {
+  margin: 0 !important;
+  padding-left: 18px !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  color: var(--pet-text-secondary) !important;
+}
+
+/* ----------------------------------------------------------
+   10. MASLOW HIERARCHY
+   ---------------------------------------------------------- */
+.pet-maslow {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0 !important;
+  margin-top: 48px !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.pet-maslow__level {
+  display: flex !important;
+  align-items: stretch !important;
+  border-radius: var(--pet-radius) !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  margin-bottom: -1px !important;
+}
+
+/* Pyramid shape via width */
+.pet-maslow__level--1 { width: 55% !important; }
+.pet-maslow__level--2 { width: 65% !important; }
+.pet-maslow__level--3 { width: 75% !important; }
+.pet-maslow__level--4 { width: 87% !important; }
+.pet-maslow__level--5 { width: 100% !important; }
+
+.pet-maslow__content {
+  padding: 20px 24px !important;
+  flex: 1 !important;
+}
+
+.pet-maslow__content h4 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 0 4px !important;
+}
+
+.pet-maslow__content p {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* Color bars on left of each level */
+.pet-maslow__level--1 { border-left: 4px solid var(--pet-toro-red) !important; }
+.pet-maslow__level--2 { border-left: 4px solid #e65100 !important; }
+.pet-maslow__level--3 { border-left: 4px solid #f9a825 !important; }
+.pet-maslow__level--4 { border-left: 4px solid #2e7d32 !important; }
+.pet-maslow__level--5 { border-left: 4px solid #1565c0 !important; }
+
+/* ----------------------------------------------------------
+   11. USER JOURNEY
+   ---------------------------------------------------------- */
+.pet-journey {
+  margin-top: 48px !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.pet-journey__table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  font-size: 14px !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  overflow: hidden !important;
+}
+
+.pet-journey__table thead {
+  background: var(--pet-bg-dark) !important;
+}
+
+.pet-journey__table thead th {
+  padding: 14px 20px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-align: left !important;
+  border: none !important;
+}
+
+.pet-journey__table tbody td {
+  padding: 16px 20px !important;
+  border-bottom: 1px solid var(--pet-border) !important;
+  vertical-align: top !important;
+  color: var(--pet-text-primary) !important;
+  line-height: 1.6 !important;
+}
+
+.pet-journey__table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.pet-journey__table tbody tr:nth-child(even) {
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-journey__table tbody td:first-child {
+  font-weight: 600 !important;
+  color: var(--pet-text-heading) !important;
+  white-space: nowrap !important;
+}
+
+/* ----------------------------------------------------------
+   12. SCIENCE CARDS
+   ---------------------------------------------------------- */
+.pet-science-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.pet-science-card:hover {
+  box-shadow: var(--pet-shadow) !important;
+  transform: translateY(-2px) !important;
+}
+
+.pet-science-card__icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: var(--pet-radius) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;
+  margin-bottom: 4px !important;
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-science-card__icon--temp  { background: #fce4ec !important; color: #c62828 !important; }
+.pet-science-card__icon--wind  { background: #e3f2fd !important; color: #1565c0 !important; }
+.pet-science-card__icon--plant { background: #e8f5e9 !important; color: #2e7d32 !important; }
+.pet-science-card__icon--soil  { background: #fff3e0 !important; color: #e65100 !important; }
+
+.pet-science-card h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-science-card p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* Dark section science cards */
+.pet-section--dark .pet-science-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.pet-section--dark .pet-science-card h4 {
+  color: #ffffff !important;
+}
+
+.pet-section--dark .pet-science-card p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ----------------------------------------------------------
+   13. EQUATION
+   ---------------------------------------------------------- */
+.pet-equation {
+  background: var(--pet-bg-alt) !important;
+  border-radius: var(--pet-radius-lg) !important;
+  padding: 48px !important;
+  text-align: center !important;
+  margin-top: 48px !important;
+}
+
+.pet-equation__formula {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  font-family: 'Georgia', serif !important;
+  letter-spacing: 0.02em !important;
+  margin-bottom: 32px !important;
+}
+
+.pet-equation__den {
+  display: block !important;
+  margin-top: 4px !important;
+  padding-top: 4px !important;
+  border-top: 2px solid var(--pet-text-heading) !important;
+}
+
+.pet-equation__block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  text-align: left !important;
+}
+
+.pet-equation__block h4 {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-equation__block p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* Dark section equation */
+.pet-section--dark .pet-equation {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.pet-section--dark .pet-equation__formula {
+  color: #ffffff !important;
+}
+
+.pet-section--dark .pet-equation__den {
+  border-top-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.pet-section--dark .pet-equation__block h4 {
+  color: #ffffff !important;
+}
+
+.pet-section--dark .pet-equation__block p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ----------------------------------------------------------
+   14. CROP TABLE
+   ---------------------------------------------------------- */
+.pet-crop-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  font-size: 14px !important;
+  margin-top: 32px !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  overflow: hidden !important;
+}
+
+.pet-crop-table thead {
+  background: var(--pet-bg-dark) !important;
+}
+
+.pet-crop-table thead th {
+  padding: 14px 20px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-align: left !important;
+  border: none !important;
+}
+
+.pet-crop-table tbody td {
+  padding: 14px 20px !important;
+  border-bottom: 1px solid var(--pet-border) !important;
+  color: var(--pet-text-primary) !important;
+  line-height: 1.5 !important;
+}
+
+.pet-crop-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.pet-crop-table tbody tr:nth-child(even) {
+  background: var(--pet-bg-alt) !important;
+}
+
+/* ----------------------------------------------------------
+   15. STICKY SCROLL / STEP STORY
+   ---------------------------------------------------------- */
+.pet-sticky-story {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 64px !important;
+  align-items: start !important;
+  min-height: 100vh !important;
+}
+
+.pet-sticky-steps {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 80px !important;
+  padding: 80px 0 !important;
+}
+
+.pet-step {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.pet-step__number {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: var(--pet-toro-red) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  flex-shrink: 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.pet-step h3 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-step p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+.pet-step__copy {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.pet-step__science-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: var(--pet-bg-alt) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius-pill) !important;
+  padding: 6px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--pet-text-secondary) !important;
+  width: fit-content !important;
+  margin-top: 4px !important;
+}
+
+.pet-sticky-visual {
+  position: sticky !important;
+  top: clamp(72px, 18vh, 180px) !important;
+  height: fit-content !important;
+}
+
+.pet-sticky-frame {
+  position: relative !important;
+  min-height: 560px !important;
+  border-radius: var(--pet-radius-lg) !important;
+  overflow: hidden !important;
+  box-shadow: var(--pet-shadow-lg) !important;
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-sticky-image {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 0 !important;
+  opacity: 0 !important;
+  transform: translateY(8px) scale(0.995) !important;
+  transition: opacity 320ms ease, transform 320ms ease !important;
+  pointer-events: none !important;
+}
+
+.pet-sticky-image.is-active {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+
+/* ----------------------------------------------------------
+   16. AI CARDS
+   ---------------------------------------------------------- */
+.pet-ai-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  transition: box-shadow 0.25s ease !important;
+}
+
+.pet-ai-card:hover {
+  box-shadow: var(--pet-shadow) !important;
+}
+
+.pet-ai-card__icon {
+  font-size: 28px !important;
+  margin-bottom: 4px !important;
+}
+
+.pet-ai-card h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-ai-card p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* Dark section AI cards */
+.pet-section--dark .pet-ai-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.pet-section--dark .pet-ai-card h4 {
+  color: #ffffff !important;
+}
+
+.pet-section--dark .pet-ai-card p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ----------------------------------------------------------
+   17. COMPARISON GRID (Before/After)
+   ---------------------------------------------------------- */
+.pet-comp-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0 !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  overflow: hidden !important;
+  margin-top: 32px !important;
+}
+
+.pet-comp-gap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  padding: 32px !important;
+}
+
+.pet-comp-gap:first-child {
+  border-right: 1px solid var(--pet-border) !important;
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-comp-card {
+  padding: 16px !important;
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+}
+
+.pet-comp-card strong {
+  color: var(--pet-text-heading) !important;
+  font-weight: 600 !important;
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+
+/* ----------------------------------------------------------
+   18. DESIGN SYSTEM CARDS
+   ---------------------------------------------------------- */
+.pet-ds-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  margin-top: 32px !important;
+}
+
+.pet-ds-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.pet-ds-card:hover {
+  box-shadow: var(--pet-shadow) !important;
+  transform: translateY(-2px) !important;
+}
+
+.pet-ds-card__number {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: var(--pet-toro-red) !important;
+  line-height: 1 !important;
+  margin-bottom: 4px !important;
+}
+
+.pet-ds-card h4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-ds-card p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   19. APP CARDS (Screenshots)
+   ---------------------------------------------------------- */
+.pet-app-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  transition: box-shadow 0.25s ease !important;
+}
+
+.pet-app-card:hover {
+  box-shadow: var(--pet-shadow) !important;
+}
+
+.pet-app-card__icon {
+  font-size: 28px !important;
+  margin-bottom: 4px !important;
+}
+
+.pet-app-card__title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+}
+
+.pet-app-card__desc {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+}
+
+.pet-app-card__stack {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-top: 4px !important;
+}
+
+.pet-app-card__stack span {
+  display: inline-block !important;
+  padding: 4px 10px !important;
+  background: var(--pet-bg-alt) !important;
+  border-radius: var(--pet-radius-pill) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: var(--pet-text-tertiary) !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* ----------------------------------------------------------
+   20. COLOR STRIP
+   ---------------------------------------------------------- */
+.pet-color-strip {
+  display: flex !important;
+  border-radius: var(--pet-radius) !important;
+  overflow: hidden !important;
+  height: 56px !important;
+  margin-top: 32px !important;
+  box-shadow: var(--pet-shadow-sm) !important;
+}
+
+.pet-color-strip span {
+  flex: 1 !important;
+  position: relative !important;
+}
+
+/* ----------------------------------------------------------
+   21. RESULTS GRID
+   ---------------------------------------------------------- */
+.pet-results-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+}
+
+.pet-result-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.pet-result-card__number {
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  color: var(--pet-toro-red) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.pet-result-card h4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-result-card p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* Dark section results */
+.pet-section--dark .pet-result-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.pet-section--dark .pet-result-card__number {
+  color: var(--pet-accent-coral) !important;
+}
+
+.pet-section--dark .pet-result-card h4 {
+  color: #ffffff !important;
+}
+
+.pet-section--dark .pet-result-card p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ----------------------------------------------------------
+   22. LESSONS GRID
+   ---------------------------------------------------------- */
+.pet-lesson-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 24px !important;
+}
+
+.pet-lesson-card {
+  background: var(--pet-bg-card) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: var(--pet-radius) !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.pet-lesson-card__number {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--pet-toro-red) !important;
+  letter-spacing: 0.05em !important;
+}
+
+.pet-lesson-card h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-lesson-card p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   23. TIMELINE
+   ---------------------------------------------------------- */
+.pet-timeline {
+  position: relative !important;
+  padding-left: 40px !important;
+  margin-top: 48px !important;
+}
+
+.pet-timeline::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 11px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 2px !important;
+  background: var(--pet-border) !important;
+}
+
+.pet-timeline__item {
+  position: relative !important;
+  padding-bottom: 40px !important;
+}
+
+.pet-timeline__item:last-child {
+  padding-bottom: 0 !important;
+}
+
+.pet-timeline__marker {
+  position: absolute !important;
+  left: -40px !important;
+  top: 4px !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: var(--pet-toro-red) !important;
+  border: 3px solid var(--pet-bg) !important;
+  z-index: 1 !important;
+}
+
+.pet-timeline__content {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.pet-timeline__content h4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--pet-text-heading) !important;
+  margin: 0 !important;
+}
+
+.pet-timeline__content p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--pet-text-secondary) !important;
+  margin: 0 !important;
+}
+
+/* Dark section timeline */
+.pet-section--dark .pet-timeline::before {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.pet-section--dark .pet-timeline__marker {
+  border-color: var(--pet-bg-dark) !important;
+}
+
+.pet-section--dark .pet-timeline__content h4 {
+  color: #ffffff !important;
+}
+
+.pet-section--dark .pet-timeline__content p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ----------------------------------------------------------
+   24. CALLOUT (Dark)
+   ---------------------------------------------------------- */
+.pet-callout-dark {
+  background: var(--pet-bg-dark) !important;
+  border-radius: var(--pet-radius-lg) !important;
+  padding: 56px !important;
+  text-align: center !important;
+  margin-top: 48px !important;
+}
+
+.pet-callout-dark .pet-title-md {
+  color: #ffffff !important;
+}
+
+.pet-callout-dark .pet-body-lg,
+.pet-callout-dark p {
+  color: rgba(255, 255, 255, 0.75) !important;
+  max-width: 640px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ----------------------------------------------------------
+   25. RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .pet-hero__title {
+    font-size: 42px !important;
+  }
+
+  .pet-title-xl {
+    font-size: 38px !important;
+  }
+
+  .pet-title-lg {
+    font-size: 30px !important;
+  }
+
+  .pet-overview {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .pet-sticky-story {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .pet-sticky-visual {
+    position: relative !important;
+    top: 0 !important;
+    order: -1 !important;
+  }
+
+  .pet-sticky-steps {
+    gap: 48px !important;
+    padding: 40px 0 !important;
+  }
+
+  .pet-sticky-frame {
+    min-height: 0 !important;
+  }
+
+  .pet-sticky-image {
+    position: relative !important;
+    inset: auto !important;
+    display: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  .pet-sticky-image.is-active {
+    display: block !important;
+  }
+
+  .pet-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .pet-diamond__phases {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --pet-section-pad: 40px;
+    --pet-container-pad: 20px;
+  }
+
+  .pet-hero {
+    min-height: 80vh !important;
+    padding: 0 0 48px !important;
+  }
+
+  .pet-hero__title {
+    font-size: 32px !important;
+  }
+
+  .pet-hero__subtitle {
+    font-size: 17px !important;
+  }
+
+  .pet-hero__meta {
+    gap: 24px !important;
+  }
+
+  .pet-title-xl {
+    font-size: 30px !important;
+  }
+
+  .pet-title-lg {
+    font-size: 26px !important;
+  }
+
+  .pet-title-md {
+    font-size: 21px !important;
+  }
+
+  .pet-lead {
+    font-size: 17px !important;
+  }
+
+  .pet-grid-2,
+  .pet-grid-3,
+  .pet-persona-grid,
+  .pet-ds-grid,
+  .pet-results-grid,
+  .pet-lesson-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pet-comp-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pet-comp-gap:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid var(--pet-border) !important;
+  }
+
+  .pet-metrics-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  .pet-metrics-banner {
+    padding: 32px !important;
+  }
+
+  .pet-diamond__phases {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pet-maslow__level--1,
+  .pet-maslow__level--2,
+  .pet-maslow__level--3,
+  .pet-maslow__level--4 {
+    width: 100% !important;
+  }
+
+  .pet-equation {
+    padding: 32px 20px !important;
+  }
+
+  .pet-equation__formula {
+    font-size: 20px !important;
+  }
+
+  .pet-callout-dark {
+    padding: 40px 24px !important;
+  }
+
+  .pet-hero__badge {
+    font-size: 11px !important;
+    padding: 6px 14px !important;
+  }
+
+  .pet-overview__sidebar {
+    padding: 24px !important;
+  }
+
+  .pet-persona-card,
+  .pet-science-card,
+  .pet-ai-card,
+  .pet-app-card,
+  .pet-ds-card,
+  .pet-result-card,
+  .pet-lesson-card {
+    padding: 24px !important;
+  }
+
+  .pet-journey__table {
+    font-size: 13px !important;
+    display: block !important;
+    overflow-x: auto !important;
+  }
+
+  .pet-crop-table {
+    font-size: 13px !important;
+    display: block !important;
+    overflow-x: auto !important;
+  }
+}
+
+/* ----------------------------------------------------------
+   26. SMOOTH TRANSITIONS & POLISH
+   ---------------------------------------------------------- */
+
+/* Smooth scroll */
+.pet-case-study {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+.pet-case-study ::selection {
+  background: var(--pet-toro-red);
+  color: #ffffff;
+}
+
+/* Focus styles */
+.pet-case-study a:focus-visible {
+  outline: 2px solid var(--pet-toro-red);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove Webflow overrides for our namespace */
+.pet-case-study h1,
+.pet-case-study h2,
+.pet-case-study h3,
+.pet-case-study h4,
+.pet-case-study h5,
+.pet-case-study h6 {
+  font-family: var(--pet-font) !important;
+  margin: 0 !important;
+}
+
+.pet-case-study p {
+  font-family: var(--pet-font) !important;
+}
+
+/* List styling inside cards */
+.pet-body ul,
+.pet-body-lg ul,
+.pet-body-sm ul,
+.pet-persona-card ul,
+.pet-app-card ul {
+  margin-top: 0;
+}
+
+/* ============================================================
+   Precision ET — Oasis Alignment Overrides
+   Keeps structure/content, normalizes visual system.
+   ============================================================ */
+
+:root {
+  --pet-bg: #ffffff;
+  --pet-bg-alt: #f6f6f6;
+  --pet-bg-dark: #f6f6f6;
+  --pet-bg-card: #f6f6f6;
+  --pet-bg-muted: #f6f6f6;
+  --pet-text-heading: #171717;
+  --pet-text-primary: #323235;
+  --pet-text-secondary: #5e5e63;
+  --pet-text-tertiary: #75757a;
+  --pet-text-on-dark: #171717;
+  --pet-border: #d8d9dd;
+  --pet-border-light: #e5e7eb;
+  --pet-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --pet-shadow-lg: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --pet-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --pet-max-width: 930px;
+  --pet-narrow-width: 930px;
+  --pet-section-pad: 88px;
+  --pet-container-pad: 32px;
+}
+
+.pet-case-study {
+  background: var(--pet-bg-alt);
+}
+
+.pet-section,
+.pet-section--muted,
+.pet-section--dark {
+  background: var(--pet-bg-alt) !important;
+  color: var(--pet-text-primary) !important;
+}
+
+.pet-container,
+.pet-container--narrow {
+  max-width: var(--pet-max-width) !important;
+}
+
+.pet-eyebrow {
+  color: #8f8f94 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.1em !important;
+}
+
+.pet-title-xl,
+.pet-title-lg {
+  letter-spacing: -0.02em !important;
+}
+
+/* Hero: remove dark cinematic treatment, match Oasis clarity */
+.pet-hero {
+  display: block !important;
+  min-height: auto !important;
+  padding: 0 0 36px !important;
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-hero__bg {
+  inset: auto !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 930px !important;
+  margin: 0 auto !important;
+  opacity: 1 !important;
+  filter: none !important;
+  border-radius: 16px !important;
+}
+
+.pet-hero__overlay {
+  display: none !important;
+}
+
+.pet-hero__content {
+  margin-top: 20px !important;
+}
+
+.pet-hero__badge {
+  display: none !important;
+}
+
+.pet-hero__title,
+.pet-hero__subtitle,
+.pet-hero__meta-label,
+.pet-hero__meta-value {
+  color: var(--pet-text-primary) !important;
+  text-shadow: none !important;
+}
+
+.pet-hero__meta-label {
+  color: var(--pet-text-tertiary) !important;
+}
+
+/* Neutralize legacy dark-section text overrides */
+.pet-section--dark .pet-title-xl,
+.pet-section--dark .pet-title-lg,
+.pet-section--dark .pet-title-md,
+.pet-section--dark .pet-title-sm,
+.pet-section--dark .pet-eyebrow,
+.pet-section--dark .pet-lead,
+.pet-section--dark .pet-body,
+.pet-section--dark .pet-body-lg,
+.pet-section--dark .pet-body-sm,
+.pet-section--dark .pet-caption,
+.pet-section--dark .pet-science-card h4,
+.pet-section--dark .pet-science-card p,
+.pet-section--dark .pet-ai-card h4,
+.pet-section--dark .pet-ai-card p,
+.pet-section--dark .pet-result-card__number,
+.pet-section--dark .pet-result-card h4,
+.pet-section--dark .pet-result-card p,
+.pet-section--dark .pet-timeline__content h4,
+.pet-section--dark .pet-timeline__content p,
+.pet-callout-dark .pet-title-md,
+.pet-callout-dark .pet-body-lg,
+.pet-callout-dark p {
+  color: var(--pet-text-primary) !important;
+}
+
+/* Metrics block like Oasis: outlined, no dark fill */
+.pet-metrics-banner {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+
+.pet-metrics-grid {
+  width: 100% !important;
+  margin: 0 !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: var(--pet-bg-alt) !important;
+  gap: 0 !important;
+}
+
+.pet-metrics-banner .pet-container {
+  max-width: 930px !important;
+  padding: 0 32px !important;
+}
+
+.pet-metric-item {
+  padding: 44px 24px !important;
+  position: relative !important;
+}
+
+.pet-metric-item:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 24% !important;
+  height: 52% !important;
+  width: 1px !important;
+  background: #dfdfe3 !important;
+}
+
+.pet-metric-number {
+  color: var(--pet-text-heading) !important;
+  font-size: 48px !important;
+}
+
+.pet-metric-label {
+  color: #8f8f94 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* Cards + surfaces: outline-only system */
+.pet-overview__sidebar,
+.pet-persona-card,
+.pet-science-card,
+.pet-ai-card,
+.pet-ds-card,
+.pet-app-card,
+.pet-result-card,
+.pet-lesson-card,
+.pet-maslow__level,
+.pet-equation,
+.pet-callout-dark,
+.pet-sticky-frame,
+.pet-comp-card {
+  background: var(--pet-bg-alt) !important;
+  border: 1px solid var(--pet-border) !important;
+  box-shadow: none !important;
+}
+
+/* Project overview horizontal panels */
+.pet-overview {
+  display: block !important;
+}
+
+.pet-overview-panels {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin-top: 32px !important;
+}
+
+.pet-overview-panel {
+  background: var(--pet-bg-alt) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: 14px !important;
+  padding: 24px !important;
+}
+
+.pet-overview-panel .pet-title-sm {
+  margin-bottom: 10px !important;
+}
+
+.pet-overview-panel ul {
+  margin: 0 !important;
+  padding-left: 18px !important;
+}
+
+.pet-overview-panel li {
+  color: var(--pet-text-primary) !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 6px !important;
+}
+
+.pet-overview-panel li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Competitive table: single-line separators only */
+.pet-comp-grid {
+  border: 1px solid var(--pet-border) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  gap: 0 !important;
+}
+
+.pet-comp-card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 28px 30px !important;
+  background: var(--pet-bg-alt) !important;
+}
+
+.pet-comp-card:nth-child(odd) {
+  border-right: 1px solid var(--pet-border) !important;
+}
+
+.pet-comp-card:not(:nth-last-child(-n + 2)) {
+  border-bottom: 1px solid var(--pet-border) !important;
+}
+
+.pet-persona-card:hover,
+.pet-science-card:hover,
+.pet-ai-card:hover,
+.pet-ds-card:hover,
+.pet-app-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Remove colorful icon chips */
+.pet-diamond__icon,
+.pet-persona__avatar,
+.pet-science-card__icon,
+.pet-ai-card__icon,
+.pet-app-card__icon,
+.pet-step__number,
+.pet-lesson-card__number,
+.pet-timeline__marker,
+.pet-ds-card__number {
+  background: transparent !important;
+  color: var(--pet-text-heading) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.pet-persona__avatar,
+.pet-science-card__icon,
+.pet-app-card__icon,
+.pet-ai-card__icon {
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.pet-diamond__icon--discover,
+.pet-diamond__icon--define,
+.pet-diamond__icon--develop,
+.pet-diamond__icon--deliver,
+.pet-persona__avatar--homeowner,
+.pet-persona__avatar--contractor,
+.pet-persona__avatar--landscape,
+.pet-science-card__icon--temp,
+.pet-science-card__icon--wind,
+.pet-science-card__icon--plant,
+.pet-science-card__icon--soil {
+  background: transparent !important;
+  color: var(--pet-text-heading) !important;
+}
+
+/* Tables and timeline to neutral palette */
+.pet-journey__table thead,
+.pet-crop-table thead {
+  background: #ececef !important;
+}
+
+.pet-journey__table thead th,
+.pet-crop-table thead th {
+  color: var(--pet-text-tertiary) !important;
+}
+
+.pet-journey__table tbody tr:nth-child(even),
+.pet-crop-table tbody tr:nth-child(even) {
+  background: #f1f1f4 !important;
+}
+
+.pet-timeline::before {
+  background: #d7d9df !important;
+}
+
+.pet-timeline__marker {
+  border: 1px solid #cfd2d9 !important;
+}
+
+/* Responsive consistency with Oasis spacing */
+@media (max-width: 900px) {
+  :root {
+    --pet-container-pad: 20px;
+    --pet-section-pad: 72px;
+  }
+
+  .pet-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .pet-metric-item:not(:last-child)::after {
+    display: none !important;
+  }
+
+  .pet-metric-item:nth-child(1),
+  .pet-metric-item:nth-child(2) {
+    border-bottom: 1px solid #dfdfe3 !important;
+  }
+
+  .pet-overview-panels {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .pet-comp-card:nth-child(odd) {
+    border-right: 0 !important;
+  }
+
+  .pet-comp-card:not(:last-child) {
+    border-bottom: 1px solid var(--pet-border) !important;
+  }
+
+  .pet-metrics-banner .pet-container {
+    padding: 0 20px !important;
+  }
+}
+.pet-case-study ul {
+  margin: 0 !important;
+  padding-left: 18px !important;
+}
+
+.pet-case-study li {
+  margin-bottom: 4px !important;
+}
+
+/* Table reset */
+.pet-case-study table {
+  font-family: var(--pet-font) !important;
+}
+
+/* Competitor logos */
+.pet-brand-title {
+  margin: 0 0 14px !important;
+}
+
+.pet-brand-logo {
+  height: 28px !important;
+  width: auto !important;
+  max-width: 170px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  filter: grayscale(1) contrast(1.08) !important;
+}
+
+/* Problem statement: full-width white section, tighter vertical rhythm */
+.pet-problem-section {
+  background: #ffffff !important;
+  padding: 56px 0 60px !important;
+}
+
+.pet-problem-section__inner {
+  text-align: center !important;
+}
+
+.pet-problem-section .pet-title-xl {
+  margin-bottom: 18px !important;
+}
+
+.pet-problem-section .pet-lead {
+  margin: 0 auto !important;
+  max-width: 960px !important;
+}
+
+@media (max-width: 900px) {
+  .pet-brand-logo {
+    height: 24px !important;
+    max-width: 150px !important;
+  }
+
+  .pet-problem-section {
+    padding: 48px 0 52px !important;
+  }
+}
+
+/* ==========================================================
+   Precision ET — Spacing Polish (Oasis-aligned rhythm)
+   ========================================================== */
+
+:root {
+  --pet-section-pad: 88px;
+  --pet-container-pad: 32px;
+}
+
+.pet-container {
+  max-width: 1160px !important;
+}
+
+.pet-container--narrow {
+  max-width: 920px !important;
+}
+
+.pet-section {
+  padding: 88px 0 !important;
+}
+
+.pet-section--muted,
+.pet-section--dark {
+  padding: 92px 0 !important;
+}
+
+.pet-hero__content {
+  padding-top: 54px !important;
+  padding-bottom: 54px !important;
+}
+
+.pet-eyebrow {
+  margin: 0 0 10px !important;
+}
+
+.pet-title-xl {
+  margin: 0 0 30px !important;
+  max-width: 980px !important;
+}
+
+.pet-title-lg {
+  margin: 0 0 28px !important;
+  max-width: 900px !important;
+}
+
+.pet-title-md {
+  margin: 0 0 20px !important;
+}
+
+.pet-title-sm {
+  margin: 0 0 14px !important;
+}
+
+.pet-lead {
+  margin: 0 0 32px !important;
+  max-width: 860px !important;
+}
+
+.pet-body {
+  margin: 0 0 16px !important;
+  max-width: 880px !important;
+}
+
+.pet-body:last-child {
+  margin-bottom: 0 !important;
+}
+
+.pet-grid-2,
+.pet-grid-3,
+.pet-persona-grid,
+.pet-overview-panels,
+.pet-ds-grid,
+.pet-results-grid,
+.pet-lesson-grid {
+  gap: 20px !important;
+  margin-top: 28px !important;
+}
+
+.pet-persona-card,
+.pet-science-card,
+.pet-ai-card,
+.pet-app-card,
+.pet-result-card,
+.pet-lesson-card,
+.pet-overview-panel,
+.pet-ds-card {
+  padding: 26px !important;
+}
+
+.pet-metrics-banner {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+}
+
+.pet-metrics-grid {
+  border-radius: 20px !important;
+}
+
+.pet-metric-item {
+  padding: 38px 24px !important;
+}
+
+.pet-diamond {
+  margin-top: 20px !important;
+  margin-bottom: 24px !important;
+}
+
+.pet-diamond__phases {
+  margin-top: 22px !important;
+  gap: 20px !important;
+}
+
+.pet-diamond__phase {
+  padding: 24px !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  background: var(--pet-bg-alt) !important;
+  border: 1px solid var(--pet-border) !important;
+  border-radius: 14px !important;
+}
+
+.pet-diamond__icon {
+  margin-bottom: 8px !important;
+}
+
+.pet-journey,
+.pet-equation,
+.pet-crop-table,
+.pet-timeline,
+.pet-comp-grid {
+  margin-top: 24px !important;
+}
+
+.pet-comp-gap {
+  margin-top: 24px !important;
+}
+
+.pet-sticky-story {
+  margin-top: 14px !important;
+  gap: 52px !important;
+}
+
+.pet-sticky-steps {
+  gap: 60px !important;
+  padding: 56px 0 !important;
+}
+
+.pet-step {
+  gap: 10px !important;
+}
+
+.pet-problem-section {
+  padding: 64px 0 68px !important;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --pet-section-pad: 76px;
+    --pet-container-pad: 24px;
+  }
+
+  .pet-section {
+    padding: 76px 0 !important;
+  }
+
+  .pet-section--muted,
+  .pet-section--dark {
+    padding: 80px 0 !important;
+  }
+
+  .pet-grid-2,
+  .pet-grid-3,
+  .pet-persona-grid,
+  .pet-overview-panels,
+  .pet-ds-grid,
+  .pet-results-grid,
+  .pet-lesson-grid {
+    gap: 16px !important;
+    margin-top: 24px !important;
+  }
+
+  .pet-persona-card,
+  .pet-science-card,
+  .pet-ai-card,
+  .pet-app-card,
+  .pet-result-card,
+  .pet-lesson-card,
+  .pet-overview-panel,
+  .pet-ds-card {
+    padding: 22px !important;
+  }
+
+  .pet-metric-item {
+    padding: 30px 20px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --pet-section-pad: 64px;
+    --pet-container-pad: 18px;
+  }
+
+  .pet-section,
+  .pet-section--muted,
+  .pet-section--dark {
+    padding: 64px 0 !important;
+  }
+
+  .pet-title-xl {
+    margin-bottom: 22px !important;
+  }
+
+  .pet-title-lg {
+    margin-bottom: 20px !important;
+  }
+
+  .pet-lead {
+    margin-bottom: 24px !important;
+  }
+
+  .pet-metric-item {
+    padding: 26px 18px !important;
+  }
+
+  .pet-problem-section {
+    padding: 52px 0 !important;
+  }
+}
+
+/* Sticky story: mirror HyperJar proportions/behavior */
+.pet-sticky-story {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  max-width: 930px !important;
+  width: 100% !important;
+  margin: 16px auto 0 !important;
+  padding: 0 32px !important;
+  gap: 44px !important;
+  min-height: 0 !important;
+}
+
+.pet-sticky-visual {
+  position: sticky !important;
+  top: 20% !important;
+  flex: 0 0 340px !important;
+  width: 340px !important;
+}
+
+.pet-sticky-frame {
+  width: 340px !important;
+  min-height: 560px !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.pet-sticky-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+}
+
+.pet-sticky-steps {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  gap: 56px !important;
+  padding: 0 !important;
+}
+
+.pet-step {
+  scroll-margin-top: 140px !important;
+}
+
+@media (max-width: 1024px) {
+  .pet-sticky-story {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    padding: 0 24px !important;
+    gap: 24px !important;
+  }
+
+  .pet-sticky-visual {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .pet-sticky-frame {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  .pet-sticky-steps {
+    gap: 40px !important;
+  }
+}
+
+/* Match the shared case-study rail even though this stylesheet loads last. */
+.pet-case-study {
+  --case-study-content-width: 960px;
+  --case-study-content-gutter: 24px;
+}
+
+.pet-case-study .pet-container,
+.pet-case-study .pet-container--narrow,
+.pet-case-study .pet-sticky-story,
+.pet-case-study .pet-metrics-grid,
+.pet-case-study .pet-overview,
+.pet-case-study .pet-figure,
+.pet-case-study .pet-media-frame {
+  width: min(var(--case-study-content-width), calc(100vw - (var(--case-study-content-gutter) * 2))) !important;
+  max-width: min(var(--case-study-content-width), calc(100vw - (var(--case-study-content-gutter) * 2))) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.pet-case-study .pet-sticky-story {
+  align-items: flex-start !important;
+  gap: clamp(32px, 5vw, 56px) !important;
+  min-height: 0 !important;
+}
+
+.pet-case-study .pet-sticky-visual {
+  top: clamp(80px, 18vh, 160px) !important;
+}
+
+.pet-case-study .pet-sticky-frame {
+  width: min(340px, 100%) !important;
+  min-height: 0 !important;
+  height: min(560px, 72vh) !important;
+}
+
+.pet-case-study .pet-sticky-image {
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+}
+
+.pet-case-study .pet-container > img,
+.pet-case-study .pet-figure img,
+.pet-case-study .pet-media-frame img {
+  display: block !important;
+  width: auto !important;
+  max-width: min(900px, 100%) !important;
+  max-height: 72vh !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.pet-design-solution .full-width-image-block {
+  padding: 24px !important;
+}
+
+.pet-design-solution .full-width-image-block > img {
+  width: auto !important;
+  max-width: min(560px, 100%) !important;
+  max-height: 430px !important;
+  object-fit: contain !important;
+}
+
+.pet-design-solution .caption {
+  max-width: 560px !important;
+}
+
+.pet-design-solution .pet-design-solution-phone-crop {
+  width: min(960px, 100%) !important;
+  height: 655px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border-radius: 14px !important;
+  background-color: #f7f7f7 !important;
+}
+
+.pet-design-solution .pet-design-solution-phone-crop img {
+  height: 1352px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 991px) {
+  .pet-case-study {
+    --case-study-content-gutter: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pet-case-study .pet-sticky-frame {
+    height: auto !important;
+  }
+
+  .pet-case-study .pet-container > img,
+  .pet-case-study .pet-figure img,
+  .pet-case-study .pet-media-frame img {
+    max-height: none !important;
+  }
+
+  .pet-design-solution .full-width-image-block > img {
+    max-height: 520px !important;
+  }
+}

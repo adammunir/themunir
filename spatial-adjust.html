@@ -55,21 +55,99 @@
       })(window, document);
     </script>
     <link
-      href="img/themunirLogo.svg"
+      href="/img/themunirLogo.svg"
       rel="shortcut icon"
       type="image/x-icon"
     />
     <link
-      href="img/themunirLogo.svg"
+      href="/img/themunirLogo.svg"
       rel="apple-touch-icon"
     />
     <style>
+      .spatial-adjust-page {
+        --spatial-rail-width: 930px;
+        --spatial-rail-gutter: 48px;
+      }
+
+      .spatial-adjust-page .case-study-header-content,
+      .spatial-adjust-page .case-study-block,
+      .spatial-adjust-page .quote-divider,
+      .spatial-adjust-page .oasis-metrics-banner,
+      .spatial-adjust-page .full-width-image-block,
+      .spatial-adjust-page .oasis-problem-statement {
+        box-sizing: border-box;
+        width: min(var(--spatial-rail-width), calc(100% - var(--spatial-rail-gutter))) !important;
+        max-width: min(var(--spatial-rail-width), calc(100% - var(--spatial-rail-gutter))) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .spatial-adjust-page .case-study-section.white-background,
+      .spatial-adjust-page .wide-max-width {
+        box-sizing: border-box;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .spatial-adjust-page .case-study-section.white-background {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .spatial-adjust-page .case-study-block {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .spatial-adjust-page .oasis-metrics-banner {
+        margin-top: 0 !important;
+        margin-bottom: 96px !important;
+        padding: 36px 40px;
+        background: #f7f7f7;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+      }
+
+      .spatial-adjust-page .oasis-metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .spatial-adjust-page .oasis-metric-item {
+        min-width: 0;
+      }
+
+      .spatial-adjust-page .oasis-metric-number {
+        margin-bottom: 8px;
+        color: #303030;
+        font-family: Inter, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .spatial-adjust-page .oasis-metric-label {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
       .spatial-adjust-page .full-width-image-block.gray-placeholder {
-        max-width: 930px;
-        margin: 40px auto;
-        padding: 0;
-        background: none;
-        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 48px !important;
+        margin-bottom: 96px !important;
+        padding: clamp(20px, 4vw, 40px);
+        background: #f7f7f7;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
         box-shadow: none;
       }
 
@@ -80,17 +158,169 @@
       .spatial-adjust-page .case-image,
       .spatial-adjust-page .full-width-image-block img {
         display: block;
-        width: 100%;
+        width: auto;
         max-width: 100%;
+        max-height: min(640px, 72vh);
         height: auto;
-        margin: 24px auto 0;
-        border-radius: 0;
+        margin: 0 auto;
+        border-radius: 8px;
         box-shadow: none;
+        object-fit: contain;
+      }
+
+      .spatial-adjust-page .full-width-image-block .spatial-mobile-image {
+        max-height: min(560px, 70vh);
       }
 
       .spatial-adjust-page .caption {
         max-width: 680px;
-        margin: 14px auto 0;
+        margin: 18px auto 0;
+        color: #5d6370;
+        text-align: center;
+      }
+
+      .spatial-adjust-page .quote-divider {
+        margin-top: 8px !important;
+        margin-bottom: 96px !important;
+        padding: 56px 24px;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        text-align: center;
+      }
+
+      .spatial-adjust-page .quote-divider h2 {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .spatial-adjust-page .oasis-pain-grid,
+      .spatial-adjust-page .oasis-execution-details,
+      .spatial-adjust-page .oasis-research-stats {
+        display: grid;
+        gap: 20px;
+      }
+
+      .spatial-adjust-page .oasis-pain-grid,
+      .spatial-adjust-page .oasis-execution-details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 32px;
+      }
+
+      .spatial-adjust-page .oasis-pain-card,
+      .spatial-adjust-page .oasis-execution-detail {
+        padding: 24px;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+      }
+
+      .spatial-adjust-page .oasis-pain-card h4,
+      .spatial-adjust-page .oasis-execution-detail h5 {
+        margin: 0 0 12px;
+        color: #303030;
+        font-family: Inter, sans-serif;
+        font-weight: 700;
+      }
+
+      .spatial-adjust-page .oasis-pain-card p,
+      .spatial-adjust-page .oasis-execution-detail p {
+        margin: 0;
+        color: #5f6368;
+        line-height: 1.55;
+      }
+
+      .spatial-adjust-page .oasis-pain-card .pain-stat {
+        display: block;
+        margin-bottom: 14px;
+        color: #303030;
+        font-family: Inter, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .spatial-adjust-page .oasis-problem-statement {
+        margin-top: 0 !important;
+        margin-bottom: 96px !important;
+        padding: 56px 0;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .spatial-adjust-page .oasis-problem-statement h2 {
+        max-width: 820px;
+        margin: 0;
+      }
+
+      .spatial-adjust-page .oasis-research-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 32px 0 20px;
+        padding: 28px;
+        background: #f7f7f7;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+      }
+
+      .spatial-adjust-page .oasis-research-stat {
+        min-width: 0;
+      }
+
+      .spatial-adjust-page .oasis-research-stat .stat-number {
+        display: block;
+        margin-bottom: 8px;
+        color: #303030;
+        font-family: Inter, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .spatial-adjust-page .oasis-research-stat .stat-label {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .spatial-adjust-page .oasis-execution-block {
+        margin-top: 64px;
+        padding-top: 48px;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .spatial-adjust-page .oasis-execution-block:first-of-type {
+        margin-top: 40px;
+      }
+
+      .spatial-adjust-page .oasis-execution-block .execution-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 20px;
+        background: #303030;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .spatial-adjust-page .oasis-execution-block h3 {
+        margin-top: 0;
+      }
+
+      @media screen and (max-width: 767px) {
+        .spatial-adjust-page {
+          --spatial-rail-gutter: 32px;
+        }
+
+        .spatial-adjust-page .oasis-metrics-grid,
+        .spatial-adjust-page .oasis-pain-grid,
+        .spatial-adjust-page .oasis-execution-details,
+        .spatial-adjust-page .oasis-research-stats {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
     
@@ -117,7 +347,7 @@
   <body class="spatial-adjust-page">
     <div id="top" class="top-of-the-page"></div>
     <div class="menu-holder">
-      <a href="index.html" class="icon-button w-inline-block"
+      <a href="/" class="icon-button w-inline-block"
         ><img
           src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd65af4e1ad8f10bcd72f7b_ArrowLeft.svg"
           loading="lazy"
@@ -144,19 +374,19 @@
         ></div
       ></a>
       <div class="menu-container">
-        <a href="index.html" class="menu-item w-inline-block">
+        <a href="/" class="menu-item w-inline-block">
           <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b0d34b9d09283ff00d2_House.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Home</div>
         </a>
-        <a href="about.html" class="menu-item w-inline-block">
+        <a href="/about/" class="menu-item w-inline-block">
           <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b1353c1a180dbc8beb4_User.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">About</div>
         </a>
-        <a href="resume.html" class="menu-item w-inline-block">
-          <img src="img/resume.png" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
+        <a href="/resume/" class="menu-item w-inline-block">
+          <img src="/img/resume.png" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Resume</div>
         </a>
-        <a href="contact.html" class="menu-item w-inline-block">
+        <a href="/contact/" class="menu-item w-inline-block">
           <img src="https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/5fd51b112a8c8af4f99d7507_EnvelopeSimple.svg" loading="lazy" width="24" height="24" alt="" class="menu-item-icon" />
           <div class="menu-item-text">Contact</div>
         </a>
@@ -178,7 +408,7 @@
         class="back-to-top-animation-wrapper"
       >
         <a
-          href="spatial-adjust.html#top"
+          href="/spatial-adjust#top"
           data-w-id="2075c8d4-c8cd-6473-f5c8-9d5972679131"
           class="bottom-icon-button-teal w-inline-block"
           ><div
@@ -210,8 +440,10 @@
     </div>
     <div class="sj-hero-container">
       <img
-        src="img/spatial_adjust_top.svg"
-        loading="lazy"
+        src="/img/spatial_adjust_top.svg"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
         sizes="(max-width: 1279px) 81vw, 972px"
         style="z-index: -99 !important;"
         srcset="        "
@@ -220,17 +452,17 @@
       />
     </div>
     <div class="case-study-header-content">
-      <a href="highlights.html#patents" class="openlink">
+      <a href="/highlights#patents" class="openlink">
         <div class="oasis-app-card">
           <div class="oasis-app-card-logo">
-            <img src="/img/OasisLogo.svg" alt="Spatial Adjust" class="oasis-logo-img" />
+            <img src="/img/OasisLogo.svg" alt="Spatial Adjust" class="oasis-logo-img" decoding="async" />
           </div>
           <div class="oasis-app-card-content">
             <div class="oasis-app-card-title">Spatial Adjust</div>
             <div class="oasis-app-card-description">Patent-backed concept work for AI-assisted spatial irrigation adjustment.</div>
           </div>
           <div class="oasis-app-card-link">
-            <img src="/img/OpenLink.svg" alt="Open link" class="open-link-icon" />
+            <img src="/img/OpenLink.svg" alt="Open link" class="open-link-icon" decoding="async" />
           </div>
         </div>
       </a>
@@ -281,118 +513,251 @@
       </div>
     </div>
     <div class="v-space large"></div>
+
+    <div class="oasis-metrics-banner">
+      <div class="oasis-metrics-grid">
+        <div class="oasis-metric-item">
+          <div class="oasis-metric-number">8</div>
+          <p class="oasis-metric-label">superintendents reviewed recommendation trust, overrides, and map readability.</p>
+        </div>
+        <div class="oasis-metric-item">
+          <div class="oasis-metric-number">5</div>
+          <p class="oasis-metric-label">irrigation and agronomy specialists pressure-tested the decision model.</p>
+        </div>
+        <div class="oasis-metric-item">
+          <div class="oasis-metric-number">4</div>
+          <p class="oasis-metric-label">product and engineering partners aligned on scope, launch risk, and feasibility.</p>
+        </div>
+        <div class="oasis-metric-item">
+          <div class="oasis-metric-number">1</div>
+          <p class="oasis-metric-label">patent-backed concept for AI-assisted spatial irrigation governance.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <div class="section-eyebrow">The Opportunity</div>
+          <h2 class="section-title">Making Spatial Irrigation Intelligence Actionable</h2>
+          <p class="large-lead">Toro had the sensor data. Superintendents needed a safe way to turn it into confident watering decisions.</p>
+          <p>Spatial Adjust connects TurfRad soil-moisture readings, weather forecasts, and course geometry into an AI-assisted recommendation flow. The goal was not to replace expert judgment. It was to make dense telemetry readable enough for experts to inspect, adjust, and approve in the field.</p>
+          <p>The design work focused on the trust layer: map-based reasoning, confidence signals, clear recommendation drivers, and override paths that kept the superintendent in control.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="full-width-image-block gray-placeholder">
+      <div class="wireframe-placeholder"></div>
+      <img src="/img/Web_SpatialAdjust_01.png" alt="Spatial Adjust hero overview showing map-based irrigation intelligence." loading="lazy" decoding="async" />
+      <p class="caption">Spatial Adjust translates TurfRad sensor data into an actionable, override-friendly map interface.</p>
+    </div>
+
+    <div class="quote-divider">
+      <h2>&ldquo;I don&rsquo;t need another dashboard. I need to know what to change and why.&rdquo;</h2>
+      <p class="caption">A recurring theme from superintendent and irrigation lead conversations.</p>
+    </div>
+
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <div class="section-eyebrow">The Challenge</div>
+          <h2 class="section-title">Drowning in Telemetry</h2>
+          <p class="large-lead">Raw moisture data was useful only when the system could explain the next action.</p>
+          <p>Hardware sensors can capture millions of readings across a course, but superintendents do not make irrigation decisions from raw tables. They compare weather, turf conditions, zone history, crew constraints, and course priorities. When an algorithm recommends a major watering change, the interface has to prove the recommendation is reasonable before asking for approval.</p>
+          <div class="oasis-pain-grid">
+            <div class="oasis-pain-card">
+              <span class="pain-stat">Millions</span>
+              <h4>Data Points</h4>
+              <p>TurfRad created rich soil-moisture signals, but the value was locked inside spatial and temporal patterns that were hard to scan quickly.</p>
+            </div>
+            <div class="oasis-pain-card">
+              <span class="pain-stat">Low</span>
+              <h4>Automation Trust</h4>
+              <p>Experts were open to AI, but only if the recommendation showed its evidence and never hid the override path.</p>
+            </div>
+            <div class="oasis-pain-card">
+              <span class="pain-stat">High</span>
+              <h4>Operational Risk</h4>
+              <p>Wrong recommendations could damage turf, waste water, or create maintenance problems across a large property.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="full-width-image-block gray-placeholder">
+      <div class="wireframe-placeholder"></div>
+      <img src="/img/Web_SpatialAdjust_02.png" alt="Spatial Adjust web interface showing recommendation context and map review." loading="lazy" decoding="async" />
+      <p class="caption">The web experience anchors recommendations in course context instead of presenting them as isolated system decisions.</p>
+    </div>
+
+    <div class="oasis-problem-statement">
+      <div class="section-eyebrow">Problem Statement</div>
+      <h2>How might we make an AI irrigation recommendation feel inspectable enough for experts to approve, edit, or reject without slowing down field work?</h2>
+    </div>
+
     <section class="case-study-block">
       <div class="case-study-section white-background">
         <div class="wide-max-width">
           <div class="section-eyebrow">Research</div>
-          <h2 class="section-title">Who We Talked To</h2>
-          <div class="research-summary-grid">
-            <div class="research-summary-item">
-              <span class="research-summary-number">8</span>
-              <p class="research-summary-label">superintendents reviewed recommendation trust, overrides, and map readability.</p>
+          <h2 class="section-title">Trust Had To Be Designed Into Every Step</h2>
+          <p class="large-lead">The research signal was consistent: experts would use AI recommendations if they could see the reason, confidence, and escape hatch.</p>
+          <div class="oasis-research-stats">
+            <div class="oasis-research-stat">
+              <span class="stat-number">8</span>
+              <p class="stat-label">superintendents reviewed map readability and override behavior.</p>
             </div>
-            <div class="research-summary-item">
-              <span class="research-summary-number">5</span>
-              <p class="research-summary-label">irrigation and agronomy specialists pressure-tested the decision model.</p>
+            <div class="oasis-research-stat">
+              <span class="stat-number">5</span>
+              <p class="stat-label">agronomy and irrigation specialists tested recommendation logic.</p>
             </div>
-            <div class="research-summary-item">
-              <span class="research-summary-number">4</span>
-              <p class="research-summary-label">product and engineering partners aligned on differentiation, scope, and launch risk.</p>
+            <div class="oasis-research-stat">
+              <span class="stat-number">4</span>
+              <p class="stat-label">product and engineering partners aligned on scope and technical risk.</p>
             </div>
           </div>
-          <p class="research-summary-note">The main theme was trust: experts would use AI recommendations, but only if the system made confidence and override paths obvious.</p>
-        </div>
-      </div>
-    </section>
-    <!-- INTRO -->
-    <!-- EXECUTIVE SUMMARY -->
-    <section class="case-study-block">
-      <div class="case-study-section white-background">
-        <div class="wide-max-width">
-          <h2 class="section-title">Executive Summary</h2>
-          <p class="large-lead">Making spatial irrigation intelligence actionable.</p>
-          <p>Spatial Adjust integrates Toro's TurfRad sensors into an AI-assisted map and recommendation UX. While sensors gathered millions of data points on soil moisture, no system existed to help superintendents make sense of that data at scale.</p>
-          <ul>
-            <li><strong>Outcome:</strong> Seamlessly bridged autonomous recommendations with human oversight.</li>
-            <li><strong>Key Challenge:</strong> Designing "override trust patterns" so experts felt comfortable delegating decisions to an algorithm without losing control.</li>
-            <li><strong>Focus:</strong> AI-enabled workflows, hardware-to-software translation, and spatial reasoning UX.</li>
-          </ul>
+          <p>We used those conversations to separate the interface into three responsibilities: make the pattern visible, make the reasoning legible, and make intervention easy.</p>
         </div>
       </div>
     </section>
 
-    <!-- IMAGE PLACEHOLDER: HERO OVERVIEW -->
-    <div class="full-width-image-block gray-placeholder" style="display: flex; flex-direction: column; align-items: center;">
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width">
+          <div class="section-eyebrow">Design Decisions</div>
+          <h2 class="section-title">Override Trust Patterns</h2>
+          <p class="large-lead">The product could recommend, but the expert always had to understand and govern the recommendation.</p>
+          <div class="oasis-pain-grid">
+            <div class="oasis-pain-card">
+              <h4>Show The Evidence</h4>
+              <p>Recommendations expose the sensor readings, forecast inputs, and affected zones that triggered the change.</p>
+            </div>
+            <div class="oasis-pain-card">
+              <h4>Keep Overrides Close</h4>
+              <p>Users can accept, edit, or reject from the same review context instead of hunting through advanced settings.</p>
+            </div>
+            <div class="oasis-pain-card">
+              <h4>Map First</h4>
+              <p>Course-level heatmaps turn abstract telemetry into visual stress patterns tied to actual turf areas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="full-width-image-block gray-placeholder">
       <div class="wireframe-placeholder"></div>
-      <img src="/img/Web_SpatialAdjust_01.png" alt="Spatial Adjust hero overview showing map-based irrigation intelligence." style="display: block; width: 100%; max-width: 930px; margin: 0 auto; height: auto;" />
-      <p class="caption">Spatial Adjust translates millions of TurfRad sensor data points into an actionable, override-friendly map interface.</p>
+      <img src="/img/Web_SpatialAdjust_03.png" alt="Spatial Adjust interface showing override trust patterns and course-level insight." loading="lazy" decoding="async" />
+      <p class="caption">Recommendation review combines spatial evidence, confidence cues, and direct controls in one decision surface.</p>
     </div>
 
-    <!-- THE PROBLEM -->
-    <section class="case-study-block">
-      <div class="case-study-section white-background">
-        <div class="wide-max-width">
-          <div class="section-eyebrow">The Problem</div>
-          <h2 class="section-title">Drowning in Telemetry</h2>
-          <p>Hardware sensors like TurfRad can gather immense volumes of soil moisture data. However, for a golf course superintendent, raw data isn't enough. They need to know what action to take. When an algorithm recommends a severe watering reduction across a 50-acre property, the user's immediate instinct is distrust. The system must explain "why" and offer an easy "override" path.</p>
-          <img src="/img/Web_SpatialAdjust_02.png" alt="Spatial Adjust web interface showing recommendation context and map review." class="case-image" />
-        </div>
-      </div>
-    </section>
-
-    <!-- KEY DECISIONS -->
-    <section class="case-study-block">
-      <div class="case-study-section white-background">
-        <div class="wide-max-width">
-          <div class="section-eyebrow">Key Decisions</div>
-          <h2 class="section-title">Override Trust Patterns</h2>
-          <div class="insights-container" style="display: block; margin-top: 16px;">
-            <div class="insight-block" style="margin-bottom: 24px;">
-              <h4>1. Algorithmic Transparency</h4>
-              <p>We designed the UI to "show its work." Instead of a blackbox recommendation, Spatial Adjust highlights the specific TurfRad sensor logs and weather forecasts that triggered the recommendation.</p>
-            </div>
-            <div class="insight-block" style="margin-bottom: 24px;">
-              <h4>2. The Confident Override</h4>
-              <p>If an expert disagrees with the AI, overriding the decision is a frictionless one-click action. This builds trust, establishing AI as an assistant rather than an unyielding authority.</p>
-            </div>
-            <div class="insight-block">
-              <h4>3. Spatial Reasoning UX</h4>
-              <p>Data was plotted spatially across the course map, transforming abstract tables into visual heatmaps of soil moisture deficiencies.</p>
-            </div>
-          </div>
-          <img src="/img/Web_SpatialAdjust_03.png" alt="Spatial Adjust interface showing override trust patterns and course-level insight." class="case-image" />
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUTION WALKTHROUGH -->
     <section class="case-study-block">
       <div class="case-study-section white-background">
         <div class="wide-max-width execution-section-spaced">
-          <div class="section-eyebrow">Solution Walkthrough</div>
-          <h2 class="section-title" style="margin-bottom: 36px;">Building Trust with AI</h2>
-          <div class="full-width-image-block gray-placeholder" style="margin: 32px 0 40px 0;">
-            <div class="wireframe-placeholder"></div>
-            <img src="/img/mobile_spatial_Adust_01.png" alt="Spatial Adjust mobile flow showing recommendation review and map-linked controls." class="case-image" />
-            <p class="caption"><strong>Spatial Heatmaps:</strong> Visualizing exactly where the algorithm predicts stress.</p>
+          <div class="section-eyebrow">Execution</div>
+          <h2 class="section-title">Building Trust With AI</h2>
+
+          <div class="oasis-execution-block">
+            <div class="execution-number">1</div>
+            <h3>Spatial Heatmaps</h3>
+            <p>We made the map the primary review surface so superintendents could see where stress was happening before looking at recommendation details.</p>
+            <div class="oasis-execution-details">
+              <div class="oasis-execution-detail">
+                <h5>Pattern Recognition</h5>
+                <p>Heatmaps make moisture gaps visible across fairways, greens, and zones.</p>
+              </div>
+              <div class="oasis-execution-detail">
+                <h5>Course Context</h5>
+                <p>Recommendations stay tied to real turf areas, not disconnected rows of data.</p>
+              </div>
+              <div class="oasis-execution-detail">
+                <h5>Fast Triage</h5>
+                <p>Teams can spot what needs attention before opening deeper controls.</p>
+              </div>
+            </div>
           </div>
-          <div class="full-width-image-block gray-placeholder" style="margin: 32px 0 40px 0;">
-            <div class="wireframe-placeholder"></div>
-            <img src="/img/mobile_spatial_Adust_02.png" alt="Spatial Adjust mobile flow showing override controls and adjustment confirmation." class="case-image" />
-            <p class="caption"><strong>The Override Mechanism:</strong> A simple, contextual dialogue allowing users to adjust the AI's schedule.</p>
-          </div>
-          <img src="/img/Web_SpatialAdjust_04.png" alt="Spatial Adjust desktop flow showing finalized review and recommendation acceptance." class="case-image" />
         </div>
       </div>
     </section>
 
-    <!-- VALIDATION -->
+    <div class="full-width-image-block gray-placeholder">
+      <div class="wireframe-placeholder"></div>
+      <img src="/img/mobile_spatial_Adust_01.png" alt="Spatial Adjust mobile flow showing recommendation review and map-linked controls." class="spatial-mobile-image" loading="lazy" decoding="async" />
+      <p class="caption">Mobile review keeps map-linked recommendations available where irrigation work happens.</p>
+    </div>
+
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width execution-section-spaced">
+          <div class="oasis-execution-block">
+            <div class="execution-number">2</div>
+            <h3>Explainable Recommendations</h3>
+            <p>The recommendation flow separates the result from the rationale so users can scan the decision first, then inspect the supporting evidence when needed.</p>
+            <div class="oasis-execution-details">
+              <div class="oasis-execution-detail">
+                <h5>Clear Trigger</h5>
+                <p>The UI identifies what changed and why the system thinks action is needed.</p>
+              </div>
+              <div class="oasis-execution-detail">
+                <h5>Confidence Cues</h5>
+                <p>Recommendation strength is visible before the user commits to an action.</p>
+              </div>
+              <div class="oasis-execution-detail">
+                <h5>Decision History</h5>
+                <p>Past actions and sensor context remain available during review.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="full-width-image-block gray-placeholder">
+      <div class="wireframe-placeholder"></div>
+      <img src="/img/mobile_spatial_Adust_02.png" alt="Spatial Adjust mobile flow showing override controls and adjustment confirmation." class="spatial-mobile-image" loading="lazy" decoding="async" />
+      <p class="caption">Override controls stay close to the recommendation so AI remains an assistant, not an authority.</p>
+    </div>
+
+    <section class="case-study-block">
+      <div class="case-study-section white-background">
+        <div class="wide-max-width execution-section-spaced">
+          <div class="oasis-execution-block">
+            <div class="execution-number">3</div>
+            <h3>Governed Approval</h3>
+            <p>The final flow supports accept, adjust, and reject states so teams can act quickly while still preserving expert judgment and operational accountability.</p>
+            <div class="oasis-execution-details">
+              <div class="oasis-execution-detail">
+                <h5>Accept</h5>
+                <p>Apply the recommendation when evidence and confidence are aligned.</p>
+              </div>
+              <div class="oasis-execution-detail">
+                <h5>Adjust</h5>
+                <p>Tune the recommendation without leaving the review workflow.</p>
+              </div>
+              <div class="oasis-execution-detail">
+                <h5>Reject</h5>
+                <p>Decline a recommendation while preserving the rationale for future model review.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="full-width-image-block gray-placeholder">
+      <div class="wireframe-placeholder"></div>
+      <img src="/img/Web_SpatialAdjust_04.png" alt="Spatial Adjust desktop flow showing finalized review and recommendation acceptance." loading="lazy" decoding="async" />
+      <p class="caption">The final review state closes the loop between AI recommendation, expert decision, and operational follow-through.</p>
+    </div>
+
     <section class="case-study-block">
       <div class="case-study-section white-background">
         <div class="wide-max-width">
           <div class="section-eyebrow">Validation</div>
           <h2 class="section-title">Patent-Backed Innovation</h2>
-          <p>The interaction models and spatial logic developed here were distinct enough to support a pending patent application (Patent App 20240260521) around mobile governance and validation for predictive irrigation models.</p>
+          <p class="large-lead">The interaction model was distinct enough to support patent work around mobile governance for predictive irrigation.</p>
+          <p>The spatial logic and review patterns supported patent application 20240260521. More importantly, the product direction clarified how Toro could pair sensor intelligence with expert control instead of treating automation as an all-or-nothing decision.</p>
         </div>
       </div>
     </section>
@@ -404,11 +769,11 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="js/vision247.js"
+      src="/js/vision247.js"
       type="text/javascript"
     ></script>
     <script
-      src="js/footer.js"
+      src="/js/footer.js"
       type="text/javascript"
     ></script>
     <!--[if lte IE 9

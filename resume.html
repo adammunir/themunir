@@ -58,12 +58,12 @@
       })(window, document);
     </script>
     <link
-      href="img/themunirLogo.svg"
+      href="/img/themunirLogo.svg"
       rel="shortcut icon"
       type="image/x-icon"
     />
     <link
-      href="img/themunirLogo.svg"
+      href="/img/themunirLogo.svg"
       rel="apple-touch-icon"
     />
     <style>
@@ -185,12 +185,129 @@
       .download-link:hover {
         text-decoration: underline;
       }
+
+      html.ats-pdf,
+      html.ats-pdf body {
+        background: #fff;
+        color: #111;
+        font-family: Arial, Helvetica, sans-serif;
+        font-variant-ligatures: none;
+      }
+
+      html.ats-pdf .menu-holder,
+      html.ats-pdf .download-link,
+      html.ats-pdf .footer-placeholder,
+      html.ats-pdf .case-study-bottom-nav-elements-wrapper {
+        display: none !important;
+      }
+
+      html.ats-pdf .resume-wrapper {
+        max-width: none;
+        padding: 0;
+      }
+
+      html.ats-pdf .resume-name {
+        font-size: 32px;
+      }
+
+      html.ats-pdf .resume-meta {
+        gap: 6px 12px;
+        font-size: 13px;
+      }
+
+      html.ats-pdf .resume-section {
+        margin-top: 20px;
+      }
+
+      html.ats-pdf .resume-section h2 {
+        margin-bottom: 8px;
+        font-size: 17px;
+      }
+
+      html.ats-pdf .resume-summary {
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      html.ats-pdf .resume-subsection {
+        margin-top: 13px;
+      }
+
+      html.ats-pdf .resume-company-line {
+        font-size: 13px;
+      }
+
+      html.ats-pdf .resume-list,
+      html.ats-pdf .resume-skill-group p,
+      html.ats-pdf .resume-education {
+        font-size: 12px;
+        line-height: 1.32;
+      }
+
+      html.ats-pdf .resume-list li {
+        margin-bottom: 4px;
+      }
+
+      html.ats-pdf .resume-skill-group h3 {
+        font-size: 13px;
+      }
+
+      @media print {
+        @page {
+          margin: 0.45in;
+        }
+
+        body {
+          background: #fff;
+          color: #111;
+        }
+
+        .menu-holder,
+        .download-link,
+        .footer-placeholder,
+        .case-study-bottom-nav-elements-wrapper {
+          display: none !important;
+        }
+
+        .resume-wrapper {
+          max-width: none;
+          padding: 0;
+        }
+
+        .resume-section {
+          margin-top: 26px;
+          break-inside: avoid;
+        }
+
+        .resume-subsection {
+          margin-top: 16px;
+          break-inside: avoid;
+        }
+
+        .resume-name {
+          font-size: 34px;
+        }
+
+        .resume-summary,
+        .resume-list,
+        .resume-skill-group p {
+          line-height: 1.42;
+        }
+
+        .resume-list li {
+          margin-bottom: 6px;
+        }
+      }
     </style>
 
     <script>
       // Scroll to top & track click
       function scrollAndTrack() {
         window.scroll({ top: 0, behavior: "smooth" });
+      }
+
+      if (window.location.search.indexOf("ats-pdf=1") !== -1) {
+        document.documentElement.classList.add("ats-pdf");
       }
     </script>
   </head>
@@ -200,24 +317,24 @@
       <!-- <div class="sup-text">Sup</div> -->
       <a
         data-w-id="d64efa4e-aae7-3cd0-956d-dcaafdb93207"
-        href="index.html"
+        href="/"
         class="logomain w-inline-block"
-        ><div><img src="img/themunirLogo.svg" style="height: 30px; width: auto;"></div></a
+        ><div><img src="/img/themunirLogo.svg" style="height: 30px; width: auto;"></div></a
       >
       <div class="menu-container">
-        <a href="index.html" class="menu-item w-inline-block">
+        <a href="/" class="menu-item w-inline-block">
           <div class="menu-item-text">Home</div>
         </a>
-        <a href="index.html?tab=Play" class="menu-item w-inline-block">
+        <a href="/?tab=Play" class="menu-item w-inline-block">
           <div class="menu-item-text">Play</div>
         </a>
-        <a href="about.html" class="menu-item w-inline-block">
+        <a href="/about/" class="menu-item w-inline-block">
           <div class="menu-item-text">About</div>
         </a>
-        <a href="resume.html" class="menu-item w-inline-block w--current" aria-current="page">
+        <a href="/resume/" class="menu-item w-inline-block w--current" aria-current="page">
           <div class="menu-item-text">Resume</div>
         </a>
-        <a href="contact.html" class="menu-item w-inline-block">
+        <a href="/contact/" class="menu-item w-inline-block">
           <div class="menu-item-text">Contact</div>
         </a>
       </div>
@@ -242,7 +359,7 @@
       <section class="resume-section">
         <h2>Summary</h2>
         <p class="resume-summary">
-          Senior Product Designer working across native apps, web products, and AI-enabled experiences. I work from concept through implementation, partnering closely with engineering to shape clear, thoughtful products that balance user needs, business goals, and execution quality.
+          Senior Product Designer with 9+ years designing AI-enabled, hardware-adjacent, and enterprise SaaS products across irrigation, IoT, fintech, streaming, and logistics. I turn complex technical systems into usable workflows, scalable design systems, and measurable product outcomes.
         </p>
       </section>
 
@@ -251,15 +368,15 @@
         <div class="resume-skills-grid">
           <div class="resume-skill-group">
             <h3>Product & Systems</h3>
-            <p>Enterprise SaaS & platform UX, design systems, information architecture, UX strategy & roadmapping, complex workflow design, data visualization, IoT & connected-device experiences.</p>
+            <p>Enterprise SaaS & platform UX, interaction design, design systems, information architecture, UX strategy, user research, usability testing, accessibility/WCAG, data visualization, IoT & connected-device experiences.</p>
           </div>
           <div class="resume-skill-group">
             <h3>Design Engineering & Implementation</h3>
-            <p>HTML, CSS, JS/TS, Next.js, GitHub. Tools: Figma, ProtoPie, CreateWithPlay, Rive, Jitter, Spline.</p>
+            <p>Native iOS/Android UX, HTML, CSS, JS/TS, Next.js, GitHub. Tools: Figma, ProtoPie, CreateWithPlay, Rive, Jitter, Spline, Adobe Creative Suite.</p>
           </div>
           <div class="resume-skill-group">
             <h3>AI & Agentic Workflows</h3>
-            <p>Agentic UI patterns, machine learning user trust interfaces, AI-assisted research and development, spatial reasoning UX.</p>
+            <p>AI UX, agentic UI patterns, AI explainability, human-in-the-loop review, machine learning trust interfaces, AI-assisted research and development, spatial reasoning UX.</p>
           </div>
           <div class="resume-skill-group">
             <h3>Leadership & Execution</h3>
@@ -278,11 +395,12 @@
             <span class="resume-dates">Apr 2022 - Present</span>
           </div>
           <ul class="resume-list">
-            <li>Lead product design for connected irrigation platforms spanning enterprise web, native mobile, and hardware-adjacent experiences used by large field and operations teams.</li>
-            <li>Own design across products including Toro Oasis, Precision ET, Lynx Mobile, Lynx Drive, and Spatial Adjust, shaping strategy, IA, interaction models, systems, and implementation quality.</li>
-            <li>Turn dense irrigation science, telemetry, and operational constraints into interfaces that feel understandable, inspectable, and safe to act on.</li>
-            <li>Built AI-assisted design workflows for research, prototyping, and systems exploration, helping accelerate R&amp;D while maintaining precision in engineering handoff.</li>
-            <li>Partner directly with engineering in GitHub and implementation review to close the gap between concept quality and shipped product quality.</li>
+            <li>Lead product design for enterprise and consumer irrigation platforms spanning web, native mobile, hardware-adjacent workflows, and connected smart-home systems supporting 5,000+ daily active professional users and around 400k homeowners.</li>
+            <li>Own design across Toro Oasis, Precision ET, Lynx Mobile, Lynx Drive, and Spatial Adjust, shaping product strategy, IA, interaction models, design systems, and implementation quality.</li>
+            <li>Redesigned controller onboarding and setup flows, increasing successful activation from 64% to 87% and reducing first-time setup time by 41%.</li>
+            <li>Defined human-in-the-loop patterns for AI-driven irrigation recommendations, helping users inspect system reasoning, confidence, and override controls before acting.</li>
+            <li>Established modular product design systems adopted across 8 product teams, decreasing design-to-dev delivery cycles by 32% and reducing engineering rework by 27%.</li>
+            <li>Built AI-assisted research, prototyping, and systems workflows that increased weekly validated concept throughput by 2.5x while maintaining precision in engineering handoff.</li>
           </ul>
         </div>
 
@@ -293,9 +411,10 @@
             <span class="resume-dates">Oct 2020 - Apr 2022</span>
           </div>
           <ul class="resume-list">
-            <li>Led end-to-end product design for an OTT streaming platform across subscription UX, content discovery, onboarding, account access, and native app delivery.</li>
-            <li>Redesigned multi-device sign-in and authentication flows, improving the path from trial to paid conversion.</li>
-            <li>Created a shared design system that improved consistency and execution across web and mobile surfaces.</li>
+            <li>Led end-to-end product design for OneHubTV, an OTT streaming service across web, mobile, and TV apps.</li>
+            <li>Redesigned onboarding and subscription purchase flows, reducing checkout drop-off by 28% and increasing trial-to-paid conversion by 21%.</li>
+            <li>Simplified multi-device sign-in and account management, cutting related support tickets by 24% and improving self-serve task completion from 63% to 89% in usability testing.</li>
+            <li>Created a reusable design system that reduced UI design and implementation time for new features by 30% across web and mobile teams.</li>
           </ul>
         </div>
 
@@ -306,9 +425,9 @@
             <span class="resume-dates">Nov 2019 - Sept 2020</span>
           </div>
           <ul class="resume-list">
-            <li>Led consumer fintech UX across budgeting, savings automation, cards, and spending controls for a rapidly scaling product.</li>
-            <li>Redesigned core money management flows to make budgeting and savings behavior easier to understand and adopt.</li>
-            <li>Simplified setup and verification to improve first-use clarity and reduce friction on the path to activation.</li>
+            <li>Led consumer fintech UX across budgeting, savings automation, cards, and spending controls serving 150,000+ active customers.</li>
+            <li>Redesigned transaction categorization flows, improving budgeting engagement by 21% and savings activation by 17%.</li>
+            <li>Simplified setup and verification flows, increasing verified account completion by 19%.</li>
           </ul>
         </div>
 
@@ -320,8 +439,8 @@
           </div>
           <ul class="resume-list">
             <li>Designed and shipped an internal freight pricing and sales operations platform integrated with Salesforce for commercial teams across multiple offices.</li>
-            <li>Built a unified quoting and pricing experience that replaced fragmented manual lookups and supported faster proposal generation.</li>
-            <li>Delivered dashboards and task-focused workflows that improved visibility into pipeline, pricing, and sales performance.</li>
+            <li>Built a unified quoting engine and pricing calculator that cut average quote turnaround time by 52% and supported faster on-site sales proposals.</li>
+            <li>Delivered dashboards and task-focused workflows that improved sales workflow task completion by 34% in usability testing and reduced onboarding/training requirements by 28%.</li>
             <li>Led product discovery, UX/UI design, data modeling collaboration, and front-end delivery support for the MVP.</li>
           </ul>
         </div>
@@ -333,11 +452,9 @@
             <span class="resume-dates">Dec 2016 - Sept 2017</span>
           </div>
           <ul class="resume-list">
-            <li>Led the redesign and rebuild of the racecourse website and mobile experience across ticketing, event discovery, and promotional content.</li>
-            <li>Designed and implemented responsive interfaces for live event traffic, seasonal campaigns, and on-site customer journeys.</li>
-            <li>Automated parts of the content and racing-odds workflow to reduce manual operational overhead.</li>
-            <li>Drove digital campaigns and supporting brand materials across online and physical touchpoints.</li>
-            <li>Worked with operations, marketing, and venue teams to align launches with event calendars and commercial goals.</li>
+            <li>Led redesign and rebuild of the racecourse website and mobile experience, improving ticket purchase conversion by ~28% and reducing bounce rate by ~22%.</li>
+            <li>Designed responsive web and mobile interfaces used by 10k+ monthly visitors during peak racing season.</li>
+            <li>Automated racing odds ingestion and content workflows, cutting manual update time by ~80%.</li>
           </ul>
         </div>
       </section>
@@ -419,11 +536,11 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="js/aptitude_contact.js"
+      src="/js/aptitude_contact.js"
       type="text/javascript"
     ></script>
     <script
-      src="js/footer.js"
+      src="/js/footer.js"
       type="text/javascript"
     ></script>
     <!--[if lte IE 9

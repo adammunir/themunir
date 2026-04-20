@@ -12,35 +12,36 @@
 
     const navStyles = document.createElement('link');
     navStyles.rel = 'stylesheet';
-    navStyles.href = 'styles/nav.css';
+    navStyles.href = '/styles/nav.css';
     document.head.appendChild(navStyles);
   }
 
   function getCurrentPageKey() {
-    const page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const parts = window.location.pathname.split('/').filter(Boolean);
+    const page = (parts[parts.length - 1] || '').toLowerCase();
     const params = new URLSearchParams(window.location.search);
 
-    if (page === 'index.html' && params.get('tab') === 'Play') {
+    if ((page === '' || page === 'index' || page === 'index.html') && params.get('tab') === 'Play') {
       return 'play';
     }
 
-    if (page === 'index.html' && window.location.hash === '#work') {
+    if ((page === '' || page === 'index' || page === 'index.html') && window.location.hash === '#work') {
       return 'work';
     }
 
-    if (page === 'index.html' || page === '') {
+    if (page === '' || page === 'index' || page === 'index.html') {
       return 'home';
     }
 
-    if (page === 'about.html') {
+    if (page === 'about' || page === 'about.html') {
       return 'about';
     }
 
-    if (page === 'resume.html') {
+    if (page === 'resume' || page === 'resume.html') {
       return 'resume';
     }
 
-    if (page === 'contact.html') {
+    if (page === 'contact' || page === 'contact.html') {
       return 'contact';
     }
 
@@ -64,8 +65,9 @@
     document.querySelectorAll('.tm-site-nav').forEach(node => node.remove());
 
     const currentKey = getCurrentPageKey();
-    const page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    const shouldOffsetContent = page !== 'index.html' && page !== '';
+    const page = (window.location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
+    const isHome = page === '' || page === 'index' || page === 'index.html';
+    const shouldOffsetContent = !isHome;
 
     document.body.classList.remove('shared-nav-offset');
     if (shouldOffsetContent) {
@@ -74,16 +76,16 @@
 
     const navMarkup = [
       '<header class="tm-site-nav" aria-label="Primary navigation">',
-      '<a href="index.html" class="tm-nav-brand" aria-label="Adam Munir home">',
-      '<img src="img/themunirLogo.svg" alt="Adam Munir" class="tm-nav-brand-logo">',
+      '<a href="/" class="tm-nav-brand" aria-label="Adam Munir home">',
+      '<img src="/img/themunirLogo.svg" alt="Adam Munir" class="tm-nav-brand-logo">',
       '</a>',
       '<nav class="tm-nav-links">',
-      buildNavItem('index.html', 'Home', 'home', currentKey),
-      buildNavItem('index.html#work', 'Work', 'work', currentKey),
-      buildNavItem('index.html?tab=Play', 'Play', 'play', currentKey),
-      buildNavItem('about.html', 'About', 'about', currentKey),
-      buildNavItem('resume.html', 'Resume', 'resume', currentKey),
-      buildNavItem('contact.html', 'Contact', 'contact', currentKey),
+      buildNavItem('/', 'Home', 'home', currentKey),
+      buildNavItem('/#work', 'Work', 'work', currentKey),
+      buildNavItem('/?tab=Play', 'Play', 'play', currentKey),
+      buildNavItem('/about/', 'About', 'about', currentKey),
+      buildNavItem('/resume/', 'Resume', 'resume', currentKey),
+      buildNavItem('/contact/', 'Contact', 'contact', currentKey),
       '</nav>',
       '</header>'
     ].join('');
@@ -142,7 +144,7 @@
       // If no placeholder, try to find existing footer and replace it
       const existingFooter = document.querySelector('.footer');
       if (existingFooter) {
-        fetch('footer.html')
+        fetch('/footer.html')
           .then(response => response.text())
           .then(html => {
             existingFooter.outerHTML = html;
@@ -153,7 +155,7 @@
           });
       }
     } else {
-      fetch('footer.html')
+      fetch('/footer.html')
         .then(response => response.text())
         .then(html => {
           footerPlaceholder.outerHTML = html;

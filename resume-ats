@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adam Munir Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @page {
+        margin: 0.36in;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #111;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.4px;
+        line-height: 1.28;
+        font-variant-ligatures: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 4px;
+        font-size: 25px;
+        line-height: 1.05;
+      }
+
+      .title {
+        margin-bottom: 5px;
+        font-size: 12.5px;
+        font-weight: 600;
+      }
+
+      .contact {
+        margin-bottom: 12px;
+        font-size: 9.8px;
+      }
+
+      h2 {
+        margin: 13px 0 5px;
+        border-bottom: 1px solid #cfcfcf;
+        padding-bottom: 2px;
+        font-size: 12.4px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      h3 {
+        margin: 9px 0 3px;
+        font-size: 11.1px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      ul {
+        margin-bottom: 0;
+        padding-left: 15px;
+      }
+
+      li {
+        margin-bottom: 3px;
+      }
+
+      .skills p {
+        margin-bottom: 3px;
+      }
+
+      .role {
+        break-inside: avoid;
+      }
+
+      .role-line {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 2px;
+        font-weight: 700;
+      }
+
+      .date {
+        font-weight: 600;
+      }
+
+      .education p {
+        margin-bottom: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adam Munir</h1>
+    <p class="title">Senior Product Designer | Native, Web, and AI-Enabled Product Design</p>
+    <p class="contact">Orange, CA | themunir.com | adam@themunir.com | 562-665-2310 | linkedin.com/in/adammunirr</p>
+
+    <h2>Summary</h2>
+    <p>Senior Product Designer with 9+ years designing AI-enabled, hardware-adjacent, and enterprise SaaS products across irrigation, IoT, fintech, streaming, and logistics. I turn complex technical systems into usable workflows, scalable design systems, and measurable product outcomes.</p>
+
+    <h2>Capabilities</h2>
+    <div class="skills">
+      <p><strong>Product &amp; Systems:</strong> Enterprise SaaS &amp; platform UX, interaction design, design systems, information architecture, UX strategy, user research, usability testing, accessibility/WCAG, data visualization, IoT &amp; connected-device experiences.</p>
+      <p><strong>Design Engineering &amp; Implementation:</strong> Native iOS/Android UX, HTML, CSS, JS/TS, Next.js, GitHub. Tools: Figma, ProtoPie, CreateWithPlay, Rive, Jitter, Spline, Adobe Creative Suite.</p>
+      <p><strong>AI &amp; Agentic Workflows:</strong> AI UX, agentic UI patterns, AI explainability, human-in-the-loop review, machine learning trust interfaces, AI-assisted research and development, spatial reasoning UX.</p>
+      <p><strong>Leadership &amp; Execution:</strong> End-to-end product discovery, cross-functional engineering collaboration, product measurement (Mixpanel, PostHog, Sprig).</p>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="role-line">
+        <span>Senior Product Designer - The Toro Company - Riverside, CA</span>
+        <span class="date">Apr 2022 - Present</span>
+      </div>
+      <ul>
+        <li>Lead product design for enterprise and consumer irrigation platforms spanning web, native mobile, hardware-adjacent workflows, and connected smart-home systems supporting 5,000+ daily active professional users and around 400k homeowners.</li>
+        <li>Own design across Toro Oasis, Precision ET, Lynx Mobile, Lynx Drive, and Spatial Adjust, shaping product strategy, IA, interaction models, design systems, and implementation quality.</li>
+        <li>Redesigned controller onboarding and setup flows, increasing successful activation from 64% to 87% and reducing first-time setup time by 41%.</li>
+        <li>Defined human-in-the-loop patterns for AI-driven irrigation recommendations, helping users inspect system reasoning, confidence, and override controls before acting.</li>
+        <li>Established modular product design systems adopted across 8 product teams, decreasing design-to-dev delivery cycles by 32% and reducing engineering rework by 27%.</li>
+        <li>Built AI-assisted research, prototyping, and systems workflows that increased weekly validated concept throughput by 2.5x while maintaining precision in engineering handoff.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-line">
+        <span>Senior UI/UX Designer - Vision247 - London, United Kingdom</span>
+        <span class="date">Oct 2020 - Apr 2022</span>
+      </div>
+      <ul>
+        <li>Led end-to-end product design for OneHubTV, an OTT streaming service across web, mobile, and TV apps.</li>
+        <li>Redesigned onboarding and subscription purchase flows, reducing checkout drop-off by 28% and increasing trial-to-paid conversion by 21%.</li>
+        <li>Simplified multi-device sign-in and account management, cutting related support tickets by 24% and improving self-serve task completion from 63% to 89% in usability testing.</li>
+        <li>Created a reusable design system that reduced UI design and implementation time for new features by 30% across web and mobile teams.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-line">
+        <span>Lead Product Designer - HyperJar - London, United Kingdom</span>
+        <span class="date">Nov 2019 - Sept 2020</span>
+      </div>
+      <ul>
+        <li>Led consumer fintech UX across budgeting, savings automation, cards, and spending controls serving 150,000+ active customers.</li>
+        <li>Redesigned transaction categorization flows, improving budgeting engagement by 21% and savings activation by 17%.</li>
+        <li>Simplified setup and verification flows, increasing verified account completion by 19%.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-line">
+        <span>Product Designer - FSCOCEANS - London, United Kingdom</span>
+        <span class="date">Jan 2019 - Nov 2019</span>
+      </div>
+      <ul>
+        <li>Designed and shipped an internal freight pricing and sales operations platform integrated with Salesforce for commercial teams across multiple offices.</li>
+        <li>Built a unified quoting engine and pricing calculator that cut average quote turnaround time by 52% and supported faster on-site sales proposals.</li>
+        <li>Delivered dashboards and task-focused workflows that improved sales workflow task completion by 34% in usability testing and reduced onboarding/training requirements by 28%.</li>
+        <li>Led product discovery, UX/UI design, data modeling collaboration, and front-end delivery support for the MVP.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-line">
+        <span>Product Designer - Geoff Banks - Ascot, United Kingdom</span>
+        <span class="date">Dec 2016 - Sept 2017</span>
+      </div>
+      <ul>
+        <li>Led redesign and rebuild of the racecourse website and mobile experience, improving ticket purchase conversion by ~28% and reducing bounce rate by ~22%.</li>
+        <li>Designed responsive web and mobile interfaces used by 10k+ monthly visitors during peak racing season.</li>
+        <li>Automated racing odds ingestion and content workflows, cutting manual update time by ~80%.</li>
+      </ul>
+    </div>
+
+    <h2>Education &amp; Inventions</h2>
+    <div class="education">
+      <p><strong>Westcliff University</strong> - MBA Business Administration and IT (2020)</p>
+      <p><strong>University of Plymouth</strong> - BSc Economics (2016)</p>
+      <p><strong>Stanford University</strong> - Certificate in UI/UX Design for AI Products (2026)</p>
+      <p><strong>Patent US 12,543,671 B1</strong> - Methods and systems for spatially intelligent irrigation (Granted 2024)</p>
+      <p><strong>Patent App 20240260521</strong> - Mobile control and validation for predictive irrigation models (Pending 2024)</p>
+    </div>
+  </body>
+</html>

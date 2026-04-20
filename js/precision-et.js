@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var images = Array.prototype.slice.call(
     story.querySelectorAll("[data-precision-image]")
   );
+  if (!steps.length || !images.length) return;
+
   var activeStep = null;
   var ticking = false;
 
@@ -28,35 +30,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function updateActiveStep() {
-    ticking = false;
+  function getActiveStepByScrollPosition() {
+    var anchor = window.innerHeight * 0.42;
+    var current = steps[0];
 
-    var viewportAnchor = window.innerHeight * 0.38;
-    var bestStep = steps[0];
-    var bestDistance = Infinity;
+    for (var i = 0; i < steps.length; i += 1) {
+      var rect = steps[i].getBoundingClientRect();
 
-    steps.forEach(function (step) {
-      var rect = step.getBoundingClientRect();
-      var stepAnchor = rect.top + Math.min(rect.height * 0.35, 80);
-      var distance = Math.abs(stepAnchor - viewportAnchor);
-
-      if (distance < bestDistance) {
-        bestDistance = distance;
-        bestStep = step;
+      // If the anchor is inside a step, that step is active.
+      if (rect.top <= anchor && rect.bottom >= anchor) {
+        return steps[i];
       }
-    });
 
-    setActive(bestStep);
+      // Otherwise keep the last step that has crossed the anchor.
+      if (rect.top <= anchor) {
+        current = steps[i];
+      }
+    }
+
+    return current;
+  }
+
+  function updateFromScroll() {
+    ticking = false;
+    setActive(getActiveStepByScrollPosition());
   }
 
   function requestUpdate() {
     if (ticking) return;
     ticking = true;
-    window.requestAnimationFrame(updateActiveStep);
+    window.requestAnimationFrame(updateFromScroll);
   }
 
+  // Deterministic scroll sync + resize handling.
   setActive(steps[0]);
-  updateActiveStep();
+  updateFromScroll();
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", requestUpdate);
 });
