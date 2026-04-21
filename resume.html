@@ -306,6 +306,11 @@
         window.scroll({ top: 0, behavior: "smooth" });
       }
 
+      function openResumePdf(event) {
+        event.preventDefault();
+        window.open("/Adam_Munir_Product_Designer.pdf", "_blank", "noopener");
+      }
+
       if (window.location.search.indexOf("ats-pdf=1") !== -1) {
         document.documentElement.classList.add("ats-pdf");
       }
@@ -341,7 +346,7 @@
     </div>
 
     <div class="resume-wrapper">
-      <a class="download-link" href="Adam_Munir_Product_Designer.pdf" target="_blank" rel="noopener">Download PDF</a>
+      <a class="download-link" href="/Adam_Munir_Product_Designer.pdf" download="Adam_Munir_Product_Designer.pdf" target="_blank" rel="noopener" onclick="openResumePdf(event)">Download PDF</a>
       <header class="resume-header">
         <div>
           <h1 class="resume-name">Adam Munir</h1>
