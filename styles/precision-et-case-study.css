@@ -340,8 +340,8 @@
   line-height: 1.08 !important;
   letter-spacing: -0.03em !important;
   color: #ffffff !important;
-  margin: 0 0 20px !important;
-  max-width: 720px !important;
+  margin: 0 0 28px !important;
+  max-width: 100% !important;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -349,8 +349,9 @@
   font-size: 20px !important;
   line-height: 1.6 !important;
   color: rgba(255, 255, 255, 0.75) !important;
-  margin: 0 0 40px !important;
-  max-width: 600px !important;
+  margin: 12px 0 40px !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .pet-hero__meta {
@@ -1484,6 +1485,9 @@
 
   .pet-hero__subtitle {
     font-size: 17px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 10px !important;
   }
 
   .pet-hero__meta {
@@ -2144,6 +2148,20 @@
 .pet-overview-panel,
 .pet-ds-card {
   padding: 26px !important;
+}
+
+.pet-science-card,
+.pet-ai-card,
+.pet-app-card {
+  align-items: flex-start !important;
+}
+
+.pet-science-card__icon,
+.pet-ai-card__icon,
+.pet-app-card__icon {
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 .pet-metrics-banner {

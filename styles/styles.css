@@ -4842,7 +4842,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 .home-hero-copy .black-gradient-h1 {
-  max-width: 1200px;
+  max-width: 930px;
   margin: 0;
   font-size: clamp(40px, 6vw, 72px);
   line-height: 0.96;
@@ -4851,7 +4851,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 .home-hero-copy .hero-centered-paragraph {
-  max-width: 620px;
+  max-width: 930px;
   margin: 12px 0 0;
   color: #5b6270;
   font-size: 18px;
@@ -4914,7 +4914,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 .hero-text-wrapper {
-  max-width: 1200px;
+  max-width: 930px;
 }
 
 .work-tab-content > .hero-text-wrapper {
