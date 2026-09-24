@@ -147,6 +147,100 @@
         opacity: 1 !important;
       }
 
+      .tm-flagship-intro {
+        width: min(1120px, calc(100vw - 48px));
+        margin: 72px auto 18px;
+        padding: 32px 0 0;
+        border-top: 1px solid rgba(16, 17, 20, 0.14);
+      }
+
+      .tm-flagship-kicker,
+      .tm-eyebrow {
+        margin: 0 0 14px;
+        color: #6f7580;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .tm-flagship-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(260px, .8fr);
+        gap: 72px;
+        align-items: start;
+      }
+
+      .tm-flagship-copy h2 {
+        max-width: 760px;
+        margin: 0;
+        color: #101114;
+        font-size: clamp(34px, 5vw, 66px);
+        line-height: .98;
+        letter-spacing: -.055em;
+      }
+
+      .tm-flagship-body {
+        max-width: 650px;
+        margin: 26px 0 0;
+        color: #5b6270;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .tm-flagship-link {
+        display: inline-flex;
+        gap: 10px;
+        margin-top: 28px;
+        color: #101114;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: gap 180ms ease;
+      }
+
+      .tm-flagship-link:hover { gap: 16px; }
+
+      .tm-systems-rail {
+        display: grid;
+        gap: 0;
+        border-top: 1px solid #d8dde5;
+      }
+
+      .tm-systems-rail > div {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 2px 12px;
+        padding: 18px 0;
+        border-bottom: 1px solid #d8dde5;
+      }
+
+      .tm-systems-rail span {
+        grid-row: span 2;
+        color: #9aa1ac;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .tm-systems-rail strong { color: #23262d; font-size: 15px; }
+      .tm-systems-rail small { color: #7a818c; font-size: 13px; line-height: 1.45; }
+
+      @media (max-width: 767px) {
+        .tm-flagship-intro {
+          width: min(100% - 32px, 600px);
+          margin-top: 48px;
+          padding-top: 24px;
+        }
+
+        .tm-flagship-layout {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+
+        .tm-flagship-copy h2 { font-size: clamp(36px, 11vw, 56px); }
+        .tm-flagship-body { font-size: 16px; }
+      }
+
       /* Fade-in effect for sections on scroll */
       .fade-in-section {
         opacity: 0;
@@ -394,13 +488,30 @@
               <div class="hero-text-wrapper">
                 <div class="home-hero-grid">
                   <div class="home-hero-copy">
-                    <h1 class="black-gradient-h1"><span class="home-hero-intro">Hey, I&#x27;m Adam.</span><span class="home-hero-main">Designing the software layer behind complex products.</span></h1>
+                    <h1 class="black-gradient-h1"><span class="home-hero-intro">Hey, I&#x27;m Adam.</span><span class="home-hero-main">I design the software layer behind complex products.</span></h1>
                     <div class="hero-centered-paragraph work">
-                      Senior Product Designer currently @ The Toro Company, working across operational platforms, native tools, and AI-enabled workflows for products that need clarity, reliability, and real-world execution.
+                      Senior Product Designer at The Toro Company. I turn hardware, data, and operational complexity into calm, reliable experiences across connected products, native tools, and AI-enabled workflows.
                     </div>
                   </div>
                 </div>
               </div>
+
+              <section class="tm-flagship-intro" aria-labelledby="tm-flagship-title">
+                <div class="tm-flagship-kicker">Featured system</div>
+                <div class="tm-flagship-layout">
+                  <div class="tm-flagship-copy">
+                    <p class="tm-eyebrow">Toro Lynx ecosystem</p>
+                    <h2 id="tm-flagship-title">Making irrigation intelligence legible at the moment decisions matter.</h2>
+                    <p class="tm-flagship-body">Lynx Drive, Lynx Mobile, and the connected controller experience work as one system across desktop, field, and hardware. I helped shape the product language that keeps experts fast without asking them to think like the machine.</p>
+                    <a class="tm-flagship-link" href="/lynxdrive/">Explore Lynx Drive <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="tm-systems-rail" aria-label="Systems lens">
+                    <div><span>01</span><strong>Physical world</strong><small>Controllers, valves, weather</small></div>
+                    <div><span>02</span><strong>Product system</strong><small>Maps, states, workflows</small></div>
+                    <div><span>03</span><strong>User decision</strong><small>Clear action, real consequence</small></div>
+                  </div>
+                </div>
+              </section>
 
               <section class="achievements-preview" aria-label="Highlights preview">
                 <div class="achievement-awards-grid">
