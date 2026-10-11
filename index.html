@@ -1,215 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adam Munir — Product design for systems in the world</title>
-  <meta name="description" content="Adam Munir designs complex products where software, hardware, data, and human decisions meet.">
-  <meta property="og:title" content="Adam Munir — Product design for systems in the world">
-  <meta property="og:description" content="Product design across connected products, enterprise workflows, AI-enabled systems, and the physical world.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="img/themunirLogo.svg">
-  <style>
-    :root{--bg:#0a0d10;--panel:#11161b;--panel-2:#151c23;--line:rgba(255,255,255,.13);--soft-line:rgba(255,255,255,.08);--ink:#f5f7f8;--muted:#9aa4ad;--red:#f02a45;--green:#78ef55;--max:1320px}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-    .shell{width:min(var(--max),calc(100% - 72px));margin:auto}
-    .micro{font-size:10px;line-height:1.2;letter-spacing:.16em;text-transform:uppercase;font-weight:750;color:#7d8992}
-    .topbar{position:sticky;top:14px;z-index:30;padding-top:14px}
-    .nav{height:62px;border:1px solid var(--line);border-radius:18px;background:rgba(10,13,16,.72);backdrop-filter:blur(22px);display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 14px;box-shadow:0 14px 40px rgba(0,0,0,.24)}
-    .brand{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:740;letter-spacing:-.025em}
-    .brand-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#f6f7f7;color:#0a0d10;font-size:12px;font-weight:850}
-    .nav-right{display:flex;align-items:center;gap:24px}
-    .navlinks{display:flex;gap:22px;color:#b6bec5;font-size:12px}
-    .navlinks a:hover{color:#fff}
-    .availability{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:#dbe1e5;font-size:11px}
-    .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(120,239,85,.7)}
-    .hero{padding:128px 0 0}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:end}
-    .hero h1{font-size:clamp(62px,9.6vw,142px);line-height:.84;letter-spacing:-.095em;max-width:920px;margin:18px 0 28px;font-weight:710}
-    .hero-lead{font-size:clamp(18px,2vw,25px);line-height:1.35;color:#c1c9cf;max-width:650px;margin:0}
-    .hero-side{border-left:1px solid var(--line);padding-left:26px;padding-bottom:6px}
-    .hero-side p{font-size:14px;line-height:1.65;color:var(--muted);max-width:330px;margin:12px 0 26px}
-    .link{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:750;border-bottom:1px solid rgba(255,255,255,.7);padding-bottom:6px}
-    .link:after{content:"↗";font-weight:500}
-    .link-muted{color:#a8b0b7;border-bottom-color:rgba(255,255,255,.24)}
-    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
-    .chip{border:1px solid var(--line);border-radius:999px;color:#aeb7be;font-size:11px;padding:8px 11px;background:rgba(255,255,255,.025)}
-    .live-wrap{margin-top:70px}
-    .live-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
-    .live-head-left{display:flex;align-items:center;gap:12px}
-    .live-title{font-size:12px;font-weight:720;color:#dbe0e3}
-    .live-status{display:flex;align-items:center;gap:7px;color:var(--green);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:760}
-    .live-shell{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#05070a;box-shadow:0 30px 90px rgba(0,0,0,.32)}
-    .live-chrome{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid var(--soft-line);color:#87929b;font-size:11px}
-    .live-chrome span:last-child{color:#5f6c76}
-    .live-surface{min-height:430px;display:grid;grid-template-columns:1.25fr .75fr;position:relative;overflow:hidden;background:radial-gradient(circle at 45% 45%,rgba(28,79,129,.28),transparent 42%),#05080b}
-    .live-surface:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 90%);pointer-events:none}
-    .live-copy{position:relative;z-index:1;padding:54px 42px;display:flex;flex-direction:column;justify-content:space-between}
-    .live-copy h2{font-size:clamp(40px,5vw,72px);line-height:.88;letter-spacing:-.08em;max-width:420px;margin:16px 0 20px}
-    .live-copy p{color:#9da8b0;line-height:1.55;font-size:14px;max-width:360px;margin:0}
-    .live-map{position:relative;z-index:1;display:grid;place-items:center;padding:30px 30px 22px}
-    .live-map img{width:100%;height:350px;object-fit:contain;filter:drop-shadow(0 25px 32px rgba(0,0,0,.5));opacity:.95}
-    .live-legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-    .legend{border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:10px;color:#a9b2b8}
-    .legend i{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;background:var(--red)}
-    .legend.blue i{background:#348bf4}.legend.green i{background:#4fd134}
-    .proof-strip{display:grid;grid-template-columns:1.3fr repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:34px}
-    .proof-strip>div{padding:22px 18px;border-left:1px solid var(--line)}
-    .proof-strip>div:first-child{border-left:0;padding-left:0}
-    .proof-strip b{display:block;font-size:18px;letter-spacing:-.04em}
-    .proof-strip span{display:block;color:#7f8992;font-size:11px;line-height:1.4;margin-top:5px}
-    section{margin-top:150px}
-    .section-top{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:28px}
-    .section-top h2{font-size:clamp(42px,6vw,82px);line-height:.87;letter-spacing:-.085em;max-width:780px;margin:12px 0 0}
-    .section-top p{color:var(--muted);font-size:14px;line-height:1.6;max-width:340px;margin:0}
-    .flagship{display:grid;grid-template-columns:.72fr 1.28fr;min-height:620px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--panel)}
-    .flagship-copy{padding:36px;display:flex;flex-direction:column;justify-content:space-between}
-    .flagship-copy h3{font-size:clamp(44px,5.5vw,78px);line-height:.86;letter-spacing:-.09em;margin:16px 0 22px}
-    .flagship-copy p{font-size:15px;line-height:1.65;color:#aeb8bf;max-width:440px;margin:0}
-    .flagship-copy .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-    .flagship-art{background:linear-gradient(140deg,#172231,#0e141d);display:flex;align-items:end;justify-content:center;padding:34px 24px 0;min-height:420px}
-    .flagship-art img{width:100%;height:100%;max-height:540px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 26px 28px rgba(0,0,0,.5))}
-    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
-    .work-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel);min-height:400px;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
-    .work-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.32)}
-    .work-card-copy{padding:24px;flex:1}
-    .work-card h3{font-size:32px;line-height:.92;letter-spacing:-.07em;margin:13px 0 13px}
-    .work-card p{font-size:13px;line-height:1.55;color:#9ca7af;margin:0}
-    .work-card-art{height:200px;background:#e9edf0;display:flex;align-items:center;justify-content:center;padding:18px}
-    .work-card-art.dark{background:#141b24}
-    .work-card-art img{width:100%;height:100%;object-fit:contain}
-    .lens{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0;display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
-    .lens h2{font-size:clamp(42px,5vw,70px);line-height:.88;letter-spacing:-.085em;max-width:520px;margin:14px 0 20px}
-    .lens p{font-size:15px;line-height:1.65;color:var(--muted);max-width:440px}
-    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-    .flow-item{border-top:1px solid var(--line);padding:14px 8px 0 0;position:relative}
-    .flow-item:not(:last-child):after{content:"→";position:absolute;right:4px;top:12px;color:#58636c}
-    .flow-item b{font-size:12px;line-height:1.3;display:block;padding-right:12px}
-    .flow-item span{font-size:10px;color:#7e8991;line-height:1.45;display:block;margin-top:8px}
-    .evidence{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
-    .evidence-card{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:32px}
-    .evidence-card h3{font-size:clamp(34px,4vw,56px);line-height:.9;letter-spacing:-.08em;max-width:600px;margin:15px 0 18px}
-    .evidence-card p{font-size:14px;line-height:1.65;color:var(--muted);max-width:580px}
-    .evidence-list{display:grid;gap:10px;margin-top:24px}
-    .evidence-row{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:13px 0;border-top:1px solid var(--soft-line);font-size:12px;color:#c7cfd5}
-    .evidence-row span{color:#75818a;text-align:right}
-    .cta{border:1px solid var(--line);border-radius:24px;padding:44px;background:linear-gradient(135deg,#161d25,#0d1116);display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
-    .cta h2{font-size:clamp(48px,6.5vw,90px);line-height:.86;letter-spacing:-.09em;max-width:720px;margin:14px 0 0}
-    .cta p{color:var(--muted);font-size:14px;line-height:1.6;max-width:320px;margin:0 0 24px}
-    footer{padding:44px 0 55px;display:flex;justify-content:space-between;color:#6f7a83;font-size:11px}
-    footer div{display:flex;gap:20px}
-    @media(max-width:980px){.hero-grid,.flagship,.lens,.evidence,.cta{grid-template-columns:1fr}.hero-side{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.live-surface{grid-template-columns:1fr}.live-map{display:none}.work-grid{grid-template-columns:1fr 1fr}.flagship-art{min-height:330px}.flow{grid-template-columns:repeat(3,1fr);row-gap:28px}}
-    @media(max-width:680px){.shell{width:min(100% - 32px,600px)}.topbar{top:8px;padding-top:8px}.nav{height:56px;border-radius:15px;padding-right:12px}.brand{font-size:12px}.brand-mark{width:29px;height:29px}.nav-right{gap:12px}.navlinks{gap:12px;font-size:10px}.navlinks a:nth-child(2),.availability span{display:none}.availability{padding:8px}.hero{padding-top:92px}.hero h1{font-size:clamp(58px,17vw,88px)}.hero-lead{font-size:18px}.live-wrap{margin-top:48px}.live-surface{min-height:390px}.live-copy{padding:32px 24px}.live-copy h2{font-size:48px}.proof-strip{grid-template-columns:1fr 1fr}.proof-strip>div:nth-child(3){border-left:0}.proof-strip>div:nth-child(n+3){border-top:1px solid var(--line)}section{margin-top:100px}.section-top{display:block}.section-top p{margin-top:20px}.flagship-copy{padding:26px}.flagship-copy h3{font-size:58px}.flagship-art{min-height:255px;padding:20px 14px 0}.work-grid{grid-template-columns:1fr}.work-card{min-height:0}.work-card-art{height:190px}.lens{padding:40px 0;gap:34px}.flow{grid-template-columns:1fr 1fr}.flow-item{min-height:92px}.evidence-card,.cta{padding:26px;border-radius:20px}.cta{gap:36px}footer{display:block}footer div{margin-top:16px;flex-wrap:wrap}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.work-card{transition:none}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adam Munir — Product Designer</title>
+<meta name="description" content="Adam Munir is a product designer building connected products, enterprise systems, and experiences that make complexity feel human.">
+<link rel="icon" href="img/themunirLogo.svg">
+<style>
+:root{--paper:#f4f2ed;--ink:#151515;--muted:#6e6d68;--line:#d9d6cf;--dark:#0c0f12;--accent:#e7ff5e;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(var(--max),calc(100% - 72px));margin:auto}.micro{font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:760;color:#85827a}.nav{height:62px;margin-top:24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:13px;font-weight:780;letter-spacing:-.03em}.navlinks{display:flex;align-items:center;gap:26px;font-size:12px;color:#5c5b56}.navlinks a:hover{color:var(--ink)}.availability{display:inline-flex;align-items:center;gap:7px}.availability i{width:6px;height:6px;background:#2ca63a;border-radius:50%;display:inline-block}.hero{padding:148px 0 132px}.hero-top{display:flex;justify-content:space-between;gap:60px;align-items:start}.hero h1{font-size:clamp(68px,11vw,160px);line-height:.8;letter-spacing:-.105em;font-weight:720;max-width:940px;margin:18px 0 34px}.hero-copy{max-width:690px}.hero-copy p{font-size:clamp(18px,2.2vw,27px);line-height:1.3;letter-spacing:-.03em;margin:0;color:#474641}.hero-aside{width:230px;padding-top:7px}.hero-aside p{font-size:12px;line-height:1.6;color:var(--muted);margin:12px 0 24px}.arrow{font-size:12px;font-weight:750;border-bottom:1px solid var(--ink);padding-bottom:6px}.arrow:after{content:" ↗";font-weight:400}.hero-foot{display:flex;justify-content:space-between;align-items:end;border-top:1px solid var(--line);padding-top:18px;margin-top:70px;color:var(--muted);font-size:11px}.hero-foot span:last-child{color:var(--ink)}.feature{padding:30px 0 140px}.feature-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}.feature-title{font-size:13px;font-weight:760}.feature-meta{font-size:11px;color:var(--muted)}.embed-shell{background:var(--dark);border-radius:20px;overflow:hidden;box-shadow:0 20px 55px rgba(27,24,18,.12)}.embed-shell iframe{display:block;width:100%;height:min(66vw,690px);min-height:500px;border:0}.embed-caption{display:flex;justify-content:space-between;gap:28px;border-bottom:1px solid var(--line);padding:16px 0;color:var(--muted);font-size:11px}.embed-caption strong{color:var(--ink);font-size:12px}.work{padding:0 0 140px}.work-intro{display:flex;justify-content:space-between;align-items:end;gap:60px;margin-bottom:46px}.work-intro h2{font-size:clamp(48px,7vw,92px);line-height:.86;letter-spacing:-.095em;margin:14px 0 0;max-width:760px}.work-intro p{max-width:280px;color:var(--muted);font-size:13px;line-height:1.6;margin:0}.case-list{border-top:1px solid var(--line)}.case{display:grid;grid-template-columns:80px 1fr 1.05fr;gap:26px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line);transition:padding .25s ease}.case:hover{padding-left:12px;padding-right:12px}.case-number{font-size:12px;color:var(--muted)}.case-copy h3{font-size:clamp(32px,4vw,58px);line-height:.9;letter-spacing:-.08em;margin:9px 0 15px}.case-copy p{font-size:13px;line-height:1.55;color:var(--muted);max-width:330px;margin:0}.case-tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#817f78}.case-image{height:280px;border-radius:15px;background:#e3e5e5;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:20px}.case-image.dark{background:#111925}.case-image img{width:100%;height:100%;object-fit:contain}.case-link{display:inline-block;margin-top:20px;font-size:11px;font-weight:760;border-bottom:1px solid var(--ink);padding-bottom:5px}.about{display:grid;grid-template-columns:1fr 1fr;gap:100px;padding:0 0 140px;border-top:1px solid var(--line);padding-top:38px}.about h2{font-size:clamp(50px,7vw,96px);line-height:.84;letter-spacing:-.1em;margin:14px 0 0}.about-copy{max-width:470px;padding-top:4px}.about-copy p{font-size:17px;line-height:1.45;letter-spacing:-.025em;margin:0 0 24px}.about-links{display:grid;gap:10px;margin-top:38px;border-top:1px solid var(--line)}.about-links a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px}.about-links a:after{content:"↗"}.playground{background:var(--dark);color:#f2f3ee;border-radius:20px;padding:38px;display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;margin-bottom:140px}.playground h2{font-size:clamp(44px,6vw,82px);line-height:.84;letter-spacing:-.09em;margin:14px 0 0}.playground-copy p{color:#a6adb0;font-size:13px;line-height:1.6;max-width:280px}.play-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end}.play-card{border:1px solid rgba(255,255,255,.16);border-radius:12px;min-height:150px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;color:#bcc4c5;font-size:11px}.play-card:nth-child(2){min-height:210px;background:#e7ff5e;color:#10120f;border-color:#e7ff5e}.play-card:nth-child(3){min-height:180px;background:#f4b4cb;color:#171217;border-color:#f4b4cb}.footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:22px 0 46px;color:var(--muted);font-size:11px}.footer div{display:flex;gap:20px}.footer a:hover{color:var(--ink)}
+@media(max-width:900px){.hero-top,.work-intro,.about,.playground{grid-template-columns:1fr;display:grid}.hero-aside{width:auto;max-width:310px}.case{grid-template-columns:50px 1fr}.case-image{grid-column:2;height:230px}.playground{gap:34px}.play-grid{max-width:560px}}
+@media(max-width:650px){.wrap{width:min(100% - 32px,600px)}.nav{margin-top:12px;height:54px}.navlinks{gap:13px;font-size:10px}.navlinks a:nth-child(2){display:none}.hero{padding:94px 0 90px}.hero h1{font-size:clamp(58px,17vw,92px)}.hero-copy p{font-size:19px}.hero-foot{display:block;line-height:1.6}.hero-foot span{display:block}.hero-foot span+span{margin-top:9px}.feature{padding-bottom:94px}.embed-shell{border-radius:16px}.embed-shell iframe{height:470px;min-height:0}.embed-caption{display:block;line-height:1.6}.embed-caption span{display:block;margin-top:4px}.work{padding-bottom:94px}.work-intro{display:block}.work-intro p{margin-top:22px}.case{grid-template-columns:32px 1fr;gap:14px;padding:24px 0}.case-image{grid-column:2;height:210px}.case-copy h3{font-size:42px}.about{display:block;padding-bottom:94px}.about-copy{padding-top:34px}.playground{display:block;padding:26px;border-radius:16px;margin-bottom:94px}.play-grid{margin-top:32px;grid-template-columns:1fr 1fr}.play-card:nth-child(3){display:none}.footer{display:block;line-height:1.6}.footer div{margin-top:12px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.case{transition:none}}
+</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="shell">
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="./"><span class="brand-mark">AM</span><span>Adam Munir / Product design</span></a>
-      <div class="nav-right">
-        <div class="navlinks"><a href="#work">Work</a><a href="#system">System</a><a href="about/">About</a><a href="resume/">Résumé</a></div>
-        <a class="availability" href="mailto:hello@adammunir.com"><i class="dot"></i><span>Open to the right problem</span></a>
-      </div>
-    </nav>
-  </div>
-</header>
+<header class="wrap"><nav class="nav"><a class="brand" href="./">Adam Munir / Product designer</a><div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="resume/">Résumé</a><a class="availability" href="mailto:hello@adammunir.com"><i></i>Open to opportunities</a></div></nav></header>
+<main class="wrap">
+<section class="hero"><div class="hero-top"><div class="hero-copy"><div class="micro">Hello, I’m Adam.</div><h1>I make complex products feel human.</h1><p>I design connected products, enterprise systems, and experiences where software meets the real world.</p></div><aside class="hero-aside"><div class="micro">Currently</div><p>Senior product designer working across software, hardware, data, and the decisions people need to make next.</p><a class="arrow" href="about/">A little more about me</a></aside></div><div class="hero-foot"><span>Product design · systems thinking · design engineering</span><span>9+ years across B2C + enterprise</span></div></section>
 
-<main>
-  <div class="shell">
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="micro">Senior product designer · systems thinker · builder</div>
-          <h1>Designing products that hold together in the real world.</h1>
-          <p class="hero-lead">I work across software, hardware, data, and human decisions—turning complex systems into products people can understand, trust, and use.</p>
-          <div class="hero-meta"><span class="chip">Connected products</span><span class="chip">Enterprise workflows</span><span class="chip">AI / decision support</span><span class="chip">Design engineering</span></div>
-        </div>
-        <div class="hero-side">
-          <div class="micro">The short version</div>
-          <p>My best work sits between the interface and the system behind it: the field, the device, the data, the team, the constraints, and the outcome.</p>
-          <a class="link" href="#work">Enter the work</a>
-          <a class="link link-muted" href="resume/" style="margin-left:18px">Read the résumé</a>
-        </div>
-      </div>
+<section class="feature"><div class="feature-head"><span class="feature-title">01 / Oasis — a system in use</span><span class="feature-meta">Interactive preview · Toro connected products</span></div><div class="embed-shell"><iframe title="Interactive Oasis globe system preview" src="live-oasis/" loading="eager" allow="fullscreen"></iframe></div><div class="embed-caption"><strong>The first thing you see is the product—not a mockup of the product.</strong><span>A public live URL can replace this preview without changing the layout.</span></div></section>
 
-      <div class="live-wrap" id="system">
-        <div class="live-head">
-          <div class="live-head-left"><span class="live-status"><i class="dot"></i> Live system proof</span><span class="live-title">Toro Oasis / network intelligence surface</span></div>
-          <span class="micro">Built system · shown in use</span>
-        </div>
-        <div class="live-shell">
-          <div class="live-chrome"><span>OASIS / BULLS EYE</span><span>Production evidence surface · embed-ready</span></div>
-          <div class="live-surface">
-            <div class="live-copy">
-              <div>
-                <div class="micro">What the work became</div>
-                <h2>Oasis,<br>right now.</h2>
-                <p>A live operational surface for seeing activity across a connected irrigation network—where the system is, what is happening, and what needs attention.</p>
-              </div>
-              <div class="live-legend"><span class="legend"><i></i>App activity</span><span class="legend blue"><i></i>Watering</span><span class="legend green"><i></i>New controller</span></div>
-            </div>
-            <div class="live-map"><img src="img/Oasis-1.svg" alt="Toro Oasis connected product interface"></div>
-          </div>
-        </div>
-        <div class="proof-strip">
-          <div><b>Built system</b><span>Not a concept screen—an operating surface for the product.</span></div>
-          <div><b>Software + field</b><span>Designed across the connected experience.</span></div>
-          <div><b>Evidence first</b><span>Show the thing in use, with context.</span></div>
-          <div><b>Embed-ready</b><span>Swap in the public URL when available.</span></div>
-        </div>
-      </div>
-    </section>
+<section class="work" id="work"><div class="work-intro"><div><div class="micro">Selected work</div><h2>Case studies with a point of view.</h2></div><p>Deep work across connected hardware, enterprise workflows, AI decision support, and the physical world.</p></div><div class="case-list">
+<a class="case" href="lynxdrive/"><div class="case-number">02</div><div class="case-copy"><div class="case-tag">Toro · enterprise systems</div><h3>Lynx Drive</h3><p>Reframing a mission-critical irrigation platform around the way operators actually work.</p><span class="case-link">Read case study</span></div><div class="case-image dark"><img src="img/LD.svg" alt="Lynx Drive interface"></div></a>
+<a class="case" href="oasis/"><div class="case-number">03</div><div class="case-copy"><div class="case-tag">Toro · consumer + IoT</div><h3>Oasis + RXC</h3><p>Making connected irrigation understandable for homeowners and contractors.</p><span class="case-link">Read case study</span></div><div class="case-image"><img src="img/Oasis-1.svg" alt="Toro Oasis interface"></div></a>
+<a class="case" href="spatial-adjust/"><div class="case-number">04</div><div class="case-copy"><div class="case-tag">Toro · AI / decision support</div><h3>Spatial Adjust</h3><p>Designing transparent, map-based recommendations that keep people in control.</p><span class="case-link">Read case study</span></div><div class="case-image dark"><img src="img/spatial_adjust_top.svg" alt="Spatial Adjust interface"></div></a>
+<a class="case" href="precision-et/"><div class="case-number">05</div><div class="case-copy"><div class="case-tag">Toro · design + development</div><h3>Precision ET</h3><p>Turning environmental intelligence into clear, actionable product decisions.</p><span class="case-link">Read case study</span></div><div class="case-image"><img src="img/precisionET_top.svg" alt="Precision ET interface"></div></a>
+</div></section>
 
-    <section id="work">
-      <div class="section-top"><div><div class="micro">Selected work</div><h2>One flagship story.<br>Several systems around it.</h2></div><p>Every case study now needs to show the product problem, the decisions, the shipped surface, and what scales beyond the screen.</p></div>
-      <a class="flagship" href="lynxdrive/">
-        <div class="flagship-copy">
-          <div><div class="micro">Toro · flagship case study</div><h3>Lynx<br>Drive</h3><p>A multi-surface operating system for golf-course irrigation: central control, mapping, diagnostics, system state, and field workflows in one product model.</p><div class="tags"><span class="chip">Enterprise</span><span class="chip">Systems design</span><span class="chip">Mapping</span><span class="chip">Connected products</span></div></div>
-          <span class="link">Read the flagship case study</span>
-        </div>
-        <div class="flagship-art"><img src="img/LD.svg" alt="Lynx Drive product interface"></div>
-      </a>
-      <div class="work-grid">
-        <a class="work-card" href="oasis/"><div class="work-card-copy"><div class="micro">Toro · consumer + IoT</div><h3>Oasis<br>+ RXC</h3><p>Making connected irrigation approachable for homeowners while preserving capability for professionals.</p></div><div class="work-card-art"><img src="img/Oasis-1.svg" alt="Toro Oasis mobile interface"></div></a>
-        <a class="work-card" href="spatial-adjust/"><div class="work-card-copy"><div class="micro">Toro · AI/ML decision support</div><h3>Spatial<br>Adjust</h3><p>Map-based irrigation recommendations designed around transparency, review, and human control.</p></div><div class="work-card-art dark"><img src="img/spatial_adjust_top.svg" alt="Spatial Adjust interface"></div></a>
-        <a class="work-card" href="precision-et/"><div class="work-card-copy"><div class="micro">Design + development</div><h3>Precision<br>ET</h3><p>Turning environmental and irrigation logic into an understandable, actionable product experience.</p></div><div class="work-card-art"><img src="img/precisionET_top.svg" alt="Precision ET interface"></div></a>
-      </div>
-    </section>
+<section class="about" id="about"><div><div class="micro">About me</div><h2>Designer.<br>Builder.<br>Systems thinker.</h2></div><div class="about-copy"><p>I’m drawn to problems that are equal parts human and technical—the kind where a good experience has to account for the interface, the hardware, the data, the team, and what happens in the real world.</p><p>The strongest work I do is not a collection of screens. It is a product model that gives people more clarity and more confidence.</p><div class="about-links"><a href="achievements/">Patents, learning, and proof</a><a href="resume/">Résumé and experience</a><a href="contact/">Work with me</a></div></div></section>
 
-    <section>
-      <div class="lens">
-        <div><div class="micro">Systems lens</div><h2>I design the whole loop, not just the screen.</h2><p>Strong product decisions account for the physical environment, hardware, cloud and data, the product surface, and the decision a person needs to make next.</p><a class="link" href="about/">How I work</a></div>
-        <div class="flow" aria-label="Systems design loop">
-          <div class="flow-item"><b>Physical world</b><span>Place, environment, real-world constraints.</span></div>
-          <div class="flow-item"><b>Hardware</b><span>Controllers, sensors, connectivity, state.</span></div>
-          <div class="flow-item"><b>Cloud + data</b><span>Services, telemetry, logic, intelligence.</span></div>
-          <div class="flow-item"><b>Product</b><span>Mobile, web, desktop, workflows.</span></div>
-          <div class="flow-item"><b>User decision</b><span>Clarity, confidence, action, outcome.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-top"><div><div class="micro">Proof and range</div><h2>The work should answer<br>“what changed?”</h2></div><p>Visual craft gets attention. Evidence earns trust. The next layer of this portfolio is explicit ownership, constraints, shipped decisions, and verified outcomes.</p></div>
-      <div class="evidence">
-        <div class="evidence-card"><div class="micro">Evidence standard</div><h3>From polished artifact to credible product story.</h3><p>Each flagship case study is being sharpened around the problem, research, trade-offs, collaboration, shipped experience, and measurable effect—without inventing claims.</p><a class="link" href="achievements/">See the receipts</a></div>
-        <div class="evidence-card"><div class="micro">Range</div><div class="evidence-list"><div class="evidence-row">Patents + innovation <span>Product invention</span></div><div class="evidence-row">Stanford AI UX <span>Formal learning</span></div><div class="evidence-row">Connected products <span>Software + hardware</span></div><div class="evidence-row">Design engineering <span>From idea to build</span></div><div class="evidence-row">Cross-domain work <span>B2C + enterprise</span></div></div><a class="link" href="resume/" style="margin-top:26px">Open résumé</a></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="cta"><div><div class="micro">Let’s build what’s next</div><h2>Complex product problem?</h2></div><div><p>I’m open to senior product design opportunities across complex systems, connected products, AI / ML, and design engineering.</p><a class="link" href="mailto:hello@adammunir.com">Start a conversation</a></div></div>
-    </section>
-  </div>
+<section class="playground"><div class="playground-copy"><div class="micro" style="color:#9da6a6">Building to think</div><h2>Things I make when the brief is open.</h2><p>Small experiments, prototypes, visual systems, and ideas that help me stay curious about what products can become.</p></div><div class="play-grid"><div class="play-card"><span>01</span><strong>Live systems</strong><span>Data · motion · spatial UI</span></div><div class="play-card"><span>02</span><strong>Making complexity legible</strong><span>Interfaces · maps · decision tools</span></div><div class="play-card"><span>03</span><strong>Design engineering</strong><span>Code · prototypes · interaction</span></div></div></section>
 </main>
-
-<footer class="shell"><span>© 2026 Adam Munir</span><div><a href="resume/">Résumé</a><a href="mailto:hello@adammunir.com">Email</a><a href="https://www.linkedin.com/in/adammunir" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+<footer class="wrap footer"><span>© 2026 Adam Munir</span><div><a href="resume/">Résumé</a><a href="mailto:hello@adammunir.com">Email</a><a href="https://www.linkedin.com/in/adammunir" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
 </body>
 </html>
