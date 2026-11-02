@@ -60,6 +60,11 @@ export function Zoom({
   return (
     <section ref={ref} className="relative h-[260svh]">
       <div className="sticky top-0 flex h-[100svh] flex-col items-center justify-center overflow-hidden">
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,10,11,0.88)_0%,rgba(10,10,11,0.88)_65%,transparent_90%)]"
+          style={{ opacity: copyOpacity }}
+        />
         <motion.div className="shell absolute top-[12svh] z-10" style={{ opacity: copyOpacity, y: copyY }}>
           <Heading eyebrow={eyebrow} title={title} accent={accent} />
         </motion.div>
