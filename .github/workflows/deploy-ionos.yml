@@ -45,7 +45,7 @@ jobs:
           test -f out/work/lynx/index.html
           test -f out/.htaccess
 
-      - name: Replace IONOS webspace
+      - name: Upload static site to IONOS
         uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
           server: ${{ secrets.IONOS_HOST }}
@@ -54,7 +54,6 @@ jobs:
           port: 22
           local_path: "./out/*"
           remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
-          delete_remote_files: true
           sftpArgs: "-o StrictHostKeyChecking=no"
 
       - name: Upload Apache header rules
