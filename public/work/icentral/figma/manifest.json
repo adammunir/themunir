@@ -1,0 +1,387 @@
+{
+  "hero": [
+    {
+      "src": "/work/icentral/figma/hero-home-showcase.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Home dashboard",
+      "caption": "Showcase page frame. KPI tiles (alarms, ET failures, out of sync, rain shutdown, offline, balance) above a controller table, beside a live map.",
+      "nodeId": "5564:90405",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); map labels show real Riverside CA geography"
+    },
+    {
+      "src": "/work/icentral/figma/hero-map.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Map with station pins",
+      "caption": "Multi-select a controller in the table, rain-shutdown or run diagnostics in one step, while the map zooms to its stations.",
+      "nodeId": "3543:9045",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); map shows a real-looking school name (\"Elementary School\") and street labels"
+    },
+    {
+      "src": "/work/icentral/figma/hero-programming.webp",
+      "width": 1920,
+      "height": 2181,
+      "title": "Programming a controller",
+      "caption": "Program list, schedule, start times and station runtimes in one three-column view with a persistent Save & Send bar. Note: header shows placeholder \"Page Title\"; crop or retouch before use.",
+      "nodeId": "2452:33493",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+    },
+    {
+      "src": "/work/icentral/figma/hero-global-adjustments.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Global Adjustments: adjust programs",
+      "caption": "Pick programs across many controllers and edit percent adjustment, water window, overlap and cycles in bulk.",
+      "nodeId": "5699:80053",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); rows may include real-looking controller or person names (e.g. \"Sergio's Eagle Plus\"); verify"
+    },
+    {
+      "src": "/work/icentral/figma/hero-weather-controls.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Weather Controls: choose an ET source",
+      "caption": "Step 1 of the weather wizard: No ET, ZipET, Rain Master station, Historic, Manual, CIMIS.",
+      "nodeId": "9273:878915",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); controller named \"Sergios Eagle Plus\" (person-like name)"
+    },
+    {
+      "src": "/work/icentral/figma/hero-activity.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Home with Activity panel",
+      "caption": "Activity feed slides over the map: alarms, changes and watering events with status dots from the status-icon legend.",
+      "nodeId": "2552:123438",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); feed shows person-like controller and user names (e.g. \"Sergio's RXC Controller\"); verify"
+    }
+  ],
+  "sequences": [
+    {
+      "id": "onboarding",
+      "title": "Getting in",
+      "story": "Sign in, recover a password (with a QR hand-off to mobile), register, or accept an invitation.",
+      "frames": [
+        {
+          "src": "/work/icentral/figma/onb-1-signin.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Sign in",
+          "caption": "Sign-in beside a rotating marketing panel for the next evolution of the product.",
+          "nodeId": "2310:11331",
+          "flag": "Sample phone-number value (919-583-9282) in the sign-in field; retouch"
+        },
+        {
+          "src": "/work/icentral/figma/onb-2-forgot.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Forgot password",
+          "caption": "Reset flow plus a QR code that hands the user to the mobile app.",
+          "nodeId": "2310:11371"
+        },
+        {
+          "src": "/work/icentral/figma/onb-3-register.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Register",
+          "caption": "Self-registration form.",
+          "nodeId": "2310:11396",
+          "flag": "Possible real-looking sample data (city name, phone number, email); verify before use"
+        },
+        {
+          "src": "/work/icentral/figma/onb-4-invited.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Register (invited)",
+          "caption": "Invited-user variant with the account context prefilled.",
+          "nodeId": "2310:11437",
+          "flag": "CONFIDENTIAL RISK: \"Invited by City of Thousand Oaks\" and email steve.brady@thousandoaks.gov (real-looking municipality and person), plus phone-number-style sample value 919-583-9282. Do not publish unedited"
+        }
+      ]
+    },
+    {
+      "id": "programming",
+      "title": "Programming a controller",
+      "story": "Set the controller up, edit programs and runtimes, bulk-update stations, then confirm Save & Send.",
+      "frames": [
+        {
+          "src": "/work/icentral/figma/prog-1-controller-setup.webp",
+          "width": 1920,
+          "height": 1639,
+          "title": "Controller setup",
+          "caption": "Set master valve, rain sensor, flow sensor, reference ET and precision controls before programming.",
+          "nodeId": "2590:136343",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        },
+        {
+          "src": "/work/icentral/figma/hero-programming.webp",
+          "width": 1920,
+          "height": 2181,
+          "title": "Programming a controller",
+          "caption": "Program list, schedule, start times and station runtimes in one three-column view with a persistent Save & Send bar. Note: header shows placeholder \"Page Title\"; crop or retouch before use.",
+          "nodeId": "2452:33493",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        },
+        {
+          "src": "/work/icentral/figma/prog-3-quick-station.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Quick Station Update",
+          "caption": "Bulk-set runtimes across enabled/disabled stations from one modal.",
+          "nodeId": "3087:19618",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        },
+        {
+          "src": "/work/icentral/figma/prog-4-save-send.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Save & Send confirmation",
+          "caption": "Explicit confirm before changes are sent to the controller.",
+          "nodeId": "2590:135214",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        }
+      ]
+    },
+    {
+      "id": "global-adjustments",
+      "title": "Adjusting many controllers at once",
+      "story": "Select controllers or programs, edit in bulk, review current vs. new, send, confirm.",
+      "frames": [
+        {
+          "src": "/work/icentral/figma/ga-1-select.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Select controllers",
+          "caption": "Step 1: choose controllers or programs to adjust.",
+          "nodeId": "5685:65838",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); controller names look customer-like; verify"
+        },
+        {
+          "src": "/work/icentral/figma/hero-global-adjustments.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Global Adjustments: adjust programs",
+          "caption": "Pick programs across many controllers and edit percent adjustment, water window, overlap and cycles in bulk.",
+          "nodeId": "5699:80053",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); rows may include real-looking controller or person names (e.g. \"Sergio's Eagle Plus\"); verify"
+        },
+        {
+          "src": "/work/icentral/figma/ga-3-schedule.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Adjust a program schedule",
+          "caption": "Edit program schedule and station runtimes for the selection.",
+          "nodeId": "5699:80835",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        },
+        {
+          "src": "/work/icentral/figma/ga-4-review.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Review changes",
+          "caption": "Side-by-side current vs. new values with per-row checkboxes.",
+          "nodeId": "5699:82410",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        },
+        {
+          "src": "/work/icentral/figma/ga-5-success.webp",
+          "width": 1920,
+          "height": 1080,
+          "title": "Saved and sent",
+          "caption": "Confirmation toast and summary after the batch is sent.",
+          "nodeId": "9764:51892",
+          "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+        }
+      ]
+    }
+  ],
+  "responsive": [
+    {
+      "src": "/work/icentral/figma/hero-home-showcase.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Home at 1920px",
+      "caption": "Showcase page frame. KPI tiles (alarms, ET failures, out of sync, rain shutdown, offline, balance) above a controller table, beside a live map.",
+      "nodeId": "5564:90405",
+      "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); map labels show real Riverside CA geography"
+    },
+    {
+      "src": "/work/icentral/figma/resp-tablet-home.webp",
+      "width": 768,
+      "height": 1120,
+      "title": "Home at 768px",
+      "caption": "Tablet layout of Home: KPI tiles stack above the controller list; the map becomes a toggled view.",
+      "nodeId": "2536:106631"
+    },
+    {
+      "src": "/work/icentral/figma/resp-mobile-home.webp",
+      "width": 393,
+      "height": 852,
+      "title": "Home at 393px (hi-fi)",
+      "caption": "Mobile Home (Manager): compact KPI tiles, filterable controller list, View on map action.",
+      "nodeId": "13056:4460"
+    }
+  ],
+  "beforeAfter": [
+    {
+      "before": {
+        "src": "/work/icentral/figma/ba-legacy-programming.webp",
+        "width": 896,
+        "height": 1774,
+        "title": "Legacy program editor (reference screenshot)",
+        "caption": "Screenshot of the legacy iCentral program page used as the starting point in the Programs redesign (slide: \"Initial Design\"). Low resolution (896px native).",
+        "nodeId": "1823:15283",
+        "flag": "Contains real-looking site/address text in the screenshot (e.g. a street address and LMD name); blur before publishing"
+      },
+      "after": {
+        "src": "/work/icentral/figma/hero-programming.webp",
+        "width": 1920,
+        "height": 2181,
+        "title": "Programming a controller",
+        "caption": "Program list, schedule, start times and station runtimes in one three-column view with a persistent Save & Send bar. Note: header shows placeholder \"Page Title\"; crop or retouch before use.",
+        "nodeId": "2452:33493",
+        "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+      },
+      "caption": "Legacy program editor vs. the NT programming screen."
+    },
+    {
+      "before": {
+        "src": "/work/icentral/figma/ba-nav-exploration.webp",
+        "width": 1920,
+        "height": 1080,
+        "title": "Rebrand exploration: red nav",
+        "caption": "Rebrand-page exploration with the brand-red navigation rail. Order vs. final is inferred, not stated in Figma.",
+        "nodeId": "4438:57259",
+        "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA)"
+      },
+      "after": {
+        "src": "/work/icentral/figma/hero-home-showcase.webp",
+        "width": 1920,
+        "height": 1080,
+        "title": "Home dashboard",
+        "caption": "Showcase page frame. KPI tiles (alarms, ET failures, out of sync, rain shutdown, offline, balance) above a controller table, beside a live map.",
+        "nodeId": "5564:90405",
+        "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); map labels show real Riverside CA geography"
+      },
+      "caption": "Rebrand exploration (red rail) vs. the dark-rail Showcase direction. Ordering inferred."
+    },
+    {
+      "before": {
+        "src": "/work/icentral/figma/ba-connect.webp",
+        "width": 1920,
+        "height": 1080,
+        "title": "\"iCentral Connect\" header",
+        "caption": "Product-name exploration: \"iCentral Connect\" in the header. Ordering inferred.",
+        "nodeId": "10792:14245",
+        "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); greeting shows a teammate-like first name (\"Welcome, Maushami\")"
+      },
+      "after": {
+        "src": "/work/icentral/figma/ba-icentral.webp",
+        "width": 1920,
+        "height": 1080,
+        "title": "\"iCentral\" header",
+        "caption": "Same screen with the plain \"iCentral\" name.",
+        "nodeId": "10792:15800",
+        "flag": "Account name \"Riverside Town Hall Park\" in top bar (real city name, Riverside CA); greeting shows a teammate-like first name (\"Welcome, Maushami\")"
+      },
+      "caption": "\"iCentral Connect\" vs. \"iCentral\" product naming. Ordering inferred."
+    }
+  ],
+  "system": [
+    {
+      "src": "/work/icentral/figma/sys-colors-neutrals.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Neutrals",
+      "caption": "Cool-gray scale for text, backgrounds and dividers, with accessibility pairing rules.",
+      "nodeId": "5954:40451"
+    },
+    {
+      "src": "/work/icentral/figma/sys-colors-status.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Status and action colors",
+      "caption": "Negative, warning, positive and informative/action swatches.",
+      "nodeId": "5954:40482"
+    },
+    {
+      "src": "/work/icentral/figma/sys-type-fonts.webp",
+      "width": 1920,
+      "height": 1080,
+      "title": "Typography: Golos UI",
+      "caption": "Golos UI Regular/Medium/Bold, uniwidth with monospaced numerals for dense tables. Public font link only.",
+      "nodeId": "6303:771"
+    },
+    {
+      "src": "/work/icentral/figma/sys-status-icons.webp",
+      "width": 1992,
+      "height": 2005,
+      "title": "Status icons and activity legend",
+      "caption": "Dot icons for success, alarms, watering, changes, out-of-sync, ET failure, running, delete, shown in the Activity panel.",
+      "nodeId": "4663:10404"
+    },
+    {
+      "src": "/work/icentral/figma/sys-table-rows.webp",
+      "width": 1920,
+      "height": 552,
+      "title": "Table rows",
+      "caption": "Watering Plan table header and rows in default, hover, selected, disabled and highlight states. Component docs inherited from the Toro Lynx system (golf-course wording in notes).",
+      "nodeId": "4770:20767"
+    },
+    {
+      "src": "/work/icentral/figma/ba-logo-evolution.webp",
+      "width": 2400,
+      "height": 532,
+      "title": "Logo evolution",
+      "caption": "Old wordmark, updated logomark, Toro redesign lockup, and reference.",
+      "nodeId": "4688:7786"
+    }
+  ],
+  "mobile": [
+    {
+      "src": "/work/icentral/figma/resp-mobile-home.webp",
+      "width": 393,
+      "height": 852,
+      "title": "Home at 393px (hi-fi)",
+      "caption": "Mobile Home (Manager): compact KPI tiles, filterable controller list, View on map action.",
+      "nodeId": "13056:4460"
+    },
+    {
+      "src": "/work/icentral/figma/mob-activity.webp",
+      "width": 393,
+      "height": 852,
+      "title": "Mobile: Activity feed",
+      "caption": "Date tabs, filter sheet and severity dots.",
+      "nodeId": "13056:4649",
+      "flag": "Sample text may include place names; verify"
+    },
+    {
+      "src": "/work/icentral/figma/mob-detail.webp",
+      "width": 393,
+      "height": 852,
+      "title": "Mobile: Event detail",
+      "caption": "Event metadata with jump to controller settings.",
+      "nodeId": "13056:4993",
+      "flag": "Shows person-like names (\"Sergio's RXC Controller\", an assignee name) and a park name; verify"
+    },
+    {
+      "src": "/work/icentral/figma/mob-signin.webp",
+      "width": 393,
+      "height": 852,
+      "title": "Mobile: Sign in",
+      "caption": "Full-bleed field photo with sign-in sheet.",
+      "nodeId": "13054:144912",
+      "flag": "Sample phone number 919-583-9282 in the sign-in field (real-looking); retouch"
+    }
+  ],
+  "ia": [
+    {
+      "src": "/work/icentral/figma/ia-sitemap.webp",
+      "width": 2400,
+      "height": 1461,
+      "title": "iCentral navigation architecture",
+      "caption": "Function-first sitemap: Home, Account, Program, Manual Ops, Shutdown, Weather, Reports, Payments, Contact, Help.",
+      "nodeId": "2391:19341",
+      "flag": "Includes legacy product name \"Rainmaster Documentation\" in the Help branch"
+    }
+  ]
+}
