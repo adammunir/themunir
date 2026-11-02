@@ -9,7 +9,6 @@ export const profile = {
     "Senior Product Designer at The Toro Company. I lead UX research and design across web, native mobile, hardware-adjacent, and AI-enabled products for golf, landscape, and the home, usually as the only designer on the team. Then I help build what I design, front end and back end, so the experience ships the way it was meant to.",
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/adammunirr" },
-    { label: "GitHub", href: "https://github.com/toroadam" },
   ],
   career: [
     { years: "2022 — Now", org: "The Toro Company", role: "Senior Product Designer", place: "California" },
