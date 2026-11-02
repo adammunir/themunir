@@ -20,12 +20,12 @@ export default function About() {
           <p>{profile.intro}</p>
           <p>
             My career began in analytics and data operations. That gave me a systems-thinking, metrics-first approach that
-            I've carried through fintech, streaming, logistics, and, since 2022, irrigation for golf, landscape, and the
+            I&apos;ve carried through fintech, streaming, logistics, and, since 2022, irrigation for golf, landscape, and the
             home at The Toro Company.
           </p>
           <p>
             I work at the seam between UX and engineering. I run the research, design the system, write the code, and
-            instrument the result, increasingly with AI agents I build and hold to account. Originally from the UK, I'm
+            instrument the result, increasingly with AI agents I build and hold to account. Originally from the UK, I&apos;m
             now based in {profile.location}.
           </p>
         </Reveal>

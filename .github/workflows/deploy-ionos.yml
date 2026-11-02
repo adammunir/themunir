@@ -1,0 +1,69 @@
+name: Deploy to IONOS Webspace
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ionos-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build static site
+        run: pnpm run build
+
+      - name: Check export
+        run: |
+          test -f out/index.html
+          test -f out/about/index.html
+          test -f out/work/lynx/index.html
+          test -f out/.htaccess
+
+      - name: Replace IONOS webspace
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.IONOS_HOST }}
+          username: ${{ secrets.IONOS_USERNAME }}
+          password: ${{ secrets.IONOS_PASSWORD }}
+          port: 22
+          local_path: "./out/*"
+          remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
+          delete_remote_files: true
+          sftpArgs: "-o StrictHostKeyChecking=no"
+
+      - name: Upload Apache header rules
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.IONOS_HOST }}
+          username: ${{ secrets.IONOS_USERNAME }}
+          password: ${{ secrets.IONOS_PASSWORD }}
+          port: 22
+          local_path: "./out/.htaccess"
+          remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
+          sftpArgs: "-o StrictHostKeyChecking=no"

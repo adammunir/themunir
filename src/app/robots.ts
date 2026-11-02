@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 /**
  * The site is private: nothing on it may be indexed. Search engines are
  * allowed to fetch pages only so they can read the noindex on every response
