@@ -4,13 +4,7 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - ".gitignore"
-      - "README.md"
-      - "AGENTS.md"
-      - "case-logs/**"
-      - "logs/**"
-      - ".github/**"
+  workflow_dispatch:
 
 concurrency:
   group: ionos-deploy
@@ -24,22 +18,51 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Upload site to IONOS via SFTP
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build static site
+        run: pnpm run build
+
+      - name: Check export
+        run: |
+          test -f out/index.html
+          test -f out/about/index.html
+          test -f out/work/lynx/index.html
+          test -f out/.htaccess
+
+      - name: Upload static site to IONOS
         uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
           server: ${{ secrets.IONOS_HOST }}
           username: ${{ secrets.IONOS_USERNAME }}
           password: ${{ secrets.IONOS_PASSWORD }}
           port: 22
-          local_path: "./*"
+          local_path: "./out/*"
           remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
-          rsyncArgs: >-
-            --exclude=.git
-            --exclude=.github
-            --exclude=.gitignore
-            --exclude=AGENTS.md
-            --exclude=README.md
-            --exclude=case-logs
-            --exclude=logs
-            --exclude=.DS_Store
+          sftpArgs: "-o StrictHostKeyChecking=no"
+
+      - name: Upload Apache header rules
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.IONOS_HOST }}
+          username: ${{ secrets.IONOS_USERNAME }}
+          password: ${{ secrets.IONOS_PASSWORD }}
+          port: 22
+          local_path: "./out/.htaccess"
+          remote_path: ${{ secrets.IONOS_REMOTE_PATH }}
           sftpArgs: "-o StrictHostKeyChecking=no"

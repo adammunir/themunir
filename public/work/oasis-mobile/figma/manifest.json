@@ -1,0 +1,337 @@
+{
+  "hero": [
+    {
+      "src": "/work/oasis-mobile/figma/hero-01-dashboard-watering-now.webp",
+      "width": 1179,
+      "height": 2556,
+      "title": "Homeowner dashboard, watering now",
+      "caption": "A cyan live banner and a peeking next-run card tell the homeowner what the system is doing right now, before they read a word.",
+      "nodeId": "25758:70141",
+      "page": "Live Zone Operation",
+      "flag": "Placeholder sample data (John Smith / 8123 Main St, Los Angeles 90001 / stock avatar); not a real customer."
+    },
+    {
+      "src": "/work/oasis-mobile/figma/hero-02-place-zones-on-map.webp",
+      "width": 1179,
+      "height": 2556,
+      "title": "Place zones on the satellite map",
+      "caption": "A dock of numbered, color-coded zone badges lets installers drag each valve onto the real property, so zones are recognised by place, not by number.",
+      "nodeId": "28717:105900",
+      "page": "Controller Onboarding"
+    },
+    {
+      "src": "/work/oasis-mobile/figma/hero-03-precision-control.webp",
+      "width": 1179,
+      "height": 2556,
+      "title": "Precision Control forecast sheet",
+      "caption": "The sheet explains why watering is paused in plain language, with a four-day rain outlook and the exact trigger that fired.",
+      "nodeId": "28465:74633",
+      "page": "Precision Controls"
+    },
+    {
+      "src": "/work/oasis-mobile/figma/hero-04-clients-map-sheet.webp",
+      "width": 1179,
+      "height": 2556,
+      "title": "Contractor client map with sheet",
+      "caption": "Name pins with urgent and flag badges sit above a draggable client list, so a contractor can triage a day's route from one screen.",
+      "nodeId": "28585:29288",
+      "page": "Controller Onboarding",
+      "flag": "Sample client names and street addresses appear to be demo data; confirm they are not real customers before publishing."
+    },
+    {
+      "src": "/work/oasis-mobile/figma/hero-05-track-every-drop.webp",
+      "width": 1179,
+      "height": 2556,
+      "title": "Welcome: track every drop",
+      "caption": "The welcome carousel sells the product with a real ET adjustment chart instead of a generic illustration.",
+      "nodeId": "24476:95918",
+      "page": "Invite + Initial Layout"
+    },
+    {
+      "src": "/work/oasis-mobile/figma/hero-06-clients-map-pins.webp",
+      "width": 1179,
+      "height": 2556,
+      "title": "Contractor map with live status pins",
+      "caption": "Status filters and named pins give contractors a spatial view of every property that needs attention.",
+      "nodeId": "28577:28697",
+      "page": "Controller Onboarding",
+      "flag": "Sample client names and street addresses appear to be demo data; confirm they are not real customers before publishing."
+    }
+  ],
+  "sequences": [
+    {
+      "id": "controller-setup",
+      "title": "Controller setup, scan to done",
+      "story": "Setting up a controller is the contractor's highest-stakes moment, so the flow runs in short, single-purpose steps with a segmented progress bar. Bluetooth and Wi-Fi trouble is handled with an in-context help sheet rather than a dead end. The flow ends by proving the install works: bulk zone setup, run-all testing, then a confirmation.",
+      "frames": [
+        {
+          "src": "/work/oasis-mobile/figma/onboarding-01-connect-controller.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Connect controller",
+          "caption": "QR scan sits on top and nearby devices fill in below, so there are two ways in and no manual typing.",
+          "nodeId": "28380:73612",
+          "page": "Controller Onboarding"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/onboarding-02-having-issues.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Having issues? help sheet",
+          "caption": "Ordered troubleshooting steps and a Contact Support button live in a bottom sheet, so a failed pairing never loses the user's place.",
+          "nodeId": "28380:73822",
+          "page": "Controller Onboarding"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/onboarding-03-setup-zones.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Set up zones in bulk",
+          "caption": "Select-all with a floating action bar applies Map Zones or True ET to 22 zones at once instead of 22 times.",
+          "nodeId": "24098:61521",
+          "page": "TRUE ET Wizard"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/onboarding-04-system-testing.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "System testing",
+          "caption": "One test runtime, a Test All button and per-zone play controls with status ticks prove the install on the spot.",
+          "nodeId": "27617:71679",
+          "page": "Controller Onboarding"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/onboarding-05-congratulations.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Setup complete",
+          "caption": "A full progress bar and a celebratory confirmation close the loop and hand the contractor back to the account.",
+          "nodeId": "27617:71954",
+          "page": "Controller Onboarding",
+          "flag": "Uses placeholder name 'John Smith's Main Home'."
+        }
+      ]
+    },
+    {
+      "id": "true-et-wizard",
+      "title": "TRUE ET wizard",
+      "story": "TRUE ET replaces a wall of agronomy settings with a guided wizard that asks one plain-language question per screen: hardware, plant type, soil. Every option is a visual card with a 'what this means' explanation, and unknowns fall back to a smart default. The result is a zone profile a non-expert can complete and an expert can still fine-tune.",
+      "frames": [
+        {
+          "src": "/work/oasis-mobile/figma/trueet-01-select-zones.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Select zones",
+          "caption": "The wizard starts by confirming which zones it will configure, with select-all for bulk work.",
+          "nodeId": "24098:60364",
+          "page": "TRUE ET Wizard"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/trueet-02-hardware-type.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Hardware type",
+          "caption": "Large icon cards and an 'I'm not sure' default let users answer without knowing the product jargon.",
+          "nodeId": "24098:60097",
+          "page": "TRUE ET Wizard"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/trueet-03-vegetation-type.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Vegetation type",
+          "caption": "Plant categories are named in everyday language with examples, and an info banner says what the choice changes.",
+          "nodeId": "24098:59731",
+          "page": "TRUE ET Wizard"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/trueet-04-soil-type.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Soil type",
+          "caption": "Soil swatches with a one-line drainage description make a technical input feel like picking a texture.",
+          "nodeId": "24098:59862",
+          "page": "TRUE ET Wizard"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/trueet-05-zone-profile-complete.webp",
+          "width": 1181,
+          "height": 3310,
+          "title": "Zone profile complete",
+          "caption": "A summary of watering days, runtime and cycle-and-soak shows the user what the answers produced, with Advanced Settings one tap away.",
+          "nodeId": "24098:60736",
+          "page": "TRUE ET Wizard",
+          "flag": "Tall frame (1103pt); scrolls beyond one screen."
+        }
+      ]
+    },
+    {
+      "id": "map-zone-drawing",
+      "title": "Map zones and borders",
+      "story": "Zones become spatial: the installer pins each valve on a satellite view of the property and draws its coverage outline. The map goes full-bleed, the controls collapse into a bottom bar, and Undo, Reset and Done appear only when relevant. The map then comes back as a thumbnail in zone details so people can recognise a zone by place.",
+      "frames": [
+        {
+          "src": "/work/oasis-mobile/figma/zonedraw-01-zone-details.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Zone details with Map Zone",
+          "caption": "The zone detail screen offers a Map Zone call-to-action over a satellite preview thumbnail.",
+          "nodeId": "23940:56524",
+          "page": "Map Borders + Zone Drawing"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/zonedraw-02-place-zone.webp",
+          "width": 1179,
+          "height": 2538,
+          "title": "Place the zone",
+          "caption": "A one-line hint and a tray of unplaced zone badges teach drag-and-place without a tutorial.",
+          "nodeId": "23940:56400",
+          "page": "Map Borders + Zone Drawing"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/zonedraw-03-zone-selected.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Zone selected",
+          "caption": "The selected badge grows a coverage halo so it is clear which zone is being edited.",
+          "nodeId": "23940:56723",
+          "page": "Map Borders + Zone Drawing"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/zonedraw-04-draw-border.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Draw the border",
+          "caption": "Undo and Done replace Reset and Edit while drawing, so the toolbar only offers what is useful in the current mode.",
+          "nodeId": "23940:57170",
+          "page": "Map Borders + Zone Drawing"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/zonedraw-05-zone-mapped.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Zone mapped",
+          "caption": "The finished outline returns to zone details as a thumbnail with Edit Zone, closing the loop.",
+          "nodeId": "23947:58361",
+          "page": "Map Borders + Zone Drawing"
+        }
+      ]
+    },
+    {
+      "id": "welcome-and-invite",
+      "title": "Welcome and invite",
+      "story": "First launch shows a swipeable carousel that sells value with product visuals: zone mapping, savings and ET tracking. Three clear entry points sit in a docked panel, and 'I received an invite' is a first-class path rather than a buried link. The invite path helps people find the email or text and lands on a confirmed, pre-contextualised account form.",
+      "frames": [
+        {
+          "src": "/work/oasis-mobile/figma/invite-01-spatial-zone-mapping.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Welcome: spatial zone mapping",
+          "caption": "The first carousel card leads with the map, the most visual part of the product.",
+          "nodeId": "24476:95800",
+          "page": "Invite + Initial Layout"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/invite-02-savings-on-autopilot.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Welcome: savings on autopilot",
+          "caption": "A real weekly-summary notification shows the benefit in the place the user will actually see it.",
+          "nodeId": "24476:96032",
+          "page": "Invite + Initial Layout"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/invite-03-find-your-invite.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Let's find that invite",
+          "caption": "A friendly sheet routes to Messages or Email in one tap, with 'Request a new invite' as the escape hatch.",
+          "nodeId": "24405:64625",
+          "page": "Invite + Initial Layout"
+        },
+        {
+          "src": "/work/oasis-mobile/figma/invite-04-create-account.webp",
+          "width": 1179,
+          "height": 2556,
+          "title": "Welcome, you've been invited",
+          "caption": "The form opens by naming who invited the user and for which property, so the handover feels trustworthy before any typing.",
+          "nodeId": "24409:76655",
+          "page": "Invite + Initial Layout",
+          "flag": "Placeholder sample data (John Smith / 8123 Main St, Los Angeles 90001 / stock avatar); not a real customer."
+        }
+      ]
+    }
+  ],
+  "tablet": [
+    {
+      "src": "/work/oasis-mobile/figma/tablet-01-homeowner-dashboard.webp",
+      "width": 1536,
+      "height": 2048,
+      "title": "Tablet homeowner dashboard",
+      "caption": "The phone dashboard's live watering card and tile grid scale to a 768pt canvas without losing hierarchy.",
+      "nodeId": "621:119750",
+      "page": "Tablet",
+      "flag": "Placeholder sample data (John Smith / 8123 Main St, Los Angeles 90001 / stock avatar); not a real customer."
+    },
+    {
+      "src": "/work/oasis-mobile/figma/tablet-02-client-dashboard.webp",
+      "width": 1536,
+      "height": 2048,
+      "title": "Tablet client dashboard",
+      "caption": "A contractor viewing a client sees the day's watering timeline above the same action tiles homeowners use.",
+      "nodeId": "621:118416",
+      "page": "Tablet",
+      "flag": "Placeholder sample data (John Smith / 8123 Main St, Los Angeles 90001 / stock avatar); not a real customer."
+    },
+    {
+      "src": "/work/oasis-mobile/figma/tablet-03-zone-map.webp",
+      "width": 1536,
+      "height": 2048,
+      "title": "Tablet zone mapping",
+      "caption": "On the larger canvas the satellite map becomes the whole screen, with only a hint and two actions floating over it.",
+      "nodeId": "621:97883",
+      "page": "Tablet"
+    }
+  ],
+  "system": [
+    {
+      "src": "/work/oasis-mobile/figma/system-01-unified-settings-components.webp",
+      "width": 2684,
+      "height": 4096,
+      "title": "Unified settings components",
+      "caption": "Controller, program and zone settings are built from one set of form components in two variants (C and H) so every settings screen behaves the same.",
+      "nodeId": "14392:38847",
+      "page": "Core"
+    },
+    {
+      "src": "/work/oasis-mobile/figma/system-02-true-et-slider-sheet-states.webp",
+      "width": 2766,
+      "height": 2988,
+      "title": "Slider sheet states",
+      "caption": "Five agronomy inputs share one slider sheet, with a color scale and a plain-language 'What this means' panel for each stop.",
+      "nodeId": "24098:71368",
+      "page": "TRUE ET Wizard"
+    },
+    {
+      "src": "/work/oasis-mobile/figma/system-03-zone-details-states.webp",
+      "width": 1994,
+      "height": 2530,
+      "title": "Zone details states",
+      "caption": "Zone details covers with, without and resume-in-progress True ET, so every state of an advanced feature is designed rather than implied.",
+      "nodeId": "24098:71375",
+      "page": "TRUE ET Wizard"
+    }
+  ],
+  "process": [
+    {
+      "src": "/work/oasis-mobile/figma/process-01-contractor-map-prototype-board.webp",
+      "width": 2640,
+      "height": 2240,
+      "title": "Map and sheet prototype board",
+      "caption": "Prototype states for sheet detents, pin selection and a zoom ladder, annotated with motion timings in milliseconds.",
+      "nodeId": "28643:30608",
+      "page": "Controller Onboarding",
+      "flag": "Sample client names and street addresses appear to be demo data; confirm they are not real customers before publishing."
+    }
+  ]
+}

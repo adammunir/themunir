@@ -1,0 +1,392 @@
+{
+  "desktopHero": [
+    {
+      "src": "/work/lynx/figma/desktop-hero-01-course-report-map.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Course Report with docked map",
+      "caption": "One screen answers 'is the course healthy?': status counts and area rows on top, a live station map below, and the activity feed docked right.",
+      "nodeId": "12991:184020",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+      "flag": "course name visible: Riverside Golf Club"
+    },
+    {
+      "src": "/work/lynx/figma/desktop-hero-02-watering-plan-map.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Watering Plan with map and projected flow",
+      "caption": "The table, the map and a projected-flow preview share one view, so an adjustment can be judged against its hydraulic effect before it is made.",
+      "nodeId": "13314:140287",
+      "fileKey": "LCzDfd6080PE9aFU0R1Itg",
+      "flag": "course name visible: Spyglass Hill (header and 'Spyglass Hill Adjust' label)"
+    },
+    {
+      "src": "/work/lynx/figma/desktop-hero-03-projected-flow.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Projected Flow",
+      "caption": "Stacked program colors turn a night of irrigation into one readable shape, with the course map underneath to show what is running where.",
+      "nodeId": "7638:611818",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+      "flag": "course name visible: Riverside Golf Club; course name visible: Spyglass Hill"
+    },
+    {
+      "src": "/work/lynx/figma/desktop-hero-04-alarm-response.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Alarm Response",
+      "caption": "Alarms are grouped by hardware, sensor, system and weather, with the activity feed and map kept in view for triage.",
+      "nodeId": "7036:466745",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+      "flag": "course name visible: Riverside Golf Club"
+    },
+    {
+      "src": "/work/lynx/figma/desktop-hero-05-map-station-detail.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Map with station detail panel",
+      "caption": "A satellite map with a right-hand panel keeps the superintendent on the turf while editing a single station's runtime and amount.",
+      "nodeId": "13314:118711",
+      "fileKey": "LCzDfd6080PE9aFU0R1Itg"
+    },
+    {
+      "src": "/work/lynx/figma/desktop-hero-06-hydraulic.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Hydraulic setup",
+      "caption": "Mains, branches and sources are edited as a tree beside the map, so the hydraulic model stays tied to the physical course.",
+      "nodeId": "7009:380020",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+      "flag": "course name visible: Riverside Golf Club; course name visible: Spyglass Hill"
+    }
+  ],
+  "desktopSequences": [
+    {
+      "id": "morning-check-in",
+      "title": "Morning Check-In",
+      "story": "The superintendent opens Course Report, sees what failed overnight, runs diagnostics on the failing station, flags it, leaves a note for the crew, and sees the note land in the activity feed.",
+      "frames": [
+        {
+          "src": "/work/lynx/figma/desktop-morning-01-course-report.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Course Report overview",
+          "caption": "Failed, Under/Over and Running are the three counts that matter at 6 AM, and they lead the screen.",
+          "nodeId": "889:378263",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-morning-02-failed-filter.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Filter to failed stations",
+          "caption": "One tap on 'Failed' collapses 1,552 stations to the handful that need attention, grouped by area.",
+          "nodeId": "765:386978",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-morning-03-diagnostics.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Run diagnostics and flag the station",
+          "caption": "Diagnostic results offer an inline flag with a tooltip, turning a test result into a team-visible issue without leaving the modal.",
+          "nodeId": "889:400440",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Spyglass Hill"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-morning-04-add-note.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Add a note with context",
+          "caption": "A note modal attached to the station keeps the explanation next to the problem, with room for photos.",
+          "nodeId": "889:400289",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Spyglass Hill"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-morning-05-note-logged.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Issue and note appear in the feed",
+          "caption": "The flagged station is highlighted in the table and the flag and note appear in the feed, closing the loop.",
+          "nodeId": "889:400678",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club"
+        }
+      ]
+    },
+    {
+      "id": "end-of-day-planning",
+      "title": "End of Day Planning",
+      "story": "From the Watering Plan, the superintendent reviews holes, adjusts a program, tunes a single station, checks its activity history and records notes for tomorrow.",
+      "frames": [
+        {
+          "src": "/work/lynx/figma/desktop-eod-01-holes.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Watering Plan by hole",
+          "caption": "Holes, programs and stations are alternate lenses on the same plan, with a right panel for history and automation.",
+          "nodeId": "10876:230689",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Spyglass Hill"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-eod-02-program-adjust.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Adjust a program",
+          "caption": "Program-level runtime, amount and percent adjust sit in a right panel beside the table, so changes show in context.",
+          "nodeId": "780:325050",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-eod-03-station-adjust.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Adjust a single station",
+          "caption": "Per-station percent adjust and suspension are available without leaving the table, with last and next values for reference.",
+          "nodeId": "780:326533",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-eod-04-station-activity.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Station activity history",
+          "caption": "A dated activity feed with filter shows exactly what changed on a station and who changed it.",
+          "nodeId": "780:326253",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club; staff username visible: chrismacatee"
+        },
+        {
+          "src": "/work/lynx/figma/desktop-eod-05-station-notes.webp",
+          "width": 2880,
+          "height": 1620,
+          "title": "Station notes",
+          "caption": "Notes with photo thumbnails give tomorrow's crew the why behind today's adjustments.",
+          "nodeId": "780:326112",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "course name visible: Riverside Golf Club; staff username visible: chrismacatee"
+        }
+      ]
+    }
+  ],
+  "mobileHero": [
+    {
+      "src": "/work/lynx/figma/mobile-hero-01-map-clusters.webp",
+      "width": 1170,
+      "height": 2532,
+      "title": "Map with station clusters",
+      "caption": "Numbered clusters keep 1,800+ stations legible on a phone and resolve to individual pins as you zoom.",
+      "nodeId": "468:98179",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    },
+    {
+      "src": "/work/lynx/figma/mobile-hero-02-map-near-me.webp",
+      "width": 1170,
+      "height": 2532,
+      "title": "Map: Near Me",
+      "caption": "Your position anchors the map, and nearby pins carry station names, status and flag or note badges at a glance.",
+      "nodeId": "476:223969",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    },
+    {
+      "src": "/work/lynx/figma/mobile-hero-03-station-list.webp",
+      "width": 1170,
+      "height": 2532,
+      "title": "Station list with filters",
+      "caption": "Quick filters for Near Me, Flags and Notes make the list a to-do queue for walking the course.",
+      "nodeId": "818:427577",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    },
+    {
+      "src": "/work/lynx/figma/mobile-hero-04-station-flagged.webp",
+      "width": 1170,
+      "height": 2532,
+      "title": "Station sheet: issue flagged",
+      "caption": "A bottom sheet puts the flag state and the four field actions within thumb reach: run water, synchronize, note, diagnostics.",
+      "nodeId": "483:114727",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    },
+    {
+      "src": "/work/lynx/figma/mobile-hero-05-map-percent-adjust.webp",
+      "width": 1170,
+      "height": 2532,
+      "title": "Map in percent-adjust mode",
+      "caption": "Switching the map display to percent adjust shows each cluster's adjustment before you touch anything.",
+      "nodeId": "771:295144",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    }
+  ],
+  "mobileSequences": [
+    {
+      "id": "select-and-adjust",
+      "title": "Select and percent adjust",
+      "story": "In the field, the user enters selection mode, draws around the stations that need attention, opens Actions and applies a percent adjustment without going back to the desktop.",
+      "frames": [
+        {
+          "src": "/work/lynx/figma/mobile-select-01-select-mode.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Enter selection mode",
+          "caption": "A bottom bar and a pan/draw toggle make selection a clear, reversible mode.",
+          "nodeId": "8920:618220",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-select-02-draw-selection.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Draw a selection",
+          "caption": "Drawing a lasso around stations selects them in one gesture, with a live count on the Next button.",
+          "nodeId": "771:293146",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-select-03-actions.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Choose an action",
+          "caption": "Every bulk action (start/stop, diagnostic, hold, note, percent adjust) lives in one sheet.",
+          "nodeId": "489:133834",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-select-04-percent-adjust.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Percent adjust form",
+          "caption": "A sparse form with base, duration and a disabled temporary field keeps a risky change simple.",
+          "nodeId": "489:134181",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-select-05-percent-filled.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Confirm the adjustment",
+          "caption": "The Update button only activates once the values are valid, which prevents accidental irrigation changes.",
+          "nodeId": "489:134488",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        }
+      ]
+    },
+    {
+      "id": "diagnose-and-note",
+      "title": "Diagnose, flag and leave a smart note",
+      "story": "A user runs diagnostics on a failing station, flags the issue, writes a note with photos, and sees the suspension confirmed.",
+      "frames": [
+        {
+          "src": "/work/lynx/figma/mobile-note-01-diagnostics.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Diagnostic results",
+          "caption": "Each test row carries a one-tap flag, so a failed check becomes an issue in the same place it was found.",
+          "nodeId": "14084:86563",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-note-02-add-note.webp",
+          "width": 1170,
+          "height": 2685,
+          "title": "Add a note",
+          "caption": "The note composer opens the keyboard focused, with photos one tap away and a skip option.",
+          "nodeId": "483:112608",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-note-03-note-photos.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Note with photos",
+          "caption": "Attached photos show as thumbnails with expand controls, so evidence travels with the note.",
+          "nodeId": "509:243344",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "first name visible in note text: Chris"
+        },
+        {
+          "src": "/work/lynx/figma/mobile-note-04-note-added.webp",
+          "width": 1170,
+          "height": 2532,
+          "title": "Note saved, station suspended",
+          "caption": "A toast confirms the suspension, while the flag state stays visible on the station sheet.",
+          "nodeId": "483:113424",
+          "fileKey": "g6YgCRu3vbOoDJRjwq54vK",
+          "flag": "first name visible in note text: Chris"
+        }
+      ]
+    }
+  ],
+  "system": [
+    {
+      "src": "/work/lynx/figma/system-color-distribution.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Color distribution",
+      "caption": "Mostly light neutrals, with bright color reserved for status and Toro red kept to global chrome.",
+      "nodeId": "4691:7777",
+      "fileKey": "LmGfiG7j53UgKg8ryf3HYH"
+    },
+    {
+      "src": "/work/lynx/figma/system-typography-headings.webp",
+      "width": 2880,
+      "height": 1620,
+      "title": "Typography: headings and eyebrows",
+      "caption": "One uniwidth typeface (Golos UI) with monospaced numerals gives dense tables stable columns.",
+      "nodeId": "3529:93246",
+      "fileKey": "LmGfiG7j53UgKg8ryf3HYH"
+    },
+    {
+      "src": "/work/lynx/figma/system-map-pin-states.webp",
+      "width": 1960,
+      "height": 2546,
+      "title": "Map pin states",
+      "caption": "A pin matrix covers every status (available, running, disabled, selected) crossed with flag and note badges.",
+      "nodeId": "4485:2882",
+      "fileKey": "LmGfiG7j53UgKg8ryf3HYH"
+    },
+    {
+      "src": "/work/lynx/figma/system-data-rows.webp",
+      "width": 2496,
+      "height": 698,
+      "title": "Table data rows",
+      "caption": "Course Report rows are specified for status, area color bar and values, with hover and tinted states.",
+      "nodeId": "4442:3002",
+      "fileKey": "LmGfiG7j53UgKg8ryf3HYH"
+    }
+  ],
+  "details": [
+    {
+      "src": "/work/lynx/figma/detail-01-station-pin-states.webp",
+      "width": 1450,
+      "height": 900,
+      "title": "Station status pins",
+      "caption": "Flag and note badges sit above the status disc so both states read at map scale.",
+      "nodeId": "4485:2882",
+      "fileKey": "LmGfiG7j53UgKg8ryf3HYH"
+    },
+    {
+      "src": "/work/lynx/figma/detail-02-course-report-row-badges.webp",
+      "width": 3000,
+      "height": 960,
+      "title": "Course Report rows and badges",
+      "caption": "Stacked status icons and tinted count chips make failures and under/over counts scannable in a table.",
+      "nodeId": "889:394556",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    },
+    {
+      "src": "/work/lynx/figma/detail-03-flow-gauge.webp",
+      "width": 1800,
+      "height": 250,
+      "title": "Live flow gauge",
+      "caption": "Live GPM sits beside a capacity bar and PSI, so system load is readable at a glance from every screen.",
+      "nodeId": "11658:343791",
+      "fileKey": "g6YgCRu3vbOoDJRjwq54vK"
+    }
+  ]
+}
