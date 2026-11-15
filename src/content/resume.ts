@@ -4,6 +4,8 @@
  * can be set in bold. Outcome figures are my own reporting from each role, and
  * are not part of the sourced evidence on this site.
  */
+import { assetPath } from "@/lib/asset-path";
+
 export type Role = {
   org: string;
   role: string;
@@ -18,7 +20,7 @@ export type Role = {
 
 export const resume = {
   name: "Adam Munir",
-  headline: "UX Designer & Design Engineer",
+  headline: "Senior Product Designer | UX Engineering",
   subline: "Senior Product Designer · Native, web, and AI-enabled products",
   updated: "November 2026",
   contact: [
@@ -29,15 +31,15 @@ export const resume = {
     { label: "themunir.com", href: "https://themunir.com" },
   ],
   email: "adam@themunir.com",
-  pdf: "/Adam_Munir_Resume.pdf",
-  preview: "/Adam_Munir_Resume.png",
+  pdf: assetPath("/Adam_Munir_Resume.pdf"),
+  preview: assetPath("/Adam_Munir_Resume.png"),
   summary:
-    "Product designer and design engineer with 9+ years shipping AI-enabled, hardware-connected, and enterprise SaaS products across irrigation, IoT, fintech, streaming, and logistics. I lead the research, design the system, and then build what I design, front end and back end. Co-inventor on a granted US patent.",
+    "Senior Product Designer combining UX research, interaction design, and hands-on web development. I design enterprise and consumer experiences across connected products, fintech, and streaming, carrying user needs from discovery and prototypes into working interfaces.",
   highlights: [
-    { value: "9+", label: "Years designing products" },
-    { value: "64→87%", label: "Controller setup success after the onboarding redesign" },
-    { value: "8", label: "Product teams on the design system" },
-    { value: "1", label: "US patent granted, one more pending" },
+    { value: "Research", label: "Field observation, interviews, and product analytics" },
+    { value: "Interaction", label: "Clear workflows and understandable system behavior" },
+    { value: "Build", label: "Web interfaces, APIs, and design systems" },
+    { value: "Invention", label: "Co-inventor on a granted US patent" },
   ],
   experience: [
     {
@@ -47,13 +49,10 @@ export const resume = {
       dates: "Apr 2022 – Present",
       context: "Irrigation software for golf, commercial, and residential customers",
       points: [
-        "Lead UX research and design for Toro's irrigation platforms across web, native mobile, and connected hardware, used by **5,000+ daily professional users** and **~400k homeowners**.",
-        "Raised controller setup success from **64% to 87%** and cut first-time setup time **41%** by redesigning onboarding.",
-        "Cut design-to-dev cycles **32%** and engineering rework **27%** with a modular design system adopted by **8 product teams**.",
-        "Designed human-in-the-loop UX for AI irrigation recommendations: reasoning and confidence up front, with clear overrides.",
-        "Build what I design, front end and APIs, shipping at **under 1% pixel difference** from the design.",
-        "Raised weekly validated concepts **2.5x** with AI-assisted research and prototyping workflows, keeping handoff precise.",
-        "Co-invented in-field smart notes, shipped in Toro Lynx: **US Patent 12,543,671 B2** (granted 2026), with a continuation pending.",
+        "Lead UX research and interaction design for connected irrigation products with product and engineering teams.",
+        "Designed and helped implement iCentral access controls across the web app and API, making permission choices clearer while preserving the legacy model.",
+        "Redesigned controller onboarding; setup success increased from **64% to 87%**, tracked in Mixpanel.",
+        "Used field research to shape Lynx workflows; contributed to map-selection performance and analytics for investigating field failures.",
       ],
       products: [
         { name: "Lynx", slug: "lynx" },
@@ -72,9 +71,8 @@ export const resume = {
       dates: "Oct 2020 – Apr 2022",
       context: "OneHubTV, an OTT streaming service across web, mobile, and TV",
       points: [
-        "Lifted trial-to-paid conversion **21%** and cut checkout drop-off **28%** by redesigning onboarding and subscription purchase.",
-        "Cut account support tickets **24%** and raised self-serve task completion from **63% to 89%** by simplifying multi-device sign-in.",
-        "Cut design and build time for new features **30%** across web and mobile teams with a reusable design system.",
+        "Designed OneHubTV web and mobile experiences with creative, engineering, and QA partners, connecting content discovery, package presentation, and subscription journeys.",
+        "Used participant feedback and analytics to iterate global navigation and help viewers explore content before choosing a package.",
       ],
     },
     {
@@ -84,9 +82,8 @@ export const resume = {
       dates: "Nov 2019 – Sep 2020",
       context: "Consumer fintech: budgeting, savings automation, cards, and spending controls",
       points: [
-        "Led product design for **150,000+ active customers** across budgeting, savings, cards, and spending controls.",
-        "Raised budgeting engagement **21%** and savings activation **17%** by redesigning transaction categorization.",
-        "Raised verified account completion **19%** by simplifying setup and identity verification.",
+        "Designed the Kids Card launch across the physical card, website, and app presentation with product, marketing, and engineering partners.",
+        "Designed waitlist and email-verification interactions with clear confirmation and status messaging for parents.",
       ],
     },
     {
@@ -96,9 +93,8 @@ export const resume = {
       dates: "Jan 2019 – Nov 2019",
       context: "Internal freight pricing and sales platform, integrated with Salesforce",
       points: [
-        "Cut average quote turnaround **52%** with a unified quoting engine and pricing calculator for commercial teams.",
-        "Raised sales task completion **34%** in testing and cut onboarding and training needs **28%** with task-focused dashboards.",
-        "Led discovery, UX and UI, and front-end delivery support for the MVP, with engineering on the data model.",
+        "Designed a freight-pricing and sales platform integrated with Salesforce, connecting shipment quoting, pricing calculations, and operational dashboards.",
+        "Led discovery and UX/UI design for the MVP, collaborating on the data model and supporting frontend delivery.",
       ],
     },
     {
@@ -108,8 +104,7 @@ export const resume = {
       dates: "Dec 2016 – Sep 2017",
       context: "Racecourse website and mobile experience",
       points: [
-        "Lifted ticket conversion **~28%** and cut bounce rate **~22%** by rebuilding the site for **10k+ monthly visitors** at peak.",
-        "Cut manual odds update time **~80%** by automating racing odds ingestion and content workflows.",
+        "Designed responsive web and mobile experiences and automated racing-odds content updates.",
       ],
     },
   ] satisfies Role[],

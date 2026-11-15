@@ -6,8 +6,8 @@ const principles = [
     body: "A Figma file is a hypothesis. I write down what I chose, what I rejected, and the evidence that tipped it.",
   },
   {
-    title: "The gap between mock and production is my job.",
-    body: "I hold builds to measured fidelity. Pixel diffs, not screenshots on a call, decide when a screen is done.",
+    title: "The interaction has to survive implementation.",
+    body: "Loading, permissions, errors, and recovery belong in the design. I work through those states in prototypes and code, alongside the team building the product.",
   },
   {
     title: "Complex systems deserve calm interfaces.",
@@ -18,8 +18,8 @@ const principles = [
     body: "I build agents that plan, draft, and verify, with humans approving every change that matters and a trail behind each one.",
   },
   {
-    title: "Honest numbers only.",
-    body: "Every figure on this site has a source. Where a result was modelled rather than measured, I say so.",
+    title: "Make the evidence useful.",
+    body: "I use research and product data to understand what changed. Production outcomes, study findings, and prototype benchmarks each tell a different part of the story.",
   },
 ];
 

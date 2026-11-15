@@ -5,12 +5,14 @@ import { oasisMobile } from "./projects/oasis-mobile";
 import { oasis } from "./projects/oasis";
 import { spatialAdjust } from "./projects/spatial-adjust";
 import { toroPipeline } from "./projects/toro-pipeline";
+import { onehubtv, hyperjar } from "./projects/earlier-work";
 import type { IndexEntry, Metric, Project } from "./types";
+import { withAssetBase } from "@/lib/asset-path";
 
 export { profile } from "./profile";
 
 /** Stations, in the order the reader meets them. */
-export const projects: Project[] = [oasisMobile, lynxDrive, icentral, spatialAdjust, helix, toroPipeline, oasis];
+export const projects: Project[] = [oasisMobile, lynxDrive, icentral, spatialAdjust, helix, toroPipeline, oasis, hyperjar, onehubtv].map(withAssetBase);
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 
@@ -23,6 +25,8 @@ export const proof: Metric[] = [
 ];
 
 export const index: IndexEntry[] = [
+  { title: "Toro Oasis", href: "/work/oasis-mobile/", kind: "Connected product UX", year: "2025 — 2026", line: "Designing the handoff from installer to homeowner, with setup, recovery, and understandable automation.", stack: ["Research", "Native UX", "Prototyping"] },
+  { title: "Toro Helix", href: "/work/helix/", kind: "AI interaction · Pilot", year: "2026", line: "A desktop pilot that connects computed metrics to their evidence, so people can inspect what an AI explanation is based on.", stack: ["Interaction design", "Desktop", "AI"] },
   {
     title: "iCentral + Oasis feedback",
     kind: "Full-stack feature",
@@ -67,6 +71,7 @@ export const index: IndexEntry[] = [
   },
   {
     title: "OneHubTV",
+    href: "/work/onehubtv/",
     kind: "Streaming · Vision247",
     year: "2021",
     line: "Led UX for a streaming service across web, mobile, and TV: checkout, trial conversion, sign-in, and a reusable design system.",
@@ -74,6 +79,7 @@ export const index: IndexEntry[] = [
   },
   {
     title: "HyperJar Kids Card",
+    href: "/work/hyperjar/",
     kind: "Fintech · HyperJar",
     year: "2020",
     line: "Designed the launch of a free kids' card alongside the adult card for a 150,000+ customer fintech: card, app, and waitlist.",

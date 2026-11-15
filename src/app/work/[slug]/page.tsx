@@ -149,9 +149,9 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
           <Chapter id="engineering" n={n("engineering")} title="Building it">
             <Prose paragraphs={[p.engineering.intro]} />
-            <div className="mt-12">
+            {p.engineering.nodes.length > 0 && <div className="mt-12">
               <ArchDiagram nodes={p.engineering.nodes} edges={p.engineering.edges} accent={p.accent} />
-            </div>
+            </div>}
             <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
               {p.stack.map((s) => (
                 <li key={s} className="label">{s}</li>
@@ -236,6 +236,11 @@ function Hero({ p }: { p: Project }) {
           ))}
         </div>
       </div>
+      <nav className="shell mb-10 flex flex-wrap gap-3" aria-label="Read this case study">
+        {[["#summary", "Overview"], ["#design", "Key decisions"], ["#engineering", "Implementation"], ["#outcome", "Results & next steps"]].map(([href, label]) => (
+          <a key={href} href={href} className="rounded-full border border-line-strong px-5 py-3 text-[14px] transition-colors hover:border-paper focus-visible:outline-2 focus-visible:outline-offset-4">{label} ↘</a>
+        ))}
+      </nav>
       <div className="shell mt-16">
         <ViewTransition name={`cover-${p.slug}`} share="morph" default="none">
           <div className="overflow-hidden rounded-[24px] bg-ink-2 ring-1 ring-line">
@@ -249,12 +254,12 @@ function Hero({ p }: { p: Project }) {
 
 function Tldr({ p }: { p: Project }) {
   return (
-    <section aria-label="Summary" className="shell pb-32">
+    <section id="summary" aria-label="Summary" className="shell scroll-mt-28 pb-24">
       <div className="grid gap-px overflow-hidden rounded-[24px] border border-line bg-line lg:grid-cols-12">
         <div className="flex flex-col justify-between bg-ink-2 p-8 lg:col-span-4 lg:p-10">
           <p className="label">The 60-second read</p>
           <div className="mt-16">
-            <p className="font-display text-[clamp(3.5rem,7vw,6.5rem)] leading-none" style={{ color: p.accent }}>
+            <p className="font-display text-[clamp(2.5rem,4vw,4rem)] leading-tight" style={{ color: p.accent }}>
               {p.headline.value}
             </p>
             <p className="mt-3 max-w-xs text-paper/70">{p.headline.label}</p>

@@ -176,6 +176,7 @@ export type Project = {
 
 export type IndexEntry = {
   title: string;
+  href?: string;
   kind: string;
   year: string;
   line: string;

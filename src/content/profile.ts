@@ -1,12 +1,12 @@
 export const profile = {
   name: "Adam Munir",
-  role: "UX Designer & Design Engineer",
+  role: "Senior Product Designer & UX Engineer",
   location: "Orange, California",
   employer: "The Toro Company",
   email: "adam@themunir.com",
-  thesis: "I design the software layer\nbehind <em>complex</em> products.\nThen I build it.",
+  thesis: "I make complex products\n<em>easier to use.</em>\nFrom research to software.",
   intro:
-    "Senior Product Designer at The Toro Company. I lead UX research and design across web, native mobile, hardware-adjacent, and AI-enabled products for golf, landscape, and the home, usually as the only designer on the team. Then I help build what I design, front end and back end, so the experience ships the way it was meant to.",
+    "I'm Adam, a Senior Product Designer at The Toro Company. I combine UX research, interaction design, and hands-on web development to help people understand connected systems, complete important tasks, and recover when something goes wrong.",
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/adammunirr" },
   ],

@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Lines } from "@/components/motion/Reveal";
@@ -31,7 +32,7 @@ export function Hero() {
   return (
     <section ref={ref} className="relative flex min-h-[100svh] flex-col overflow-hidden" aria-labelledby="hero-title">
       <motion.div className="absolute inset-0" style={{ opacity: fieldOpacity }}>
-        {field && <HeroField />}
+        <div className="absolute inset-0 opacity-30">{field && <HeroField />}</div>
         <div className="absolute inset-0 bg-[linear-gradient(180deg,var(--color-ink)_0%,transparent_45%,transparent_80%,var(--color-ink)_100%)]" />
       </motion.div>
 
@@ -46,7 +47,7 @@ export function Hero() {
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-signal opacity-60" />
             <span className="relative inline-flex size-2 rounded-full bg-signal" />
           </span>
-          Selected work · 2016 — 2026
+          Research · Interaction design · UX engineering
         </motion.p>
 
         <Lines
@@ -54,7 +55,7 @@ export function Hero() {
           text={profile.thesis}
           immediate
           delay={0.3}
-          className="font-display text-[clamp(3rem,7.2vw,8.5rem)] leading-[0.92] tracking-[-0.01em] [&_em]:text-signal"
+          className="font-display text-[clamp(2.75rem,6.4vw,7.5rem)] leading-[0.98] tracking-[-0.01em] [&_em]:text-signal"
         />
 
         <motion.div
@@ -63,7 +64,13 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease, delay: 1.1 }}
         >
-          <p className="max-w-xl text-[17px] leading-relaxed text-paper/80 sm:col-span-6">{profile.intro}</p>
+          <div className="sm:col-span-6">
+            <p className="max-w-xl text-[17px] leading-relaxed text-paper/80">{profile.intro}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-5 text-[15px]">
+              <a href="#work" className="rounded-full bg-signal px-5 py-3 font-medium text-ink">Explore selected work ↓</a>
+              <Link href="/resume/" className="underline decoration-paper/40 underline-offset-4">View resume →</Link>
+            </div>
+          </div>
           <dl className="grid grid-cols-2 gap-6 text-[14px] sm:col-span-4 sm:col-start-8">
             <div>
               <dt className="label mb-2">Now</dt>
@@ -79,7 +86,7 @@ export function Hero() {
             className="label hidden items-end justify-end gap-2 !text-paper sm:col-span-2 sm:flex"
             data-cursor="Follow"
           >
-            Follow the line
+            Selected work
             <motion.span
               aria-hidden
               animate={{ y: [0, 6, 0] }}

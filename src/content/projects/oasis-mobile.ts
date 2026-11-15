@@ -100,7 +100,7 @@ export const oasisMobile: Project = {
       ],
     },
   ],
-  headline: { value: "248", label: "mobile screens in one design system, for the contractor who sets it up and the homeowner who inherits it." },
+  headline: { value: "A better handoff.", label: "From the contractor who installs it to the homeowner who lives with it." },
   tldr: {
     problem:
       "Smart irrigation was hardware-first: pairing over Bluetooth in a yard, setting zones and programs by number, and a handover to the homeowner that was an afterthought. Two very different people use the same system, and the old app served neither well.",

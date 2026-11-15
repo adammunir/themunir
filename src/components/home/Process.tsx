@@ -18,14 +18,14 @@ const steps = [
   },
   {
     word: "Build",
-    claim: "I ship the thing I drew.",
-    body: "Front end and back end, native and web. I help build what I design, so it ships the way it was drawn, held to pixel-diff thresholds, not \"close enough\".",
-    artifacts: ["Native + web", "Pixel-diff CI", "Architecture", "AI agents"],
+    claim: "Carry the decision into software.",
+    body: "I implement web interfaces and APIs where I own the code, and partner with mobile teams elsewhere. Loading, permissions, errors, and recovery are part of the interaction.",
+    artifacts: ["Web interfaces", "APIs", "Interaction states", "Design systems"],
   },
   {
     word: "Measure",
-    claim: "Outcomes or it didn't happen.",
-    body: "Instrumentation ships with the feature. I read the funnels the week after launch and feed what I learn back into the next round of research.",
+    claim: "Check what changed.",
+    body: "I use product analytics, feedback, and testing to understand what changed. Production outcomes and prototype benchmarks stay distinct, and unanswered questions guide the next iteration.",
     artifacts: ["Event schemas", "Dashboards", "Release notes", "Retros"],
   },
 ];
@@ -43,7 +43,7 @@ export function Process() {
   const step = steps[active];
 
   return (
-    <section id="process" ref={ref} className="relative h-[400svh]" aria-labelledby="process-title">
+    <section id="process" ref={ref} className="relative h-[240svh]" aria-labelledby="process-title">
       <div className="sticky top-0 flex h-[100svh] flex-col justify-center overflow-hidden">
         <div className="shell">
           <div className="mb-16 flex items-baseline justify-between">

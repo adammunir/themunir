@@ -7,9 +7,6 @@ import { Media } from "@/components/case/Media";
 import { Lines } from "@/components/motion/Reveal";
 import type { Project } from "@/content/types";
 
-const words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
-const count = (n: number) => words[n] ?? String(n);
-
 /**
  * Selected work as stations on one line. The spine draws with scroll; its tip
  * sits at the viewport's vertical center, and each station node ignites as the
@@ -27,12 +24,12 @@ export function Pipeline({ projects }: { projects: Project[] }) {
         <p className="label sm:col-span-3">01 — The pipeline</p>
         <div className="sm:col-span-9">
           <Lines
-            text={`${count(projects.length)} products.\nOne line from research\nto <em>shipped</em> code.`}
+            text={"Real workflows.\nThoughtful decisions.\n<em>Working experiences.</em>"}
             className="font-display text-title [&_em]:text-signal"
           />
           <p className="mt-8 max-w-2xl text-lede text-paper/70">
-            Each station is a case study written for two readers: the one with sixty seconds, and the one who wants
-            to see the decisions behind the pixels and the architecture behind the screens.
+            Selected work across enterprise tools, connected products, and streaming.
+            Follow the user problem through research, interaction design, and implementation.
           </p>
         </div>
       </div>
@@ -95,7 +92,7 @@ function Station({ project: p, index }: { project: Project; index: number }) {
             <p className="mt-5 max-w-sm text-[17px] text-paper/70">{p.tagline}</p>
 
             <div className="mt-10 border-t border-line pt-5">
-              <p className="font-display text-[clamp(2.5rem,4vw,3.75rem)] leading-none" style={{ color: p.accent }}>
+              <p className="font-display text-[clamp(1.8rem,3vw,2.5rem)] leading-tight" style={{ color: p.accent }}>
                 {p.headline.value}
               </p>
               <p className="mt-2 max-w-xs text-[14px] text-paper-dim">{p.headline.label}</p>

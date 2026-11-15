@@ -9,8 +9,8 @@ export const metadata: Metadata = { title: "Resume" };
 
 /**
  * The resume, twice from the same content: an editorial page on screen, and a
- * one-page, single-column sheet on paper. The PDF is printed from this page
- * (scripts/resume-pdf.sh), so the download can never drift from the content.
+ * single-column sheet on paper. The PDF is printed from this page
+ * (scripts/resume-pdf.sh), and must be regenerated when the content changes.
  */
 export default function Resume() {
   return (
@@ -92,7 +92,7 @@ function Screen() {
               <Image src={resume.preview} alt="" width={850} height={1100} priority unoptimized className="block h-auto w-full" />
             </span>
           </a>
-          <p className="label mt-8 text-center">1 page · US Letter · PDF</p>
+          <p className="label mt-8 text-center">US Letter · Text-based PDF</p>
         </div>
       </header>
 
@@ -213,108 +213,49 @@ function ScreenSection({ title, children }: { title: string; children: React.Rea
 /* ── Paper ────────────────────────────────────────────────────────────────── */
 
 /**
- * One page, one column, standard headings, real text: the format applicant
- * tracking systems parse cleanly and recruiters scan in seconds. Print rules
+ * Linear paragraphs, real list items, standard headings, and selectable text.
+ * Verify exported text order before using the PDF for applications. Print rules
  * in globals.css flip the palette to ink on white.
  */
 function Paper() {
   return (
-    <div className="hidden text-[9.3pt] leading-[1.37] text-paper print:block">
-      <header className="flex items-end justify-between gap-6 border-b-[1.5pt] border-paper pb-[7pt]">
-        <div>
-          <h1 className="font-display text-[30pt] leading-[0.9]">{resume.name}</h1>
-          <p className="mt-[5pt] text-[10.5pt] font-medium text-signal">{resume.headline}</p>
-        </div>
-        <ul className="text-right text-[8.6pt] leading-[1.5] text-paper-dim">
-          <li>{resume.contact.slice(0, 3).map((c, i) => <Contact key={c.label} c={c} first={i === 0} />)}</li>
-          <li>{resume.contact.slice(3).map((c, i) => <Contact key={c.label} c={c} first={i === 0} />)}</li>
-        </ul>
+    <article data-resume-sheet className="hidden text-[9.6pt] leading-[1.3] text-paper print:block">
+      <header className="border-b-[1.5pt] border-paper pb-[8pt]">
+        <h1 className="font-display text-[30pt] leading-none">{resume.name}</h1>
+        <p className="mt-[4pt] text-[11pt] font-medium">{resume.headline}</p>
+        <p className="mt-[5pt] text-[9pt]">{resume.contact.map((c, i) => <Contact key={c.label} c={c} first={i === 0} />)}</p>
       </header>
-
-      <p className="mt-[7pt] text-[9.4pt] leading-[1.42]">{resume.summary}</p>
-
+      <p className="mt-[8pt]">{resume.summary}</p>
       <PaperSection title="Experience">
         {resume.experience.map((r) => (
-          <div key={r.org} className="break-inside-avoid pt-[5pt] first:pt-0">
-            <div className="flex items-baseline justify-between gap-4">
-              <p className="text-[10.2pt]">
-                <span className="font-semibold">{r.org}</span>
-                <span className="text-paper-dim"> · </span>
-                {r.role}
-              </p>
-              <p className="tabular shrink-0 text-[8.8pt] font-medium">{r.dates}</p>
-            </div>
-            <div className="flex items-baseline justify-between gap-4 text-[8.6pt] text-paper-dim">
-              <p className="italic">{r.context}</p>
-              <p className="shrink-0">{r.place}</p>
-            </div>
-            <ul className="mt-[2pt] space-y-[1pt]">
-              {r.points.map((pt) => (
-                <li key={pt} className="relative pl-[9pt]">
-                  <span aria-hidden className="absolute top-0 left-0 text-signal">
-                    •
-                  </span>
-                  <Bullet text={pt} strong="font-semibold" />
-                </li>
-              ))}
+          <section key={r.org} className="break-inside-avoid pt-[7pt] first:pt-0">
+            <h3 className="text-[10.5pt] font-semibold">{r.org} · {r.role}</h3>
+            <p className="text-[9pt] text-paper-dim">{r.dates} | {r.place}</p>
+            <ul className="mt-[3pt] list-disc space-y-[2pt] pl-[13pt]">
+              {r.points.map((pt) => <li key={pt}><Bullet text={pt} strong="font-semibold" /></li>)}
             </ul>
-            {r.products && (
-              <p className="mt-[2.5pt] pl-[9pt] text-[8.6pt] text-paper-dim">
-                <span className="font-medium text-paper">Products: </span>
-                {r.products.map((p) => p.name).join(" · ")}
-              </p>
-            )}
-          </div>
+          </section>
         ))}
       </PaperSection>
-
       <PaperSection title="Skills">
-        <dl className="grid grid-cols-[5.2em_1fr] gap-x-[8pt] gap-y-[1.5pt]">
-          {resume.skills.map((s) => (
-            <div key={s.title} className="contents">
-              <dt className="font-semibold">{s.title}</dt>
-              <dd>{s.body}</dd>
-            </div>
-          ))}
-        </dl>
+        <p>Interaction design, UX research, usability testing, prototyping, information architecture, design systems, accessibility (WCAG), product analytics.</p>
+        <p className="mt-[2pt]">TypeScript, JavaScript, HTML, CSS, Next.js, Git, Figma, ProtoPie, Rive.</p>
       </PaperSection>
-
-      <div className="grid grid-cols-[1.5fr_1fr] gap-[18pt]">
-        <PaperSection title="Education">
-          <ul className="space-y-[1pt]">
-            {resume.education.map((e) => (
-              <li key={e.title}>
-                <span className="font-medium">{e.title}</span>
-                <span className="text-paper-dim">
-                  {" "}
-                  · {e.org} · {e.year}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </PaperSection>
-        <PaperSection title="Patents">
-          <ul className="space-y-[1pt]">
-            {resume.inventions.map((i) => (
-              <li key={i.title}>
-                <span className="font-medium">{i.title}</span>
-                <span className="text-paper-dim"> · {i.status}</span>
-              </li>
-            ))}
-            <li className="text-paper-dim">{resume.inventions[0].detail}</li>
-          </ul>
-        </PaperSection>
-      </div>
-    </div>
+      <PaperSection title="Education">
+        {resume.education.map((e) => <p key={e.title}>{e.title} · {e.org} · {e.year}</p>)}
+      </PaperSection>
+      <PaperSection title="Patents">
+        <p>Co-inventor · {resume.inventions[0].title} · {resume.inventions[0].detail} · {resume.inventions[0].status}</p>
+      </PaperSection>
+    </article>
   );
 }
 
 function PaperSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mt-[9pt]">
-      <h2 className="mb-[4pt] flex items-center gap-[6pt] font-mono text-[8pt] font-medium tracking-[0.12em] text-signal uppercase">
+    <section className="mt-[7pt]">
+      <h2 className="mb-[4pt] border-b border-line-strong pb-[2pt] text-[10pt] font-semibold uppercase">
         {title}
-        <span aria-hidden className="h-px flex-1 bg-line-strong" />
       </h2>
       {children}
     </section>

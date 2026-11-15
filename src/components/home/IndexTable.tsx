@@ -1,5 +1,6 @@
 import { Lines, Reveal } from "@/components/motion/Reveal";
 import type { IndexEntry } from "@/content/types";
+import Link from "next/link";
 
 export function IndexTable({ entries }: { entries: IndexEntry[] }) {
   return (
@@ -32,7 +33,7 @@ export function IndexTable({ entries }: { entries: IndexEntry[] }) {
                 />
                 <span role="cell" className="label col-span-3 pt-1 tabular md:col-span-1">{e.year}</span>
                 <span role="cell" className="col-span-9 font-medium transition-transform duration-500 group-hover:translate-x-2 md:col-span-3">
-                  {e.title}
+                  {e.href ? <Link href={e.href} className="underline decoration-paper/25 underline-offset-4 hover:text-signal">{e.title} ↗</Link> : e.title}
                 </span>
                 <span role="cell" className="col-span-12 text-paper-dim md:col-span-2">{e.kind}</span>
                 <span role="cell" className="col-span-12 text-paper/70 md:col-span-6">

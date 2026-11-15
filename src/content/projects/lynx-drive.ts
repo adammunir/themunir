@@ -125,7 +125,7 @@ export const lynxDrive: Project = {
       ],
     },
   ],
-  headline: { value: "<1%", label: "pixel difference between my designs and the shipped components, down from 11%, so what users see matches what I designed" },
+  headline: { value: "Find. Act. Recover.", label: "Field research connected to map interactions, performance, and recovery." },
   tldr: {
     problem:
       "Superintendents ran a course's irrigation from a desktop in the shed. The mobile app put that control in their pocket, but a field crash could lock a course out until the app was reinstalled, the map they open first was slow to appear, and the desktop UI couldn't evolve to match new designs.",

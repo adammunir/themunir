@@ -1,0 +1,49 @@
+name: Deploy portfolio preview
+
+on:
+  push:
+    branches:
+      - portfolio/resume-repositioning
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-preview
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run lint
+      - name: Build GitHub Pages preview
+        run: pnpm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /themunir
+      - name: Check export
+        run: |
+          test -f out/index.html
+          test -f out/work/icentral/index.html
+          test -f out/work/onehubtv/index.html
+          test -f out/resume/index.html
+          touch out/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - name: Deploy preview
+        id: deployment
+        uses: actions/deploy-pages@v4

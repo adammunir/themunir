@@ -83,14 +83,14 @@ export const icentral: Project = {
     },
     { kind: "film", src: "/work/icentral/film.mp4?v=teaser", poster: "/work/icentral/film.jpg?v=teaser", title: "The new iCentral" },
   ],
-  headline: { value: "25 → 3", label: "Access settings nobody could read, from 25 separate checkboxes down to three levels people understand at a glance." },
+  headline: { value: "Understand. Act. Recover.", label: "Multi-site control shaped around the work an operator needs to do." },
   tldr: {
     problem:
       "iCentral runs commercial irrigation for parks departments, campuses, and contractors managing many sites. The legacy app was one page per task, with no way to see a whole account on a map or act on many controllers at once, and its access settings were too complex for anyone to reason about.",
     did:
       "I audited competing products, set a North Star and three experience pillars, and designed the new iCentral around a map-first Home, bulk control, and plain-language access. In 2026 I joined the build and made my own designs real: the shared table, the header and account switching, the Help Center, in-app feedback, and the access rebuild across the web app and the API.",
     result:
-      "The redesign is in beta, so there are no adoption numbers yet. Access went from 25 checkboxes to three plain levels, and in ten weeks I shipped 359 unique changes across 550 web files and 83 API files.",
+      "The redesign is in beta. I implemented clearer access choices, shared table behavior, and feedback workflows across the web app and API. The existing permission model stays compatible with the legacy app; usability and adoption outcomes remain to be measured.",
   },
   context: [
     "<strong>iCentral</strong> is Toro's central control for Rain Master Eagle and Eagle Plus controllers. Its users are city parks and recreation departments, municipalities, school and college campuses, and grounds teams managing many sites.",
@@ -282,14 +282,8 @@ export const icentral: Project = {
   },
   outcome: {
     intro:
-      "The redesign is in beta and no one outside the team has used it at scale yet, so there are no adoption numbers to report. These numbers describe the design simplification and the build, de-duplicated so they aren't inflated by stacked branches.",
-    metrics: [
-      { value: 3, label: "Plain access levels replace 25 separate checkboxes", source: "Design file index and repository history, Oct 2026" },
-      { value: 10, label: "Function-first sections replace the legacy page-per-task navigation", source: "Design file index (sitemap)" },
-      { value: 359, label: "Unique changes to the web app, Aug 14 to Oct 23, 2026", source: "Repository history, Aug–Oct 2026, counted by unique change rather than by commit" },
-      { value: 633, label: "Files touched: 550 in the web app, 83 in the API", source: "Repository history, Aug–Oct 2026" },
-      { value: 51, label: "Commits building the in-app Help Center", source: "Repository history, Aug–Oct 2026" },
-    ],
+      "The beta introduces clearer access choices, a shared table, and feedback that preserves unsent drafts. The interface reflects the existing permission model, including staff access that cannot be edited here. These are delivered interaction changes; the next step is testing task completion and permission comprehension with operators.",
+    metrics: [],
   },
   reflection: [
     "Building my own designs changed how I design. When the access picker had to agree with 25 flags and two services, the clean three-word UI only held because I could follow it all the way to the database.",
