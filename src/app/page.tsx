@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Pipeline projects={projects} />
+      <Pipeline projects={projects.filter((p) => !["oasis", "toro-pipeline"].includes(p.slug))} />
       <Process />
       <Conviction />
       <IndexTable entries={index} />
