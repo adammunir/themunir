@@ -12,7 +12,7 @@ import { withAssetBase } from "@/lib/asset-path";
 export { profile } from "./profile";
 
 /** Stations, in the order the reader meets them. */
-export const projects: Project[] = [icentral, lynxDrive, onehubtv, oasisMobile, hyperjar, spatialAdjust, helix, toroPipeline, oasis].map(withAssetBase);
+export const projects: Project[] = [oasisMobile, lynxDrive, icentral, spatialAdjust, helix, toroPipeline, oasis, hyperjar, onehubtv].map(withAssetBase);
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 

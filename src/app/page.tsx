@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Pipeline projects={projects.filter((p) => ["icentral", "lynx", "onehubtv"].includes(p.slug))} />
+      <Pipeline projects={projects} />
       <Process />
       <Conviction />
       <IndexTable entries={index} />
